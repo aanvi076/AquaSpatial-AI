@@ -1,0 +1,6101 @@
+[
+  {
+    "id": "K-NUMI2-01",
+    "name": "Kohler Numi 2.0 Intelligent Smart Toilet",
+    "category": "smart_toilet",
+    "subcategory": "floor_mount_intelligent",
+    "price_inr": 485000,
+    "dimensions": {
+      "width": 1.25,
+      "depth": 2.15,
+      "height": 1.5,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury",
+      "futuristic"
+    ],
+    "finishes": [
+      "white",
+      "honed_black"
+    ],
+    "features": [
+      "Ambient RGB lighting",
+      "Hands-free automatic opening/closing",
+      "Integrated Bluetooth surround audio",
+      "Heated seat",
+      "Warm air dryer",
+      "Stainless steel bidet wand with UV sanitization"
+    ],
+    "water_consumption": {
+      "rate": 3.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Dual-flush Eco 3.8/3.0 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense Certified",
+      "Eco Power Save mode",
+      "Smart flow regulation"
+    ],
+    "installation_requirements": [
+      "Dedicated 220V electrical socket within 3 ft",
+      "Concealed water inlet line 1/2 inch",
+      "Minimum water pressure 0.14 MPa"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-VERDERA-01",
+      "K-STATEMENT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/numi-2-0",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/numi2.jpg",
+    "model_number": "K-3092-0"
+  },
+  {
+    "id": "K-VEIL-WH-02",
+    "name": "Kohler Veil Wall-Hung Intelligent Toilet",
+    "category": "smart_toilet",
+    "subcategory": "wall_hung_intelligent",
+    "price_inr": 295000,
+    "dimensions": {
+      "width": 1.35,
+      "depth": 2.2,
+      "height": 1.4,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "zen",
+      "luxury"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Concealed in-wall tank",
+      "Touchscreen remote",
+      "Automatic dual flush",
+      "Heated seat with adjustable temperature",
+      "Pulsing aerated bidet spray"
+    ],
+    "water_consumption": {
+      "rate": 3.0,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "High-Efficiency Dual Flush 3.0/4.5 LPF"
+    },
+    "sustainability_attributes": [
+      "LEED point compliant",
+      "High-efficiency dual flush"
+    ],
+    "installation_requirements": [
+      "Kohler in-wall carrier frame",
+      "220V power point behind bowl"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-BASIN-01",
+      "K-PURIST-01",
+      "K-STATEMENT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/veil-wall-hung",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/veil.jpg",
+    "model_number": "K-5401-0"
+  },
+  {
+    "id": "K-MODERNLIFE-03",
+    "name": "Kohler ModernLife Rimless Wall-Hung Toilet",
+    "category": "toilet",
+    "subcategory": "wall_hung",
+    "price_inr": 38000,
+    "dimensions": {
+      "width": 1.2,
+      "depth": 1.8,
+      "height": 1.3,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "space_saver"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Ultra-hygienic rimless bowl",
+      "Quick-release slim soft-close seat",
+      "Compact projection for tight spaces"
+    ],
+    "water_consumption": {
+      "rate": 3.5,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense Certified 3.5 LPF"
+    },
+    "sustainability_attributes": [
+      "CleanCoat antimicrobial glaze",
+      "Reduced flush volume"
+    ],
+    "installation_requirements": [
+      "In-wall cistern frame"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/toilets/modern-life",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/modernlife.jpg",
+    "model_number": "K-77767IN-0"
+  },
+  {
+    "id": "K-CIMARRON-04",
+    "name": "Kohler Cimarron Comfort Height Two-Piece Toilet",
+    "category": "toilet",
+    "subcategory": "floor_mount_two_piece",
+    "price_inr": 26500,
+    "dimensions": {
+      "width": 1.45,
+      "depth": 2.45,
+      "height": 2.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Revolutionary AquaPiston flush canister",
+      "Comfort Height seating chair level",
+      "DryLock fast installation system"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": false,
+      "efficiency_rating": "Standard AquaPiston 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "Low maintenance mechanical valve"
+    ],
+    "installation_requirements": [
+      "Standard 12-inch rough-in plumbing"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-ARTIFACTS-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/cimarron",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/cimarron.jpg",
+    "model_number": "K-31621-0"
+  },
+  {
+    "id": "K-HARKEN-VANITY-01",
+    "name": "Kohler Harken 36-Inch Modern Floating Vanity",
+    "category": "vanity",
+    "subcategory": "wall_mount_vanity",
+    "price_inr": 85000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 1.8,
+      "height": 2.0,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "natural_walnut",
+      "pure_white"
+    ],
+    "features": [
+      "Soft-close dovetailed drawers",
+      "Integrated moisture-resistant solid surface top",
+      "Concealed organizer tray"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "FSC-Certified sustainably harvested engineered wood",
+      "Low VOC lacquer finish"
+    ],
+    "installation_requirements": [
+      "Reinforced wall backing or studs"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-MODERNLIFE-03",
+      "K-VERDERA-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/harken",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/harken_vanity.jpg",
+    "model_number": "K-33539-ASB"
+  },
+  {
+    "id": "K-MEMOIRS-VANITY-01",
+    "name": "Kohler Memoirs Stately 30-Inch Vanity with Marble Top",
+    "category": "vanity",
+    "subcategory": "freestanding_vanity",
+    "price_inr": 115000,
+    "dimensions": {
+      "width": 2.5,
+      "depth": 1.85,
+      "height": 2.8,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "transitional"
+    ],
+    "finishes": [
+      "espresso",
+      "polished_brass_hardware"
+    ],
+    "features": [
+      "Carrara white natural marble top",
+      "Solid hardwood construction",
+      "Historical architectural molding"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Solid timber longevity (30+ year lifespan)"
+    ],
+    "installation_requirements": [
+      "Floor level drainage and supply stub-out"
+    ],
+    "compatible_product_ids": [
+      "K-ARTIFACTS-FAUCET-01",
+      "K-CIMARRON-04"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/memoirs",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/memoirs_vanity.jpg",
+    "model_number": "K-28443-GW1"
+  },
+  {
+    "id": "K-FOREFRONT-01",
+    "name": "Kohler Forefront Rectangular Vessel Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 18500,
+    "dimensions": {
+      "width": 1.95,
+      "depth": 1.45,
+      "height": 0.45,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "zen"
+    ],
+    "finishes": [
+      "white",
+      "matte_black"
+    ],
+    "features": [
+      "Crisp architectural geometry",
+      "Deep basin splash prevention",
+      "Durable vitreous china"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% recyclable ceramic material"
+    ],
+    "installation_requirements": [
+      "Countertop cutout for 1-1/4 inch waste hole"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/forefront",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/forefront.jpg",
+    "model_number": "K-2660IN-0"
+  },
+  {
+    "id": "K-VEIL-BASIN-01",
+    "name": "Kohler Veil Asymmetrical Zen Vessel Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 32000,
+    "dimensions": {
+      "width": 1.8,
+      "depth": 1.35,
+      "height": 0.42,
+      "unit": "ft"
+    },
+    "styles": [
+      "zen",
+      "luxury",
+      "organic_modern"
+    ],
+    "finishes": [
+      "white",
+      "cashmere"
+    ],
+    "features": [
+      "SuSu flowing organic curves",
+      "Supramic ultra-thin rim ceramic technology",
+      "Stain-resistant glaze"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Reduced material volume with high-strength Supramic formulation"
+    ],
+    "installation_requirements": [
+      "Countertop installation"
+    ],
+    "compatible_product_ids": [
+      "K-COMPOSED-01",
+      "K-VEIL-WH-02"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/sinks/veil-vessel",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/veil_basin.jpg",
+    "model_number": "K-20704IN-0"
+  },
+  {
+    "id": "K-PURIST-01",
+    "name": "Kohler Purist Single-Handle Tall Basin Faucet",
+    "category": "faucet",
+    "subcategory": "single_lever_tall",
+    "price_inr": 28500,
+    "dimensions": {
+      "width": 0.3,
+      "depth": 0.65,
+      "height": 1.05,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Solid brass construction",
+      "Kohler Ceramic Disc Valves exceeding industry longevity standards by 2x",
+      "Laminar aerated stream"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense High Efficiency 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled",
+      "Saves up to 32% water vs standard 8.3 LPM faucets"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/purist",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_faucet.jpg",
+    "model_number": "K-14404IN-4A-CP"
+  },
+  {
+    "id": "K-ARTIFACTS-FAUCET-01",
+    "name": "Kohler Artifacts Gentleman Spout Faucet with Lever Handles",
+    "category": "faucet",
+    "subcategory": "widespread_deck_mount",
+    "price_inr": 46000,
+    "dimensions": {
+      "width": 0.8,
+      "depth": 0.7,
+      "height": 0.8,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "vintage"
+    ],
+    "finishes": [
+      "oil_rubbed_bronze",
+      "polished_chrome",
+      "vintage_nickel"
+    ],
+    "features": [
+      "Edwardian vintage aesthetic",
+      "Quarter-turn ceramic disc valves",
+      "Solid brass heavy cast body"
+    ],
+    "water_consumption": {
+      "rate": 5.0,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 5.0 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense compliant eco-flow restrictor"
+    ],
+    "installation_requirements": [
+      "Three-hole 8-inch widespread deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/artifacts",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/artifacts_faucet.jpg",
+    "model_number": "K-72759IN-CP"
+  },
+  {
+    "id": "K-COMPOSED-01",
+    "name": "Kohler Composed Monobloc Basin Mixer",
+    "category": "faucet",
+    "subcategory": "single_lever_tall",
+    "price_inr": 34000,
+    "dimensions": {
+      "width": 0.25,
+      "depth": 0.6,
+      "height": 0.95,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "titanium",
+      "chrome"
+    ],
+    "features": [
+      "Geometric purity design",
+      "Kohler ScratchShield PVD finish",
+      "Smooth joystick actuation"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Eco-Flow 4.8 LPM"
+    },
+    "sustainability_attributes": [
+      "PVD coating eliminates harmful chemical electroplating waste"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-BASIN-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/p/washbasins/composed-single-handle-bathroom-sink-faucet-with-cylindrical-handle-7-5-lpm-73050in-7",
+    "verification_status": "verified",
+    "image_url": "/assets/products/composed.jpg",
+    "model_number": "K-73050IN-7-CP"
+  },
+  {
+    "id": "K-STATEMENT-01",
+    "name": "Kohler Statement Round 12-Inch Katalyst Rain Showerhead",
+    "category": "shower",
+    "subcategory": "overhead_rain_shower",
+    "price_inr": 49000,
+    "dimensions": {
+      "width": 1.0,
+      "depth": 1.0,
+      "height": 0.35,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Katalyst Air-Induction technology infuses 2M air bubbles per minute",
+      "Full drenching rain spray pattern",
+      "MasterClean spray nozzles resist mineral buildup"
+    ],
+    "water_consumption": {
+      "rate": 7.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Katalyst Air-Induction Eco 7.6 LPM (Feels like 12 LPM)"
+    },
+    "sustainability_attributes": [
+      "Air-induction delivers rich water feel while saving 30% water"
+    ],
+    "installation_requirements": [
+      "Ceiling or wall shower arm, 1/2 inch NPT connection"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-NUMI2-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/statement-rain",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/statement_shower.jpg",
+    "model_number": "K-26299IN-CP"
+  },
+  {
+    "id": "K-MOXIE-02",
+    "name": "Kohler Moxie Bluetooth Speaker Rain Shower",
+    "category": "shower",
+    "subcategory": "overhead_multimedia_shower",
+    "price_inr": 24500,
+    "dimensions": {
+      "width": 0.65,
+      "depth": 0.65,
+      "height": 0.4,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "space_saver",
+      "tech_forward"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Acoustic tuning by Harman Kardon",
+      "Waterproof IPX7 wireless speaker",
+      "Magnetic docking into sprayface"
+    ],
+    "water_consumption": {
+      "rate": 6.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 6.6 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense compliant eco-flow"
+    ],
+    "installation_requirements": [
+      "Standard wall-mounted shower arm"
+    ],
+    "compatible_product_ids": [
+      "K-MODERNLIFE-03"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/moxie",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/moxie.jpg",
+    "model_number": "K-28238-NKE"
+  },
+  {
+    "id": "K-UNDERSCORE-01",
+    "name": "Kohler Underscore 60 x 32 Inch Deep Soaking Acrylic Bath",
+    "category": "bathtub",
+    "subcategory": "drop_in_undermount_bath",
+    "price_inr": 92000,
+    "dimensions": {
+      "width": 2.67,
+      "depth": 5.0,
+      "height": 1.75,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "zen"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Slotted overflow for deep full-body soaking",
+      "Molded lumbar support",
+      "Durable acrylic with fiberglass reinforcement"
+    ],
+    "water_consumption": {
+      "rate": 220.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Deep Soaking Standard"
+    },
+    "sustainability_attributes": [
+      "100% recyclable virgin acrylic sheet"
+    ],
+    "installation_requirements": [
+      "Dedicated drain trap and drop-in surround deck or alcove"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/underscore",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/underscore.jpg",
+    "model_number": "K-1121-0"
+  },
+  {
+    "id": "K-ARTIFACTS-BATH-02",
+    "name": "Kohler Artifacts Freestanding Oval Cast Iron Bath",
+    "category": "bathtub",
+    "subcategory": "freestanding_luxury_bath",
+    "price_inr": 240000,
+    "dimensions": {
+      "width": 2.8,
+      "depth": 5.5,
+      "height": 2.1,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury"
+    ],
+    "finishes": [
+      "white_enamel_interior_iron_black_exterior"
+    ],
+    "features": [
+      "Authentic enamelled cast iron with lifetime durability",
+      "Superior heat retention keeps bathwater warm longer",
+      "Sculpted decorative iron plinth base"
+    ],
+    "water_consumption": {
+      "rate": 260.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "High Heat Retention"
+    },
+    "sustainability_attributes": [
+      "Crafted with 93% recycled materials (scrap iron and steel)",
+      "100% recyclable cast iron"
+    ],
+    "installation_requirements": [
+      "Subfloor load capacity 400kg minimum",
+      "Floor waste outlet"
+    ],
+    "compatible_product_ids": [
+      "K-ARTIFACTS-FAUCET-01",
+      "K-MEMOIRS-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/artifacts-freestanding",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/artifacts_bath.jpg",
+    "model_number": "K-21000-0"
+  },
+  {
+    "id": "K-VERDERA-01",
+    "name": "Kohler Verdera Voice Lighted Medicine Mirror Cabinet",
+    "category": "accessory",
+    "subcategory": "smart_mirror_cabinet",
+    "price_inr": 62000,
+    "dimensions": {
+      "width": 2.0,
+      "depth": 0.45,
+      "height": 2.5,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "anodized_aluminum"
+    ],
+    "features": [
+      "Built-in Amazon Alexa voice assistant",
+      "Shadow-free LED grooming illumination (90+ CRI)",
+      "Integrated dual stereo speakers",
+      "Motion-activated nightlight"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Energy-efficient LED strips (50,000 hour lifespan)",
+      "Auto-dimming daylight sensor"
+    ],
+    "installation_requirements": [
+      "Concealed 220V power point behind mirror"
+    ],
+    "compatible_product_ids": [
+      "K-NUMI2-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/mirrors/verdera-voice",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/verdera.jpg",
+    "model_number": "K-99009-TLC"
+  },
+  {
+    "id": "K-INNATE-01",
+    "name": "Kohler Innate Intelligent Smart Toilet",
+    "category": "smart_toilet",
+    "subcategory": "floor_mount_intelligent",
+    "price_inr": 245000,
+    "dimensions": {
+      "width": 1.3,
+      "depth": 2.25,
+      "height": 1.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Integrated bidet with front/rear wash and pulsating spray",
+      "Heated seat with temperature presets",
+      "Hands-free motion-activated lid",
+      "Automatic deodorization carbon filter",
+      "Warm air dryer with adjustable temperature",
+      "LED nightlight"
+    ],
+    "water_consumption": {
+      "rate": 3.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Dual-Flush 3.8/3.0 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense Certified",
+      "Eco power-save standby mode"
+    ],
+    "installation_requirements": [
+      "Dedicated 220V/15A electrical outlet within 3 ft",
+      "Standard 12-inch floor rough-in",
+      "Minimum static pressure 0.14 MPa"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-VERDERA-01",
+      "K-STATEMENT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/innate-intelligent-toilet-k-28241",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/innate_toilet.jpg",
+    "model_number": "K-28241-0"
+  },
+  {
+    "id": "K-AIRIA-01",
+    "name": "Kohler Aira Intelligent Wall-Hung Smart Toilet",
+    "category": "smart_toilet",
+    "subcategory": "wall_hung_intelligent",
+    "price_inr": 365000,
+    "dimensions": {
+      "width": 1.32,
+      "depth": 2.18,
+      "height": 1.42,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "zen"
+    ],
+    "finishes": [
+      "white",
+      "honed_black"
+    ],
+    "features": [
+      "Supramic ceramic body with ultra-slim profile",
+      "Electrolyzed water auto-cleaning nozzle",
+      "Wireless wall-mounted touchscreen remote",
+      "UV light wand sanitization",
+      "Adjustable water temperature and oscillation wand"
+    ],
+    "water_consumption": {
+      "rate": 3.0,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Ultra-High Efficiency 3.0/4.5 LPF"
+    },
+    "sustainability_attributes": [
+      "LEED v4 water efficiency compliant",
+      "Antimicrobial glaze"
+    ],
+    "installation_requirements": [
+      "Kohler in-wall carrier frame with concealed cistern",
+      "220V AC electrical feed behind wall"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-BASIN-01",
+      "K-COMPOSED-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/aira-wall-hung-intelligent-toilet",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/aira_smart_toilet.jpg",
+    "model_number": "K-77797IN-0"
+  },
+  {
+    "id": "K-EIR-01",
+    "name": "Kohler Eir Intelligent Comfort Toilet",
+    "category": "smart_toilet",
+    "subcategory": "floor_mount_intelligent",
+    "price_inr": 420000,
+    "dimensions": {
+      "width": 1.35,
+      "depth": 2.3,
+      "height": 1.6,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "modern",
+      "contemporary"
+    ],
+    "finishes": [
+      "white_with_sunrise_gold_accents",
+      "white_with_rose_gold_accents"
+    ],
+    "features": [
+      "Jewel-like accent trim in sunrise gold",
+      "Dual filtration water purification system",
+      "Hands-free foot sensor flush & lid opening",
+      "Customizable user memory profiles via Kohler Konnect app",
+      "Heated French curve ergonomically contoured seat"
+    ],
+    "water_consumption": {
+      "rate": 3.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 3.8/3.0 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled",
+      "Micro-filtration reduces scale buildup"
+    ],
+    "installation_requirements": [
+      "Dedicated 220V electrical connection",
+      "12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-STATEMENT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/eir-intelligent-toilet-k-77795",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/eir_smart_toilet.jpg",
+    "model_number": "K-77795-0"
+  },
+  {
+    "id": "K-NUMI-ORIG-01",
+    "name": "Kohler Numi Intelligent Toilet Original Edition",
+    "category": "smart_toilet",
+    "subcategory": "floor_mount_intelligent",
+    "price_inr": 385000,
+    "dimensions": {
+      "width": 1.25,
+      "depth": 2.15,
+      "height": 1.5,
+      "unit": "ft"
+    },
+    "styles": [
+      "futuristic",
+      "luxury",
+      "minimalist"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Pioneering geometric architectural silhouette",
+      "Automatic opening cover and seat",
+      "Floor-directed foot warmer",
+      "FM radio and auxiliary MP3 jack audio system",
+      "Illuminated touchscreen LCD control panel"
+    ],
+    "water_consumption": {
+      "rate": 4.0,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Dual Flush 4.0/3.0 LPF"
+    },
+    "sustainability_attributes": [
+      "Dual flush water-saving technology",
+      "Power management auto-sleep"
+    ],
+    "installation_requirements": [
+      "Dedicated 220V GFI electrical supply",
+      "Concealed 1/2-inch water connection"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-VERDERA-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/numi-original",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/numi_orig.jpg",
+    "model_number": "K-3900-0"
+  },
+  {
+    "id": "K-SAN-SOUCI-SMART-01",
+    "name": "Kohler San Souci Touchless Low-Profile Toilet",
+    "category": "smart_toilet",
+    "subcategory": "one_piece_touchless",
+    "price_inr": 88000,
+    "dimensions": {
+      "width": 1.38,
+      "depth": 2.31,
+      "height": 2.1,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "white",
+      "black_black"
+    ],
+    "features": [
+      "Wave-to-flush motion sensor touchless flush module",
+      "Sleek low-profile seamless one-piece tank and bowl",
+      "AquaPiston canister flush engine delivering 360-degree water swirl",
+      "Quiet-Close soft closing seat"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF (1.28 GPF)"
+    },
+    "sustainability_attributes": [
+      "WaterSense Certified saves up to 16,500 liters per year vs 6 LPF standard"
+    ],
+    "installation_requirements": [
+      "Standard 12-inch rough-in plumbing",
+      "4 AA battery pack for touchless sensor module"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/san-souci-touchless-toilet-k-4000",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/sansouci_touchless.jpg",
+    "model_number": "K-4000-0"
+  },
+  {
+    "id": "K-SAN-RAPHAEL-01",
+    "name": "Kohler San Raphael One-Piece Elongated Toilet",
+    "category": "toilet",
+    "subcategory": "one_piece_floor_mount",
+    "price_inr": 62000,
+    "dimensions": {
+      "width": 1.42,
+      "depth": 2.5,
+      "height": 1.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional",
+      "luxury"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Low-profile silhouette with concealed trapway for easy cleaning",
+      "Ingenium flushing system ensuring complete bowl rinse",
+      "Quiet-Close French curve toilet seat",
+      "Seamless vitreous china one-piece construction"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified",
+      "Conserves 20% water vs 6 LPF"
+    ],
+    "installation_requirements": [
+      "Standard 12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-ARTIFACTS-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/san-raphael",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/san_raphael.jpg",
+    "model_number": "K-3722-0"
+  },
+  {
+    "id": "K-MEMOIRS-TOILET-01",
+    "name": "Kohler Memoirs Classic Comfort Height Two-Piece Toilet",
+    "category": "toilet",
+    "subcategory": "two_piece_floor_mount",
+    "price_inr": 42000,
+    "dimensions": {
+      "width": 1.48,
+      "depth": 2.52,
+      "height": 2.62,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "traditional",
+      "luxury"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Architectural crown molding detailing on tank and lid",
+      "AquaPiston 360-degree canister flush engine",
+      "Comfort Height seating chair-level ease of standing",
+      "Polished chrome decorative side trip lever"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense Certified",
+      "Durable vitreous china"
+    ],
+    "installation_requirements": [
+      "Standard 12-inch rough-in plumbing"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-ARTIFACTS-FAUCET-01",
+      "K-ARTIFACTS-BATH-02"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/memoirs-classic-comfort-height-toilet-k-3817",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/memoirs_toilet.jpg",
+    "model_number": "K-3817-0"
+  },
+  {
+    "id": "K-VEIL-TOILET-CONV-01",
+    "name": "Kohler Veil Wall-Hung Toilet Bowl (Standard Dual Flush)",
+    "category": "toilet",
+    "subcategory": "wall_hung",
+    "price_inr": 54000,
+    "dimensions": {
+      "width": 1.3,
+      "depth": 1.85,
+      "height": 1.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "space_saver"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Flowing sculptural ergonomic curves",
+      "Fully skirted trapway with concealed hardware",
+      "Quiet-Close wrap-over slim seat",
+      "Wall-mounted for easy floor cleaning"
+    ],
+    "water_consumption": {
+      "rate": 3.0,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Dual Flush 3.0/4.5 LPF"
+    },
+    "sustainability_attributes": [
+      "High-efficiency dual flush saves up to 35% water vs conventional toilets"
+    ],
+    "installation_requirements": [
+      "Kohler in-wall tank carrier system"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-BASIN-01",
+      "K-COMPOSED-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/toilets/veil-wall-hung-toilet-k-5722in",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/veil_toilet_conv.jpg",
+    "model_number": "K-5722IN-0"
+  },
+  {
+    "id": "K-PATIO-01",
+    "name": "Kohler Patio Wall-Hung Toilet",
+    "category": "toilet",
+    "subcategory": "wall_hung",
+    "price_inr": 18500,
+    "dimensions": {
+      "width": 1.2,
+      "depth": 1.75,
+      "height": 1.28,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "space_saver",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Ultra-compact 1.75 ft depth footprint ideal for small apartments and powder rooms",
+      "Rimless bowl technology prevents dirt accumulation",
+      "Quick-release soft close slim seat",
+      "Washdown flushing action"
+    ],
+    "water_consumption": {
+      "rate": 3.5,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 3.5/2.5 LPF Dual Flush"
+    },
+    "sustainability_attributes": [
+      "Low volume flush saves up to 40% domestic water"
+    ],
+    "installation_requirements": [
+      "Standard in-wall cistern frame"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/toilets/patio-wall-hung",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/patio_toilet.jpg",
+    "model_number": "K-4198IN-0"
+  },
+  {
+    "id": "K-SAN-MARTINE-01",
+    "name": "Kohler San Martine Compact One-Piece Toilet",
+    "category": "toilet",
+    "subcategory": "one_piece_floor_mount",
+    "price_inr": 48000,
+    "dimensions": {
+      "width": 1.35,
+      "depth": 2.25,
+      "height": 1.95,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "space_saver",
+      "transitional"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Space-saving one-piece integrated construction",
+      "Smooth contoured exterior skirt for wipe-down cleanliness",
+      "Quiet-close seat prevents slamming",
+      "Siphon jet flushing"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled"
+    ],
+    "installation_requirements": [
+      "12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/san-martine",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/san_martine.jpg",
+    "model_number": "K-3843IN-0"
+  },
+  {
+    "id": "K-DEVONSHIRE-TOILET-01",
+    "name": "Kohler Devonshire Comfort Height Two-Piece Toilet",
+    "category": "toilet",
+    "subcategory": "two_piece_floor_mount",
+    "price_inr": 34500,
+    "dimensions": {
+      "width": 1.45,
+      "depth": 2.48,
+      "height": 2.58,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional",
+      "traditional"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Subtle molded edgework captures timeless American elegance",
+      "AquaPiston canister valve creates powerful leak-free flush",
+      "Comfort Height seating complies with ADA accessibility guidelines"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-VANITY-01",
+      "K-DEVONSHIRE-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/devonshire-comfort-height-toilet-k-3837",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_toilet.jpg",
+    "model_number": "K-3837-0"
+  },
+  {
+    "id": "K-REACH-UP-01",
+    "name": "Kohler Reach Up Wall-Hung Compact Toilet",
+    "category": "toilet",
+    "subcategory": "wall_hung",
+    "price_inr": 29000,
+    "dimensions": {
+      "width": 1.22,
+      "depth": 1.82,
+      "height": 1.3,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "French modern aesthetic with fully skirted clean lines",
+      "High performance 3/4.5 LPF dual flush washdown engine",
+      "Quick-release hinge mechanism for effortless seat removal"
+    ],
+    "water_consumption": {
+      "rate": 3.0,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Eco Dual Flush 3.0/4.5 LPF"
+    },
+    "sustainability_attributes": [
+      "Eco flush certified"
+    ],
+    "installation_requirements": [
+      "In-wall cistern frame"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/toilets/reach-up-wall-hung",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/reach_up_toilet.jpg",
+    "model_number": "K-3983IN-0"
+  },
+  {
+    "id": "K-CORBELLE-01",
+    "name": "Kohler Corbelle ContinuousClean Comfort Height Toilet",
+    "category": "toilet",
+    "subcategory": "two_piece_floor_mount",
+    "price_inr": 49500,
+    "dimensions": {
+      "width": 1.44,
+      "depth": 2.45,
+      "height": 2.6,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "transitional"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Revolutionary ContinuousClean self-cleaning system automatically dispenses cleaning solution with every flush",
+      "Revolution 360 swirl flush technology delivers complete 360-degree bowl wash",
+      "CleanCoat surface barrier prevents water stains"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "ContinuousClean extends cleanliness while saving water"
+    ],
+    "installation_requirements": [
+      "12-inch rough-in plumbing",
+      "2 AAA batteries for dispenser"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/corbelle-continuousclean-toilet-k-3814",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/corbelle_toilet.jpg",
+    "model_number": "K-3814-0"
+  },
+  {
+    "id": "K-WELLWORTH-01",
+    "name": "Kohler Wellworth Classic Dual-Flush Toilet",
+    "category": "toilet",
+    "subcategory": "two_piece_floor_mount",
+    "price_inr": 21500,
+    "dimensions": {
+      "width": 1.45,
+      "depth": 2.4,
+      "height": 2.45,
+      "unit": "ft"
+    },
+    "styles": [
+      "budget_conscious",
+      "transitional"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Benchmark American value and reliability since 1936",
+      "Top-mount two-tone dual-flush actuator button (light flush for liquid, full flush for solid)",
+      "Class Five flushing technology virtually eliminates clogs"
+    ],
+    "water_consumption": {
+      "rate": 4.2,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Dual Flush 4.2/6.0 LPF (Average 4.2 LPF)"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled dual flush saves up to 15,000 liters annually"
+    ],
+    "installation_requirements": [
+      "12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/wellworth-dual-flush-toilet-k-3987",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/wellworth_toilet.jpg",
+    "model_number": "K-3987-0"
+  },
+  {
+    "id": "K-ODEON-WH-01",
+    "name": "Kohler Odeon Smooth Wall-Hung Toilet",
+    "category": "toilet",
+    "subcategory": "wall_hung",
+    "price_inr": 22000,
+    "dimensions": {
+      "width": 1.25,
+      "depth": 1.85,
+      "height": 1.32,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "space_saver"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Clean geometric curves with semi-skirted apron",
+      "Durable thermoset soft-close seat",
+      "Rimless washdown flush preventing bacterial adhesion"
+    ],
+    "water_consumption": {
+      "rate": 3.5,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 3.5 LPF"
+    },
+    "sustainability_attributes": [
+      "High efficiency low flush volume"
+    ],
+    "installation_requirements": [
+      "Standard in-wall cistern carrier"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/toilets/odeon-wall-hung",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/odeon_toilet.jpg",
+    "model_number": "K-8762IN-0"
+  },
+  {
+    "id": "K-BRACKEN-01",
+    "name": "Kohler Bracken Compact Round-Front Two-Piece Toilet",
+    "category": "toilet",
+    "subcategory": "two_piece_floor_mount",
+    "price_inr": 19500,
+    "dimensions": {
+      "width": 1.38,
+      "depth": 2.15,
+      "height": 2.4,
+      "unit": "ft"
+    },
+    "styles": [
+      "budget_conscious",
+      "space_saver"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Round-front bowl saves 2 inches of floor projection over elongated models",
+      "Engineered for tight powder rooms and secondary baths",
+      "Precision-glazed trapway for rapid waste evacuation"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/bracken-compact",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/bracken_toilet.jpg",
+    "model_number": "K-3490IN-0"
+  },
+  {
+    "id": "K-PUREWASH-E790-01",
+    "name": "Kohler PureWash E790 Heated Electronic Bidet Toilet Seat",
+    "category": "accessory",
+    "subcategory": "electronic_bidet_seat",
+    "price_inr": 45000,
+    "dimensions": {
+      "width": 1.25,
+      "depth": 1.75,
+      "height": 0.45,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "tech_forward"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Converts standard elongated toilet into a luxury cleansing smart system",
+      "Self-cleaning stainless steel wand with UV sanitization",
+      "Instant continuous water heating for endless warm cleansing",
+      "Adjustable warm air dryer and carbon deodorizer",
+      "Slim, low-profile ergonomic design with handheld wireless remote"
+    ],
+    "water_consumption": {
+      "rate": 0.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Micro-Aero Cleansing 0.6 LPM"
+    },
+    "sustainability_attributes": [
+      "Significantly reduces household toilet paper consumption",
+      "Energy star rated instant tankless heating"
+    ],
+    "installation_requirements": [
+      "220V standard outlet within 3.5 ft of toilet",
+      "Elongated toilet bowl mount",
+      "Cold water T-valve connection (included)"
+    ],
+    "compatible_product_ids": [
+      "K-CIMARRON-04",
+      "K-MEMOIRS-TOILET-01",
+      "K-SAN-RAPHAEL-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilet-seats-bidet-seats/purewash-e790",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purewash_e790.jpg",
+    "model_number": "K-28119IN-0"
+  },
+  {
+    "id": "K-PURETIDE-MANUAL-01",
+    "name": "Kohler Puretide Non-Electric Manual Bidet Seat",
+    "category": "accessory",
+    "subcategory": "manual_bidet_seat",
+    "price_inr": 12500,
+    "dimensions": {
+      "width": 1.2,
+      "depth": 1.7,
+      "height": 0.35,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "budget_conscious",
+      "space_saver"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Non-electric water-powered single wand bidet mechanism",
+      "Manually controlled spray position and pressure adjustment side lever",
+      "Quiet-Close slow closing lid prevents slamming",
+      "Quick-Attach hardware for swift DIY installation"
+    ],
+    "water_consumption": {
+      "rate": 0.8,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Non-Electric Ambient Cleansing"
+    },
+    "sustainability_attributes": [
+      "Zero electricity required (zero power draw)",
+      "Reduces toilet paper usage by up to 75%"
+    ],
+    "installation_requirements": [
+      "Standard elongated toilet bowl",
+      "Cold water supply line connection (T-valve included)"
+    ],
+    "compatible_product_ids": [
+      "K-CIMARRON-04",
+      "K-DEVONSHIRE-TOILET-01",
+      "K-WELLWORTH-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilet-seats-bidet-seats/puretide-bidet-seat-k-5724",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/puretide_manual.jpg",
+    "model_number": "K-5724-0"
+  },
+  {
+    "id": "K-CUFF-HEALTH-FAUCET-01",
+    "name": "Kohler Cuff Ergonomic Hygiene Spray (Health Faucet)",
+    "category": "accessory",
+    "subcategory": "hygiene_spray",
+    "price_inr": 2800,
+    "dimensions": {
+      "width": 0.25,
+      "depth": 0.3,
+      "height": 0.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Easy-grip ergonomic spray trigger design",
+      "Anti-twist flexible 1.2m reinforced metal hose",
+      "Directional high-precision cleansing aerator nozzle",
+      "Includes wall mounting bracket and hardware"
+    ],
+    "water_consumption": {
+      "rate": 3.8,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Precision Spray 3.8 LPM"
+    },
+    "sustainability_attributes": [
+      "Promotes water-based hygiene over paper products"
+    ],
+    "installation_requirements": [
+      "Standard 1/2 inch angle stop outlet beside toilet"
+    ],
+    "compatible_product_ids": [
+      "K-MODERNLIFE-03",
+      "K-CIMARRON-04",
+      "K-PATIO-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/accessories/cuff-hygiene-spray",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/cuff_hygiene_spray.jpg",
+    "model_number": "K-98100IN-CP"
+  },
+  {
+    "id": "K-JAS-VANITY-01",
+    "name": "Kohler Jas 24-Inch Compact Wall-Hung Floating Vanity",
+    "category": "vanity",
+    "subcategory": "wall_mount_vanity",
+    "price_inr": 48000,
+    "dimensions": {
+      "width": 2.0,
+      "depth": 1.5,
+      "height": 1.8,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "space_saver"
+    ],
+    "finishes": [
+      "white_gloss",
+      "slate_grey"
+    ],
+    "features": [
+      "Ultra-compact 24-inch wide profile for small urban bathrooms",
+      "Full-extension soft-close drawer with U-shaped plumbing cutout",
+      "Moisture-proof polyurethane exterior coating"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "CARB Phase 2 compliant low formaldehyde engineered wood"
+    ],
+    "installation_requirements": [
+      "Wall stud mounting with heavy-duty lag bolts"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01",
+      "K-PATIO-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/vanities/jas-24",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/jas_vanity.jpg",
+    "model_number": "K-99015IN-F69"
+  },
+  {
+    "id": "K-JUTE-VANITY-01",
+    "name": "Kohler Jute 48-Inch Contemporary Wall-Hung Vanity",
+    "category": "vanity",
+    "subcategory": "wall_mount_vanity",
+    "price_inr": 135000,
+    "dimensions": {
+      "width": 4.0,
+      "depth": 1.85,
+      "height": 1.95,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "linen_weave",
+      "walnut"
+    ],
+    "features": [
+      "Mid-century modern split-drawer layout with integrated finger pulls",
+      "Silestone quartz solid-surface pre-drilled vanity top",
+      "Concealed electrical drawer with dual AC power outlets and USB ports",
+      "Under-cabinet ambient LED mood light strip"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "FSC-Certified sustainably harvested timber",
+      "Low VOC finishes"
+    ],
+    "installation_requirements": [
+      "Reinforced double wall blocking behind drywall"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-BASIN-01",
+      "K-PURIST-01",
+      "K-VERDERA-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/jute-48",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/jute_vanity.jpg",
+    "model_number": "K-99543-F69"
+  },
+  {
+    "id": "K-DEVONSHIRE-VANITY-01",
+    "name": "Kohler Devonshire 36-Inch Classic Pedestal Vanity",
+    "category": "vanity",
+    "subcategory": "freestanding_vanity",
+    "price_inr": 78000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 1.9,
+      "height": 2.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional",
+      "traditional"
+    ],
+    "finishes": [
+      "white",
+      "vintage_cherry"
+    ],
+    "features": [
+      "Classic American raised-panel doors and decorative turned feet",
+      "Solid ash and birch hardwood construction",
+      "Polished chrome decorative knob pulls",
+      "Interior adjustable storage shelf"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Solid wood heirloom build with decades-long lifespan"
+    ],
+    "installation_requirements": [
+      "Standard floor drain and water supply stub-out"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-TOILET-01",
+      "K-DEVONSHIRE-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/devonshire-36",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_vanity.jpg",
+    "model_number": "K-2448-F69"
+  },
+  {
+    "id": "K-SILICON-VALLEY-VANITY-01",
+    "name": "Kohler Poplin 60-Inch Double Sink Freestanding Master Vanity",
+    "category": "vanity",
+    "subcategory": "double_basin_vanity",
+    "price_inr": 195000,
+    "dimensions": {
+      "width": 5.0,
+      "depth": 1.95,
+      "height": 2.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "transitional"
+    ],
+    "finishes": [
+      "felt_grey",
+      "claret_suede",
+      "white"
+    ],
+    "features": [
+      "Spacious double-sink design for master ensuites",
+      "Calacatta white natural quartz top with pre-installed undermount porcelain basins",
+      "Four slow-close dovetail drawers plus dual under-sink cabinet storage",
+      "Built-in bamboo drawer dividers and grooming organizer"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Natural quartz surface with zero off-gassing sealants"
+    ],
+    "installation_requirements": [
+      "Dual plumbing supply and waste lines spaced 30 inches apart"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-COMPOSED-01",
+      "K-VEIL-WH-02"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/poplin-60",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/poplin_60.jpg",
+    "model_number": "K-99537-F69"
+  },
+  {
+    "id": "K-TRESSORE-VANITY-01",
+    "name": "Kohler Tressore 30-Inch Modern Minimalist Vanity",
+    "category": "vanity",
+    "subcategory": "freestanding_vanity",
+    "price_inr": 62000,
+    "dimensions": {
+      "width": 2.5,
+      "depth": 1.8,
+      "height": 2.75,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "matte_black",
+      "light_oak"
+    ],
+    "features": [
+      "Slender matte-black architectural steel leg base",
+      "Deep lower storage drawer with integrated soft-close glides",
+      "Vitreous china integrated single-hole basin top"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Recyclable steel frame and ceramic top"
+    ],
+    "installation_requirements": [
+      "Floor support and wall anchor strap"
+    ],
+    "compatible_product_ids": [
+      "K-MODERNLIFE-03",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/vanities/tressore-30",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/tressore_vanity.jpg",
+    "model_number": "K-99018IN-F69"
+  },
+  {
+    "id": "K-MAXSTOW-VANITY-01",
+    "name": "Kohler Maxstow 20-Inch Powder Room Vanity",
+    "category": "vanity",
+    "subcategory": "powder_room_vanity",
+    "price_inr": 34000,
+    "dimensions": {
+      "width": 1.67,
+      "depth": 1.35,
+      "height": 2.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "space_saver",
+      "minimalist",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white",
+      "shadow_grey"
+    ],
+    "features": [
+      "Engineered specifically for narrow powder rooms with tight clearances",
+      "Staggered door shelves hold toiletries in underutilized door volume",
+      "Compact projection ceramic basin top"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Material-efficient micro footprint"
+    ],
+    "installation_requirements": [
+      "Floor waste or wall stub-out"
+    ],
+    "compatible_product_ids": [
+      "K-PATIO-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/maxstow-20",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/maxstow_vanity.jpg",
+    "model_number": "K-81140-F69"
+  },
+  {
+    "id": "K-VERA-DOUBLE-VANITY-01",
+    "name": "Kohler Vera 72-Inch Grand Double Executive Vanity",
+    "category": "vanity",
+    "subcategory": "double_basin_vanity",
+    "price_inr": 285000,
+    "dimensions": {
+      "width": 6.0,
+      "depth": 2.0,
+      "height": 2.9,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "modern",
+      "contemporary"
+    ],
+    "finishes": [
+      "smoky_celadon",
+      "walnut_chevron",
+      "matte_white"
+    ],
+    "features": [
+      "Monumental 6-foot grand executive master bathroom statement piece",
+      "Custom Nero Marquina black marble or Statuario white quartz slab top",
+      "Soft-close full extension solid maple dovetail drawers with jewelry trays",
+      "Integrated electrical power hubs with hair appliance holders inside cabinets"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Lifetime heirloom materials",
+      "Sustainably sourced North American maple"
+    ],
+    "installation_requirements": [
+      "Reinforced floor structure",
+      "Dual independent plumbing stacks"
+    ],
+    "compatible_product_ids": [
+      "K-NUMI2-01",
+      "K-COMPOSED-01",
+      "K-VERDERA-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/vera-72",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/vera_vanity.jpg",
+    "model_number": "K-99547-F69"
+  },
+  {
+    "id": "K-CAXTON-01",
+    "name": "Kohler Caxton Rectangular Undermount Bathroom Sink",
+    "category": "basin",
+    "subcategory": "undermount_basin",
+    "price_inr": 11500,
+    "dimensions": {
+      "width": 1.68,
+      "depth": 1.35,
+      "height": 0.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "transitional"
+    ],
+    "finishes": [
+      "white",
+      "biscuit",
+      "black_black"
+    ],
+    "features": [
+      "Streamlined undercounter basin sits flush with countertop for easy wipe-down cleanup",
+      "Vitreous china construction for exceptional durability and stain resistance",
+      "Unobtrusive overflow drain"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% recyclable ceramic material"
+    ],
+    "installation_requirements": [
+      "Solid surface countertop with undermount cutout template"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-PURIST-01",
+      "K-MEMOIRS-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathroom-sinks/caxton-k-2210",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/caxton_sink.jpg",
+    "model_number": "K-2210-0"
+  },
+  {
+    "id": "K-LADENA-01",
+    "name": "Kohler Ladena 21-Inch Undermount Basin",
+    "category": "basin",
+    "subcategory": "undermount_basin",
+    "price_inr": 16500,
+    "dimensions": {
+      "width": 1.75,
+      "depth": 1.25,
+      "height": 0.58,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "zen"
+    ],
+    "finishes": [
+      "white",
+      "almond"
+    ],
+    "features": [
+      "Spacious rectangular basin with clean, geometric design",
+      "Gentle sloping floor minimizes standing water residue",
+      "Seamless undermount transition to granite/quartz counters"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Eco-friendly vitreous china formula"
+    ],
+    "installation_requirements": [
+      "Undermount mounting clips and silicone sealant"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-JUTE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathroom-sinks/ladena-k-2215",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/ladena_sink.jpg",
+    "model_number": "K-2215-0"
+  },
+  {
+    "id": "K-VOX-RECT-01",
+    "name": "Kohler Vox Rectangular Vessel Vessel Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 22500,
+    "dimensions": {
+      "width": 1.92,
+      "depth": 1.42,
+      "height": 0.48,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Sleek shallow-depth vessel silhouette with defined perimeter lines",
+      "True deck mounting adds architectural drama to bathroom countertops",
+      "Glazed on all exposed surfaces"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Durable ceramic lasts generations without replacement"
+    ],
+    "installation_requirements": [
+      "Countertop drain hole cutout"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-COMPOSED-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/vox-vessel",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/vox_vessel.jpg",
+    "model_number": "K-5373IN-0"
+  },
+  {
+    "id": "K-CHALICE-ROUND-01",
+    "name": "Kohler Chalice Round Vessel Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 19500,
+    "dimensions": {
+      "width": 1.38,
+      "depth": 1.38,
+      "height": 0.5,
+      "unit": "ft"
+    },
+    "styles": [
+      "zen",
+      "modern",
+      "organic_modern"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Spherical chalice silhouette inspired by fine ceramics",
+      "Compact 16.5-inch diameter ideal for smaller vanities",
+      "Ultra-smooth interior bowl for effortless hygiene"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% inert recyclable vitrified clay"
+    ],
+    "installation_requirements": [
+      "Countertop deck installation with tall vessel faucet"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-TRESSORE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/chalice-round",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/chalice_basin.jpg",
+    "model_number": "K-14800IN-0"
+  },
+  {
+    "id": "K-MEMOIRS-PEDESTAL-01",
+    "name": "Kohler Memoirs Stately 24-Inch Pedestal Basin with Pedestal",
+    "category": "basin",
+    "subcategory": "pedestal_sink",
+    "price_inr": 38000,
+    "dimensions": {
+      "width": 2.0,
+      "depth": 1.7,
+      "height": 2.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "traditional",
+      "luxury"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Timeless classical pedestal design frees visual floor area in heritage and traditional bathrooms",
+      "Molded historic architectural stepped border styling",
+      "Wide faucet deck provides convenient resting space for toiletries",
+      "Conceals water supply and p-trap plumbing within the column"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Cast vitreous china with 50+ year operational life"
+    ],
+    "installation_requirements": [
+      "Wall anchor lag bolts and floor level pedestal positioning"
+    ],
+    "compatible_product_ids": [
+      "K-ARTIFACTS-FAUCET-01",
+      "K-MEMOIRS-TOILET-01",
+      "K-ARTIFACTS-BATH-02"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathroom-sinks/memoirs-stately-pedestal-k-2258",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/memoirs_pedestal.jpg",
+    "model_number": "K-2258-1-0"
+  },
+  {
+    "id": "K-VEIL-VESSEL-ROUND-01",
+    "name": "Kohler Veil Round Fine-Ceramic Vessel Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 29500,
+    "dimensions": {
+      "width": 1.45,
+      "depth": 1.45,
+      "height": 0.42,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "zen",
+      "minimalist"
+    ],
+    "finishes": [
+      "white",
+      "cashmere"
+    ],
+    "features": [
+      "Crafted from proprietary Supramic thin-wall high-strength ceramic material",
+      "Ultra-fine precision rim under 5mm thickness",
+      "Organic basin silhouette with stain-resistant CleanCoat glaze"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "High strength formulation requires 30% less raw clay material"
+    ],
+    "installation_requirements": [
+      "Countertop cutout for 1-1/4 inch waste pipe"
+    ],
+    "compatible_product_ids": [
+      "K-COMPOSED-01",
+      "K-VEIL-WH-02",
+      "K-JUTE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/veil-round-vessel",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/veil_round_basin.jpg",
+    "model_number": "K-20703IN-0"
+  },
+  {
+    "id": "K-VERNON-WALL-BASIN-01",
+    "name": "Kohler Vernon Wall-Hung Compact Cloakroom Basin",
+    "category": "basin",
+    "subcategory": "wall_hung_basin",
+    "price_inr": 14500,
+    "dimensions": {
+      "width": 1.5,
+      "depth": 1.15,
+      "height": 0.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "space_saver",
+      "minimalist",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Direct wall-mount design eliminates need for any vanity cabinet underneath",
+      "Deep interior bowl prevents water splashing despite shallow 14-inch depth",
+      "Integrated single faucet hole deck and overflow"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Minimal resource consumption, 100% vitrified china"
+    ],
+    "installation_requirements": [
+      "Heavy-duty wall anchor bolts and decorative chrome bottle trap"
+    ],
+    "compatible_product_ids": [
+      "K-PATIO-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/vernon-wall-hung",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/vernon_wall_basin.jpg",
+    "model_number": "K-2757IN-0"
+  },
+  {
+    "id": "K-MANSFIELD-SEMIREC-01",
+    "name": "Kohler Semi-Recessed Modern Vanity Basin",
+    "category": "basin",
+    "subcategory": "semi_recessed_basin",
+    "price_inr": 18000,
+    "dimensions": {
+      "width": 1.8,
+      "depth": 1.45,
+      "height": 0.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "space_saver",
+      "transitional"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Semi-recessed installation overhangs the front of slim countertops",
+      "Allows full basin functionality on narrow 14-to-16 inch deep vanity cabinets",
+      "Front apron drops gracefully over cabinetry edge"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Allows narrow counters, saving bathroom floor area"
+    ],
+    "installation_requirements": [
+      "Semi-recessed counter cut-out"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-MODERNLIFE-03"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/semi-recessed-basin",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/semi_recessed_basin.jpg",
+    "model_number": "K-2905IN-0"
+  },
+  {
+    "id": "K-PURIST-WALL-FAUCET-01",
+    "name": "Kohler Purist Wall-Mount Two-Handle Basin Faucet",
+    "category": "faucet",
+    "subcategory": "wall_mount_basin_faucet",
+    "price_inr": 39500,
+    "dimensions": {
+      "width": 0.85,
+      "depth": 0.75,
+      "height": 0.35,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "luxury",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Wall-mount installation leaves countertop completely unobstructed",
+      "9-inch spout reach provides generous clearance for tall vessel sinks",
+      "Dual cross handles with 1/4-turn ceramic disc valves",
+      "Solid brass construction for lifetime durability"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM (1.2 GPM)"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified saves over 30% water vs 8.3 LPM standard"
+    ],
+    "installation_requirements": [
+      "Concealed in-wall two-handle rough-in valve"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-VEIL-BASIN-01",
+      "K-VOX-RECT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/shop-faucets/purist-wall-mount-bathroom-faucet-k-t14414",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_wall_faucet.jpg",
+    "model_number": "K-T14414-4-CP"
+  },
+  {
+    "id": "K-DEVONSHIRE-FAUCET-01",
+    "name": "Kohler Devonshire Widespread Two-Handle Bathroom Faucet",
+    "category": "faucet",
+    "subcategory": "widespread_deck_mount",
+    "price_inr": 31000,
+    "dimensions": {
+      "width": 0.75,
+      "depth": 0.65,
+      "height": 0.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional",
+      "traditional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "vibrant_brushed_nickel",
+      "oil_rubbed_bronze"
+    ],
+    "features": [
+      "Traditional American decorative styling with lever handles",
+      "UltraGlide ceramic disc valves engineered for smooth leak-free handle rotation",
+      "Includes all-metal touch-activated pop-up drain assembly"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "3-hole 8-inch widespread deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-VANITY-01",
+      "K-DEVONSHIRE-TOILET-01",
+      "K-MEMOIRS-PEDESTAL-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/shop-faucets/devonshire-widespread-faucet-k-394",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_faucet.jpg",
+    "model_number": "K-394-4-CP"
+  },
+  {
+    "id": "K-AVID-FAUCET-01",
+    "name": "Kohler Avid Single-Handle Monobloc Basin Faucet",
+    "category": "faucet",
+    "subcategory": "single_lever_deck_mount",
+    "price_inr": 22500,
+    "dimensions": {
+      "width": 0.28,
+      "depth": 0.58,
+      "height": 0.68,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black",
+      "brushed_nickel"
+    ],
+    "features": [
+      "Slender architectural single-lever control combining fluid curves with precise angles",
+      "Temperature limit stop allows presetting a maximum water temperature to prevent scalding",
+      "Flexible stainless steel braided supply lines for easy hookup"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified eco-aerator"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-CAXTON-01",
+      "K-HARKEN-VANITY-01",
+      "K-MODERNLIFE-03"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/p/washbasins/avid-single-handle-bathroom-sink-faucet-7-0-lpm-97345in-4",
+    "verification_status": "verified",
+    "image_url": "/assets/products/avid_faucet.jpg",
+    "model_number": "K-97345IN-4-CP"
+  },
+  {
+    "id": "K-TAUT-FAUCET-01",
+    "name": "Kohler Taut Single-Control Basin Faucet",
+    "category": "faucet",
+    "subcategory": "single_lever_deck_mount",
+    "price_inr": 11500,
+    "dimensions": {
+      "width": 0.26,
+      "depth": 0.52,
+      "height": 0.6,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "budget_conscious",
+      "space_saver"
+    ],
+    "finishes": [
+      "polished_chrome"
+    ],
+    "features": [
+      "Versatile modern aesthetic at an accessible price point",
+      "Kohler ceramic cartridge tested for 1,000,000 on/off duty cycles",
+      "Corrosion and tarnish resistant finish exceeding industry durability standards 2x"
+    ],
+    "water_consumption": {
+      "rate": 4.0,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Eco-Flow 4.0 LPM"
+    },
+    "sustainability_attributes": [
+      "High-efficiency flow regulator reduces water consumption"
+    ],
+    "installation_requirements": [
+      "Single hole deck or basin mount"
+    ],
+    "compatible_product_ids": [
+      "K-CAXTON-01",
+      "K-VERNON-WALL-BASIN-01",
+      "K-PATIO-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/faucets/taut-basin-faucet",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/taut_faucet.jpg",
+    "model_number": "K-74013IN-4-CP"
+  },
+  {
+    "id": "K-PARALLEL-FAUCET-01",
+    "name": "Kohler Parallel Single-Handle Tall Vessel Basin Faucet",
+    "category": "faucet",
+    "subcategory": "single_lever_tall",
+    "price_inr": 29000,
+    "dimensions": {
+      "width": 0.28,
+      "depth": 0.68,
+      "height": 1.15,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "contemporary"
+    ],
+    "finishes": [
+      "matte_black",
+      "brushed_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Dichotomy between round and square forms creates distinctive modern elegance",
+      "Tall body specifically engineered to clear vessel basin rims",
+      "Single joystick lever control regulates both volume and temperature effortlessly"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount beside vessel basin"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-VOX-RECT-01",
+      "K-CHALICE-ROUND-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/shop-faucets/parallel-tall-bathroom-sink-faucet-k-23475",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/parallel_faucet.jpg",
+    "model_number": "K-23475-4-CP"
+  },
+  {
+    "id": "K-BEITOU-WATERFALL-01",
+    "name": "Kohler Beitou Waterfall Basin Mixer Faucet",
+    "category": "faucet",
+    "subcategory": "waterfall_deck_mount",
+    "price_inr": 65000,
+    "dimensions": {
+      "width": 0.35,
+      "depth": 0.72,
+      "height": 0.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "zen",
+      "luxury",
+      "modern"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Architectural open-trough spout delivers a soothing, natural laminar waterfall stream",
+      "Inspired by natural Taiwanese thermal hot springs",
+      "LED temperature indicator illuminates water stream (blue cold, magenta warm, red hot)",
+      "Heavy solid cast brass construction"
+    ],
+    "water_consumption": {
+      "rate": 5.0,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Waterfall Laminar 5.0 LPM"
+    },
+    "sustainability_attributes": [
+      "Self-powered hydro-generator illuminates LED with zero batteries"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount",
+      "Minimum static pressure 0.1 MPa"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-BASIN-01",
+      "K-VEIL-WH-02",
+      "K-JUTE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/p/washbasins/beitou-single-control-tall-lavatory-faucet-99858in-4",
+    "verification_status": "verified",
+    "image_url": "/assets/products/beitou_faucet.jpg",
+    "model_number": "K-99858IN-4-CP"
+  },
+  {
+    "id": "K-SENSATE-TOUCHLESS-01",
+    "name": "Kohler Malleco Touchless Sensor Bathroom Faucet",
+    "category": "faucet",
+    "subcategory": "sensor_touchless_faucet",
+    "price_inr": 42000,
+    "dimensions": {
+      "width": 0.3,
+      "depth": 0.62,
+      "height": 0.75,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "tech_forward"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Response touchless technology provides reliable on/off activation in 20 milliseconds",
+      "Precision induction sensor avoids false activations from ambient light or movement",
+      "Automatic 30-second hygiene shut-off cycle prevents water waste",
+      "Manual override lever on side for manual temperature adjustment"
+    ],
+    "water_consumption": {
+      "rate": 3.8,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "High-Efficiency Sensor 3.8 LPM"
+    },
+    "sustainability_attributes": [
+      "Cuts basin water waste by up to 50% through automatic instant shutoff",
+      "Prevents germ transmission via touch-free operation"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount",
+      "AC power adapter or 6 AA batteries"
+    ],
+    "compatible_product_ids": [
+      "K-CAXTON-01",
+      "K-LADENA-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/malleco-touchless-faucet",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/touchless_faucet.jpg",
+    "model_number": "K-72218-CP"
+  },
+  {
+    "id": "K-MEMOIRS-FAUCET-01",
+    "name": "Kohler Memoirs Stately Widespread Basin Faucet with Stately Handles",
+    "category": "faucet",
+    "subcategory": "widespread_deck_mount",
+    "price_inr": 37500,
+    "dimensions": {
+      "width": 0.82,
+      "depth": 0.7,
+      "height": 0.58,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "traditional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "polished_brass",
+      "oil_rubbed_bronze"
+    ],
+    "features": [
+      "Deco-inspired clean faceted handle detailing captures 1920s grandeur",
+      "Solid brass construction guarantees enduring structural integrity",
+      "Ceramic disc valving engineered to maintain drip-free performance for decades"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "3-hole 8-inch widespread deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-MEMOIRS-PEDESTAL-01",
+      "K-MEMOIRS-TOILET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/shop-faucets/memoirs-stately-widespread-faucet-k-454",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/memoirs_faucet.jpg",
+    "model_number": "K-454-4V-CP"
+  },
+  {
+    "id": "K-JULIUS-FAUCET-01",
+    "name": "Kohler Aleo Single-Lever Tall Basin Faucet",
+    "category": "faucet",
+    "subcategory": "single_lever_tall",
+    "price_inr": 17500,
+    "dimensions": {
+      "width": 0.25,
+      "depth": 0.6,
+      "height": 1.05,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Geometric purity with flat plane spout and slim ergonomic lever",
+      "Tall body designed for semi-recessed and vessel countertop installations",
+      "High performance aerator generates soft champagne-like splash-free stream"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "Low-flow aerator saves up to 45% water"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-CHALICE-ROUND-01",
+      "K-TRESSORE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/faucets/aleo-tall-basin-faucet",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/aleo_faucet.jpg",
+    "model_number": "K-72275IN-4-CP"
+  },
+  {
+    "id": "K-AQUAMAC-RAIN-01",
+    "name": "Kohler Statement Oblong 14-Inch Overhead Rain Showerhead",
+    "category": "shower",
+    "subcategory": "overhead_rain_shower",
+    "price_inr": 68000,
+    "dimensions": {
+      "width": 1.18,
+      "depth": 1.18,
+      "height": 0.35,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "modern",
+      "contemporary"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Expansive oblong geometry mirrors the body silhouette for complete shoulder-to-shoulder deluge",
+      "Katalyst air-induction technology mixes 2 million air bubbles into water stream per minute",
+      "MasterClean translucent spray nozzles resist hard-water calcium buildup and wipe clean with a touch"
+    ],
+    "water_consumption": {
+      "rate": 7.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Katalyst Eco 7.6 LPM (Feels like 12 LPM)"
+    },
+    "sustainability_attributes": [
+      "Delivers luxurious drenching rain feeling while consuming 35% less water"
+    ],
+    "installation_requirements": [
+      "Ceiling shower arm with 1/2-inch NPT connection",
+      "Operating pressure 0.15-0.5 MPa"
+    ],
+    "compatible_product_ids": [
+      "K-DTV-MODE-DIGITAL-01",
+      "K-PURIST-01",
+      "K-STATEMENT-HANDSHOWER-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/statement-oblong-rainhead-k-26300",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/statement_oblong.jpg",
+    "model_number": "K-26300-CP"
+  },
+  {
+    "id": "K-RAIN-ROUND-10-01",
+    "name": "Kohler Awaken 10-Inch Round Contemporary Rainhead",
+    "category": "shower",
+    "subcategory": "overhead_rain_shower",
+    "price_inr": 28500,
+    "dimensions": {
+      "width": 0.83,
+      "depth": 0.83,
+      "height": 0.32,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Precision-sculpted sprayface with 80 targeted nozzles for warm, even envelopment",
+      "Ultra-slim 3-inch profile delivers minimalist elegance",
+      "Solid brass ball joint allows easy angle adjustment"
+    ],
+    "water_consumption": {
+      "rate": 6.8,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 6.8 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled saves up to 12,000 liters annually"
+    ],
+    "installation_requirements": [
+      "Standard 1/2 inch wall or ceiling shower arm"
+    ],
+    "compatible_product_ids": [
+      "K-AVID-FAUCET-01",
+      "K-MODERNLIFE-03"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/awaken-10-rainhead-k-76465",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/awaken_rainhead.jpg",
+    "model_number": "K-76465-CP"
+  },
+  {
+    "id": "K-HYDRO-RAIL-01",
+    "name": "Kohler HydroRail-R Shower Column System with Rainhead & Handshower Mount",
+    "category": "shower",
+    "subcategory": "shower_column_system",
+    "price_inr": 52000,
+    "dimensions": {
+      "width": 0.75,
+      "depth": 1.45,
+      "height": 3.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "transitional",
+      "luxury"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black",
+      "vibrant_brushed_nickel"
+    ],
+    "features": [
+      "Retrofits standard single-outlet wall showers into a dual luxury rainhead and handshower spa experience without in-wall plumbing alterations",
+      "Integrated two-way diverter at base of column switches smoothly between rainhead and handshower",
+      "Adjustable slidebar bracket positions handshower at desired height and angle"
+    ],
+    "water_consumption": {
+      "rate": 7.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 7.6 LPM"
+    },
+    "sustainability_attributes": [
+      "Converts existing baths to water-efficient twin-spray systems without tile demolition"
+    ],
+    "installation_requirements": [
+      "Standard wall shower outlet stub-out",
+      "Mounts directly to finished wall surface"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-SHIFT-HANDSHOWER-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/hydrorail-r-shower-column-k-45212",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/hydrorail.jpg",
+    "model_number": "K-45212-CP"
+  },
+  {
+    "id": "K-STATEMENT-HANDSHOWER-01",
+    "name": "Kohler Statement Multi-Function Handshower with Cloud Spray",
+    "category": "shower",
+    "subcategory": "hand_shower",
+    "price_inr": 18500,
+    "dimensions": {
+      "width": 0.35,
+      "depth": 0.35,
+      "height": 0.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Three unique sprays: Full Coverage with Katalyst air induction, Deep Massage target stream, and Cloud mist spray",
+      "Cloud spray creates thousands of micro-fine restorative water droplets that pamper skin",
+      "Ergonomic handle angle balances effortlessly in hand during use",
+      "Intuitive push-button spray selection"
+    ],
+    "water_consumption": {
+      "rate": 6.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 6.6 LPM (1.75 GPM)"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified eco spray modes"
+    ],
+    "installation_requirements": [
+      "Requires handshower hose, supply elbow, and wall bracket or slidebar"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-PURIST-VALVE-TRIM-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/statement-multifunction-handshower-k-26282",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/statement_handshower.jpg",
+    "model_number": "K-26282-CP"
+  },
+  {
+    "id": "K-SHIFT-HANDSHOWER-01",
+    "name": "Kohler Shift Ellipse Dual-Spray Handshower",
+    "category": "shower",
+    "subcategory": "hand_shower",
+    "price_inr": 14500,
+    "dimensions": {
+      "width": 0.25,
+      "depth": 0.28,
+      "height": 0.82,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "space_saver"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Sleek architectural baton wand design",
+      "Dual spray options: full drenching spray or concentrated targeted stream",
+      "Ergonomic lightweight brass shell"
+    ],
+    "water_consumption": {
+      "rate": 6.8,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 6.8 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled"
+    ],
+    "installation_requirements": [
+      "Standard 1/2-inch handshower hose connection"
+    ],
+    "compatible_product_ids": [
+      "K-HYDRO-RAIL-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/shift-ellipse-handshower-k-10257",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/shift_handshower.jpg",
+    "model_number": "K-10257-A-CP"
+  },
+  {
+    "id": "K-RENEW-HANDSHOWER-01",
+    "name": "Kohler Renew 3-Spray Massage Handshower Set with Hose & Cradle",
+    "category": "shower",
+    "subcategory": "hand_shower",
+    "price_inr": 8500,
+    "dimensions": {
+      "width": 0.32,
+      "depth": 0.3,
+      "height": 0.78,
+      "unit": "ft"
+    },
+    "styles": [
+      "budget_conscious",
+      "modern"
+    ],
+    "finishes": [
+      "polished_chrome"
+    ],
+    "features": [
+      "Includes 1.5m stainless steel anti-twist flexible shower hose and adjustable wall bracket",
+      "Three spray patterns: Wide Rain, Invigorating Pulsing Massage, and Eco-Rinse",
+      "Thumb-tab click selector for one-handed spray switching"
+    ],
+    "water_consumption": {
+      "rate": 6.0,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Eco-Flow 6.0 LPM"
+    },
+    "sustainability_attributes": [
+      "Eco-rinse setting conserves up to 40% water during soaping"
+    ],
+    "installation_requirements": [
+      "Standard wall shower outlet pipe"
+    ],
+    "compatible_product_ids": [
+      "K-TAUT-FAUCET-01",
+      "K-PATIO-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/showers/renew-handshower",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/renew_handshower.jpg",
+    "model_number": "K-72415IN-CP"
+  },
+  {
+    "id": "K-PURIST-VALVE-TRIM-01",
+    "name": "Kohler Purist Rite-Temp Pressure-Balancing Shower Trim with Lever",
+    "category": "shower",
+    "subcategory": "shower_valve_trim",
+    "price_inr": 22000,
+    "dimensions": {
+      "width": 0.55,
+      "depth": 0.35,
+      "height": 0.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "luxury"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Rite-Temp anti-scald pressure-balancing technology maintains water temperature within +/- 3 degrees Fahrenheit",
+      "Single ergonomic lever controls both water activation and temperature gradient",
+      "Premium solid metal construction ensures long-term finish adherence"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Anti-scald protection guarantees safety while preventing hot water waste"
+    ],
+    "installation_requirements": [
+      "Requires Kohler Rite-Temp in-wall rough-in valve body K-8304"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-PURIST-01",
+      "K-STATEMENT-HANDSHOWER-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/purist-rite-temp-valve-trim-k-ts14423",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_valve_trim.jpg",
+    "model_number": "K-TS14422-4-CP"
+  },
+  {
+    "id": "K-THERMOSTATIC-TRIM-01",
+    "name": "Kohler MasterShower Dual-Handle Thermostatic Valve Trim",
+    "category": "shower",
+    "subcategory": "thermostatic_valve_trim",
+    "price_inr": 44000,
+    "dimensions": {
+      "width": 0.55,
+      "depth": 0.38,
+      "height": 0.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "modern"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black",
+      "brushed_brass"
+    ],
+    "features": [
+      "Dual controls: top knob sets volume flow; bottom handle presets precise water temperature",
+      "High-flow thermostatic cartridge delivers up to 45 LPM to power multiple body sprays simultaneously",
+      "Integrated safety stop at 104 degrees Fahrenheit (40C) prevents accidental scalding"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Instant thermostatic response eliminates waiting for water to warm up, saving runoff water"
+    ],
+    "installation_requirements": [
+      "Kohler MasterShower 3/4-inch thermostatic rough-in valve"
+    ],
+    "compatible_product_ids": [
+      "K-AQUAMAC-RAIN-01",
+      "K-STATEMENT-HANDSHOWER-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/mastershower-thermostatic-trim",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/thermo_trim.jpg",
+    "model_number": "K-T10182-4-CP"
+  },
+  {
+    "id": "K-DTV-MODE-DIGITAL-01",
+    "name": "Kohler DTV Mode Digital Smart Shower Controller & Interface",
+    "category": "shower",
+    "subcategory": "digital_shower_controller",
+    "price_inr": 85000,
+    "dimensions": {
+      "width": 0.65,
+      "depth": 0.25,
+      "height": 0.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "tech_forward",
+      "minimalist"
+    ],
+    "finishes": [
+      "matte_black",
+      "satin_chrome"
+    ],
+    "features": [
+      "Push-button digital activation of dual shower outlets (rainhead and handshower)",
+      "Digital dial provides precision temperature control down to single degree increments",
+      "Kohler Konnect app enabled: warm up shower remotely from smartphone and pause when ready",
+      "Sleek glass front touch interface"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Warm-up and pause mode prevents water from draining away while waiting for shower to heat up",
+      "Saves up to 15 liters of warm water per shower cycle"
+    ],
+    "installation_requirements": [
+      "In-wall digital mixing valve with dedicated low-voltage power supply"
+    ],
+    "compatible_product_ids": [
+      "K-AQUAMAC-RAIN-01",
+      "K-STATEMENT-HANDSHOWER-01",
+      "K-NUMI2-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/dtv-mode-digital-interface-k-99693",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/dtv_mode.jpg",
+    "model_number": "K-99693-NA"
+  },
+  {
+    "id": "K-LEVO-DOOR-01",
+    "name": "Kohler Levity 60 x 74 Inch Frameless Sliding Shower Door",
+    "category": "shower",
+    "subcategory": "sliding_shower_door",
+    "price_inr": 58000,
+    "dimensions": {
+      "width": 5.0,
+      "depth": 0.25,
+      "height": 6.17,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "matte_black_hardware",
+      "bright_polished_silver",
+      "anodized_brushed_bronze"
+    ],
+    "features": [
+      "Frameless 3/8-inch (10 mm) thick crystal-clear tempered glass panels",
+      "CleanCoat+ hydrophobic glass treatment repels water and prevents soap scum adhesion",
+      "Dual-sliding barn-door roller system engineered for whisper-quiet glide",
+      "Integrated towel bar on outer sliding panel"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "CleanCoat+ reduces chemical bathroom cleaning detergent usage by 50%"
+    ],
+    "installation_requirements": [
+      "Vertical plumb wall surface, threshold depth 3 inches minimum"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-PURIST-VALVE-TRIM-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/shower-doors/levity-sliding-door-k-706000",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/levity_door.jpg",
+    "model_number": "K-706000-D3-SHP"
+  },
+  {
+    "id": "K-REVEL-PIVOT-01",
+    "name": "Kohler Revel 36 x 70 Inch Frameless Pivot Shower Door",
+    "category": "shower",
+    "subcategory": "pivot_shower_door",
+    "price_inr": 38000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 0.22,
+      "height": 5.83,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "space_saver",
+      "modern"
+    ],
+    "finishes": [
+      "matte_black_hardware",
+      "polished_chrome"
+    ],
+    "features": [
+      "Pivot hinge mechanism swings inward or outward for flexible room access in tight footprints",
+      "5/16-inch (8 mm) heavy tempered safety glass",
+      "Full-length magnetic seal strip ensures complete watertight closure",
+      "Adjustable wall jambs compensate for up to 3/8 inch out-of-plumb walls"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% recyclable tempered architectural glass and aluminum jambs"
+    ],
+    "installation_requirements": [
+      "Plumb shower threshold minimum 2-1/2 inches wide"
+    ],
+    "compatible_product_ids": [
+      "K-RAIN-ROUND-10-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/shower-doors/revel-pivot-door-k-707510",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/revel_door.jpg",
+    "model_number": "K-707510-L-SHP"
+  },
+  {
+    "id": "K-GRADMATE-WALKIN-01",
+    "name": "Kohler Gradient Walk-In Fixed Glass Wet-Room Shower Screen",
+    "category": "shower",
+    "subcategory": "walk_in_screen",
+    "price_inr": 32000,
+    "dimensions": {
+      "width": 3.5,
+      "depth": 0.15,
+      "height": 6.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "zen",
+      "modern",
+      "luxury"
+    ],
+    "finishes": [
+      "matte_black_profile",
+      "polished_chrome_profile"
+    ],
+    "features": [
+      "Open walk-in wet room design eliminates door threshold and door swing entirely",
+      "10mm toughened glass with CleanCoat anti-limescale shield",
+      "Architectural overhead stabilization support arm in matte black",
+      "Barrier-free zero-threshold accessible entry"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Universal design promotes lifelong accessibility"
+    ],
+    "installation_requirements": [
+      "Floor drain slope toward wet zone corner to manage water containment"
+    ],
+    "compatible_product_ids": [
+      "K-AQUAMAC-RAIN-01",
+      "K-STATEMENT-HANDSHOWER-01",
+      "K-VEIL-WH-02"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/shower-doors/gradient-walk-in-screen",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/gradient_screen.jpg",
+    "model_number": "K-707600-L-SHP"
+  },
+  {
+    "id": "K-CIMARRON-ALCOVE-BATH-01",
+    "name": "Kohler Cimarron 60 x 30 Inch Alcove Bath with Apron",
+    "category": "bathtub",
+    "subcategory": "alcove_bath",
+    "price_inr": 48000,
+    "dimensions": {
+      "width": 2.5,
+      "depth": 5.0,
+      "height": 1.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "transitional",
+      "space_saver",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Compact 3-wall alcove design fits standard replacement tub footprints",
+      "Integral apron front eliminates necessity of custom tile work",
+      "Textured slip-resistant bottom surface for confident footing",
+      "Comfort Depth design offers deep 19-inch water level while maintaining low step-over threshold"
+    ],
+    "water_consumption": {
+      "rate": 185.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Compact Alcove Standard"
+    },
+    "sustainability_attributes": [
+      "High-gloss acrylic with lightweight fiberglass reinforcement"
+    ],
+    "installation_requirements": [
+      "Three-wall alcove framing with left or right hand drain"
+    ],
+    "compatible_product_ids": [
+      "K-CIMARRON-04",
+      "K-DEVONSHIRE-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/shop-bathtubs/cimarron-60-alcove-bath-k-r1103",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/cimarron_bath.jpg",
+    "model_number": "K-848-0"
+  },
+  {
+    "id": "K-VEIL-FREESTANDING-BATH-01",
+    "name": "Kohler Veil 66 x 36 Inch Freestanding Organic Luxury Bath",
+    "category": "bathtub",
+    "subcategory": "freestanding_luxury_bath",
+    "price_inr": 295000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 5.5,
+      "height": 2.15,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "zen",
+      "modern"
+    ],
+    "finishes": [
+      "white",
+      "honed_white"
+    ],
+    "features": [
+      "Sculpted organic ergonomic curves support body posture for an immersive restorative soak",
+      "Crafted from Kohler Lithocast solid-cast resin with natural matte mineral touch",
+      "Integrated slotted overflow and center toe-tap drain",
+      "Exceptional heat retention maintains soothing bath temperatures"
+    ],
+    "water_consumption": {
+      "rate": 275.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Luxury Mineral Cast Deep Soak"
+    },
+    "sustainability_attributes": [
+      "Solid surface material is non-porous and naturally resistant to mold and bacteria",
+      "Renewable solid surface: micro-scratches can be buffed out to brand new finish"
+    ],
+    "installation_requirements": [
+      "Freestanding floor drain hookup with floor-mount tub filler"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-WH-02",
+      "K-VEIL-BASIN-01",
+      "K-PURIST-FLOOR-FILLER-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/shop-bathtubs/veil-freestanding-bath-k-8385",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/veil_bath.jpg",
+    "model_number": "K-8385-0"
+  },
+  {
+    "id": "K-PURIST-FLOOR-FILLER-01",
+    "name": "Kohler Purist Floor-Mount Freestanding Bath Filler with Handshower",
+    "category": "faucet",
+    "subcategory": "freestanding_bath_filler",
+    "price_inr": 82000,
+    "dimensions": {
+      "width": 0.55,
+      "depth": 1.15,
+      "height": 3.1,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Monumental floor-standing architectural pillar design designed to serve freestanding baths",
+      "35-inch spout height reaches gracefully over freestanding tub rims",
+      "Includes multi-function matching handshower with 60-inch kink-free hose",
+      "Integrated rotary diverter seamlessly redirects flow between bath spout and handshower"
+    ],
+    "water_consumption": {
+      "rate": 28.0,
+      "unit": "LPM Spout / 6.6 LPM Handshower",
+      "is_water_saving": true,
+      "efficiency_rating": "Rapid Fill Spout with WaterSense Handshower"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled handshower saves water during rinsing"
+    ],
+    "installation_requirements": [
+      "In-floor mounting block K-97904 anchored to concrete or subfloor"
+    ],
+    "compatible_product_ids": [
+      "K-ARTIFACTS-BATH-02",
+      "K-VEIL-FREESTANDING-BATH-01",
+      "K-UNDERSCORE-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/shop-faucets/purist-floor-mount-bath-filler-k-t97332",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_bath_filler.jpg",
+    "model_number": "K-T97328-4-CP"
+  },
+  {
+    "id": "K-AIGNER-ROUND-MIRROR-01",
+    "name": "Kohler Essential 32-Inch Round Decorative Wall Mirror",
+    "category": "accessory",
+    "subcategory": "decorative_mirror",
+    "price_inr": 18500,
+    "dimensions": {
+      "width": 2.67,
+      "depth": 0.15,
+      "height": 2.67,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "brushed_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Circular minimalist thin-profile metal frame expands visual bathroom space",
+      "Copper-free silver mirror backing eliminates dark edge corrosion in humid bathrooms",
+      "Integrated hanging cleat allows effortless level mounting"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Lead-free and copper-free environmentally safe glass backing"
+    ],
+    "installation_requirements": [
+      "Drywall anchor or wall stud positioning"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/mirrors-medicine-cabinets/essential-round-mirror",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/essential_round_mirror.jpg",
+    "model_number": "K-26051-NA"
+  },
+  {
+    "id": "K-MAXSTOW-MED-CABINET-01",
+    "name": "Kohler Maxstow 24 x 36 Inch Recessed/Surface Medicine Cabinet",
+    "category": "accessory",
+    "subcategory": "medicine_cabinet",
+    "price_inr": 28000,
+    "dimensions": {
+      "width": 2.0,
+      "depth": 0.4,
+      "height": 3.0,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "space_saver",
+      "minimalist"
+    ],
+    "finishes": [
+      "mirrored_glass_anodized_aluminum"
+    ],
+    "features": [
+      "Dual interior and exterior mirrors provide 360-degree grooming angles",
+      "Deep 3.5-inch staggered shelves maximize internal storage without crowding sink deck",
+      "Can be surface mounted or fully recessed into standard 2x4 stud wall cavities",
+      "Slow-close 108-degree hinges prevent mirror collisions"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Rust-free anodized aluminum structure guarantees lifelong use"
+    ],
+    "installation_requirements": [
+      "Rough wall opening 23.25 x 35.25 inches for recessed installation"
+    ],
+    "compatible_product_ids": [
+      "K-JAS-VANITY-01",
+      "K-TRESSORE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/mirrors-medicine-cabinets/maxstow-cabinet-k-81144",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/maxstow_cabinet.jpg",
+    "model_number": "K-81144-DA1"
+  },
+  {
+    "id": "K-VITALITY-LED-MIRROR-01",
+    "name": "Kohler Vitality 30 x 40 Inch Lighted LED Vanity Mirror with Defogger",
+    "category": "accessory",
+    "subcategory": "lighted_mirror",
+    "price_inr": 42000,
+    "dimensions": {
+      "width": 2.5,
+      "depth": 0.2,
+      "height": 3.33,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "minimalist"
+    ],
+    "finishes": [
+      "frosted_glass_illuminated_border"
+    ],
+    "features": [
+      "Perimeter frosted LED lighting delivers optimum 90+ CRI true-to-life skin illumination",
+      "Built-in heating pad defogger clears condensation completely after hot showers",
+      "Smooth capacitive touch sensor on glass with seamless dimming from 100% to 10%",
+      "Can be hung vertically or horizontally above vanities"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "High-efficiency energy-saving LEDs consume less than 35 watts"
+    ],
+    "installation_requirements": [
+      "Standard 220V electrical wall feed behind mirror"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-JUTE-VANITY-01",
+      "K-VEIL-WH-02"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/mirrors-medicine-cabinets/vitality-lighted-mirror-k-99572",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/vitality_mirror.jpg",
+    "model_number": "K-99572-NA"
+  },
+  {
+    "id": "K-PURIST-TOWEL-BAR-24-01",
+    "name": "Kohler Purist 24-Inch Wall-Mount Towel Bar",
+    "category": "accessory",
+    "subcategory": "towel_bar",
+    "price_inr": 8500,
+    "dimensions": {
+      "width": 2.15,
+      "depth": 0.32,
+      "height": 0.2,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "luxury"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Pure cylindrical architectural geometry matches Purist faucet and shower collection",
+      "Premium metal construction ensures corrosion and tarnish resistance",
+      "Includes premium mounting hardware and template for quick installation"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Solid brass build for maximum product longevity"
+    ],
+    "installation_requirements": [
+      "Wall anchor drywall anchors or wood backing"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-PURIST-VALVE-TRIM-01",
+      "K-STATEMENT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/purist-24-towel-bar-k-14436",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_towel_bar.jpg",
+    "model_number": "K-14436-CP"
+  },
+  {
+    "id": "K-PURIST-ROBE-HOOK-01",
+    "name": "Kohler Purist Single Robe & Towel Hook",
+    "category": "accessory",
+    "subcategory": "robe_hook",
+    "price_inr": 4200,
+    "dimensions": {
+      "width": 0.2,
+      "depth": 0.28,
+      "height": 0.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "space_saver"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Compact architectural post design holds heavy bathrobes and damp towels securely",
+      "Minimalist profile occupies negligible wall space beside shower doors",
+      "Concealed mounting screws preserve clean lines"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Durable lifetime brass construction"
+    ],
+    "installation_requirements": [
+      "Wall drywall anchor"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-STATEMENT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/purist-robe-hook-k-14443",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_hook.jpg",
+    "model_number": "K-14443-CP"
+  },
+  {
+    "id": "K-MEMOIRS-TOWEL-RING-01",
+    "name": "Kohler Memoirs Stately Wall-Mount Towel Ring",
+    "category": "accessory",
+    "subcategory": "towel_ring",
+    "price_inr": 6800,
+    "dimensions": {
+      "width": 0.6,
+      "depth": 0.28,
+      "height": 0.7,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "traditional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "polished_brass",
+      "oil_rubbed_bronze"
+    ],
+    "features": [
+      "Classical stepped border escutcheon details matching Memoirs suite fixtures",
+      "Keeps hand towels conveniently within reach adjacent to basin or vanity",
+      "Solid cast zinc and brass alloy composition"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Solid metal construction resists tarnish and humidity degradation"
+    ],
+    "installation_requirements": [
+      "Wall anchor installation"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-MEMOIRS-TOILET-01",
+      "K-ARTIFACTS-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/memoirs-towel-ring-k-487",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/memoirs_towel_ring.jpg",
+    "model_number": "K-487-CP"
+  },
+  {
+    "id": "K-LINEAGE-DRAIN-01",
+    "name": "Kohler Linear Shower Drain 36-Inch with Tile-In Grid",
+    "category": "accessory",
+    "subcategory": "linear_shower_drain",
+    "price_inr": 22000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 0.35,
+      "height": 0.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "zen"
+    ],
+    "finishes": [
+      "brushed_stainless_steel",
+      "matte_black"
+    ],
+    "features": [
+      "Tile-in insert cover seamlessly embeds bathroom floor tile into drain for invisible drainage",
+      "Engineered for high-flow rainhead runoff up to 55 LPM",
+      "Includes hair strainer basket and easy-lift key for rapid cleaning",
+      "304-grade heavy gauge stainless steel prevents corrosion"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% recyclable stainless steel, extends subfloor waterproof integrity"
+    ],
+    "installation_requirements": [
+      "Requires single-directional pitch floor screed in shower zone"
+    ],
+    "compatible_product_ids": [
+      "K-AQUAMAC-RAIN-01",
+      "K-GRADMATE-WALKIN-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/linear-shower-drain",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/linear_drain.jpg",
+    "model_number": "K-9136-CP"
+  },
+  {
+    "id": "K-SHOWER-NICHE-01",
+    "name": "Kohler Matte Black Stainless Steel Pre-Formed Shower Storage Niche",
+    "category": "accessory",
+    "subcategory": "shower_niche",
+    "price_inr": 16500,
+    "dimensions": {
+      "width": 1.15,
+      "depth": 0.35,
+      "height": 2.15,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "matte_black",
+      "brushed_stainless"
+    ],
+    "features": [
+      "Pre-fabricated watertight recessed storage niche installs between standard wall studs",
+      "Integrated intermediate shelf organizes shampoo bottles and grooming essentials without encroaching shower space",
+      "Precision 90-degree corners eliminate complex tile mitering"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Guarantees 100% leak-proof wall penetration protection"
+    ],
+    "installation_requirements": [
+      "Rough wall opening between standard 16-inch center studs"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-PURIST-VALVE-TRIM-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/shower-niche",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/shower_niche.jpg",
+    "model_number": "K-97624-BL"
+  },
+  {
+    "id": "K-SAN-SOUCI-ROUND-01",
+    "name": "Kohler San Souci Round-Front One-Piece Toilet",
+    "category": "toilet",
+    "subcategory": "one_piece_floor_mount",
+    "price_inr": 54000,
+    "dimensions": {
+      "width": 1.35,
+      "depth": 2.12,
+      "height": 2.05,
+      "unit": "ft"
+    },
+    "styles": [
+      "space_saver",
+      "minimalist",
+      "transitional"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Round-front compact bowl takes up less floor space",
+      "One-piece design integrates tank and bowl into seamless, easy-to-clean vitreous china form",
+      "AquaPiston single-flush canister delivers fast, powerful flush"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified saves thousands of liters annually"
+    ],
+    "installation_requirements": [
+      "Standard 12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/san-souci-round-front-toilet-k-4007",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/sansouci_round.jpg",
+    "model_number": "K-4007-0"
+  },
+  {
+    "id": "K-BETTER-LIVING-ADA-TOILET-01",
+    "name": "Kohler Highline Classic Comfort Height ADA Accessible Toilet",
+    "category": "toilet",
+    "subcategory": "two_piece_floor_mount",
+    "price_inr": 28000,
+    "dimensions": {
+      "width": 1.46,
+      "depth": 2.5,
+      "height": 2.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "universal_design",
+      "transitional",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Chair-height 17-inch rim seating complies fully with ADA standards for accessibility",
+      "Class Five flushing technology provides tremendous bulk waste removal",
+      "Polished chrome left-hand trip lever"
+    ],
+    "water_consumption": {
+      "rate": 4.8,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.8 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified",
+      "Universal accessible design"
+    ],
+    "installation_requirements": [
+      "12-inch rough-in plumbing"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/highline-comfort-height-toilet-k-3999",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/highline_toilet.jpg",
+    "model_number": "K-3999-0"
+  },
+  {
+    "id": "K-PANACHE-WH-01",
+    "name": "Kohler Panache Wall-Hung Toilet",
+    "category": "toilet",
+    "subcategory": "wall_hung",
+    "price_inr": 26500,
+    "dimensions": {
+      "width": 1.25,
+      "depth": 1.8,
+      "height": 1.3,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Modern curved styling with fully enclosed trapway",
+      "Dual flush 3/6 LPF washdown engine",
+      "Quick-release soft-close duroplast seat"
+    ],
+    "water_consumption": {
+      "rate": 4.0,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "Dual Flush 3.0/6.0 LPF"
+    },
+    "sustainability_attributes": [
+      "Water conservation dual flush"
+    ],
+    "installation_requirements": [
+      "Concealed wall cistern and carrier"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/toilets/panache-wall-hung",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/panache_toilet.jpg",
+    "model_number": "K-17644IN-0"
+  },
+  {
+    "id": "K-PRESQU-ILE-01",
+    "name": "Kohler Presqu'ile Contemporary Wall-Hung Toilet",
+    "category": "toilet",
+    "subcategory": "wall_hung",
+    "price_inr": 44000,
+    "dimensions": {
+      "width": 1.28,
+      "depth": 1.88,
+      "height": 1.35,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "contemporary"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Organic tapered form created by French design studios",
+      "Concealed fixings maintain pure external porcelain lines",
+      "Quiet-Close slim seat"
+    ],
+    "water_consumption": {
+      "rate": 3.5,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 3.5 LPF"
+    },
+    "sustainability_attributes": [
+      "Low-volume flushing"
+    ],
+    "installation_requirements": [
+      "In-wall cistern frame"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/toilets/presquile-wall-hung",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/presquile_toilet.jpg",
+    "model_number": "K-19077IN-0"
+  },
+  {
+    "id": "K-DAMASK-VANITY-01",
+    "name": "Kohler Damask 36-Inch Traditional Ornate Vanity",
+    "category": "vanity",
+    "subcategory": "freestanding_vanity",
+    "price_inr": 89000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 1.9,
+      "height": 2.85,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "traditional"
+    ],
+    "finishes": [
+      "marabou",
+      "claret_suede",
+      "white"
+    ],
+    "features": [
+      "Detailed with traditional moldings and recessed panels",
+      "Slow-close doors and drawers prevent slamming",
+      "Catalyzed polyurethane finish provides exceptional moisture resistance"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Low-emission wood construction"
+    ],
+    "installation_requirements": [
+      "Floor waste and water supply connections"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-TOILET-01",
+      "K-ARTIFACTS-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/damask-36",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/damask_vanity.jpg",
+    "model_number": "K-99518-F69"
+  },
+  {
+    "id": "K-BRITTON-VANITY-01",
+    "name": "Kohler Marabou 30-Inch Minimalist Open-Shelf Vanity",
+    "category": "vanity",
+    "subcategory": "freestanding_vanity",
+    "price_inr": 56000,
+    "dimensions": {
+      "width": 2.5,
+      "depth": 1.8,
+      "height": 2.8,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "white_oak"
+    ],
+    "features": [
+      "Open slatted lower shelf for rolled towel and basket display",
+      "Soft-close single deep upper drawer with divider trays",
+      "Solid ash wood timber structure"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Sustainably sourced North American ash"
+    ],
+    "installation_requirements": [
+      "Standard plumbing connections"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-MODERNLIFE-03"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/marabou-30",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/marabou_vanity.jpg",
+    "model_number": "K-99553-F69"
+  },
+  {
+    "id": "K-SOK-CORNER-VANITY-01",
+    "name": "Kohler Corner Space-Saver 24-Inch Vanity",
+    "category": "vanity",
+    "subcategory": "corner_vanity",
+    "price_inr": 42000,
+    "dimensions": {
+      "width": 2.0,
+      "depth": 2.0,
+      "height": 2.7,
+      "unit": "ft"
+    },
+    "styles": [
+      "space_saver",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white",
+      "natural_maple"
+    ],
+    "features": [
+      "Fits snugly into 90-degree room corners to utilize dead corner space",
+      "Integrated triangular ceramic basin top with faucet drilling",
+      "Lower storage cabinet with adjustable shelf"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Maximizes usable square footage in compact layouts"
+    ],
+    "installation_requirements": [
+      "Two-wall corner corner plumbing hookup"
+    ],
+    "compatible_product_ids": [
+      "K-PATIO-01",
+      "K-TAUT-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/corner-vanity",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/corner_vanity.jpg",
+    "model_number": "K-33535-ASB"
+  },
+  {
+    "id": "K-SEAPORT-CONSOLE-01",
+    "name": "Kohler Memoirs Stately Metal Console Table Stand with Marble Top",
+    "category": "vanity",
+    "subcategory": "console_table_vanity",
+    "price_inr": 110000,
+    "dimensions": {
+      "width": 2.5,
+      "depth": 1.8,
+      "height": 2.8,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "minimalist"
+    ],
+    "finishes": [
+      "polished_chrome_legs",
+      "vibrant_brushed_brass_legs"
+    ],
+    "features": [
+      "Slender architectural brass legs elevate the visual openness of the bathroom floor",
+      "Carrara white natural marble countertop with pre-cut sink hole",
+      "Integrated front and side towel hanging rails"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% recyclable solid brass and natural stone"
+    ],
+    "installation_requirements": [
+      "Requires decorative bottle trap and supply lines as plumbing is exposed"
+    ],
+    "compatible_product_ids": [
+      "K-ARTIFACTS-FAUCET-01",
+      "K-MEMOIRS-TOILET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/memoirs-console-table-k-30007",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/memoirs_console.jpg",
+    "model_number": "K-30007-0"
+  },
+  {
+    "id": "K-CONICAL-BELL-01",
+    "name": "Kohler Conical Bell Artist Editions Vessel Sink",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 48000,
+    "dimensions": {
+      "width": 1.35,
+      "depth": 1.35,
+      "height": 0.52,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "zen",
+      "artistic"
+    ],
+    "finishes": [
+      "translucent_sandalwood_glass",
+      "translucent_dew_glass",
+      "white"
+    ],
+    "features": [
+      "Sculpted glass construction with distinct conical flared silhouette",
+      "Handcrafted art glass delivers iridescent depth and organic reflections",
+      "Smooth nonporous surface is simple to maintain"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Handcrafted durable glass"
+    ],
+    "installation_requirements": [
+      "Countertop vessel installation with tall faucet"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathroom-sinks/conical-bell-vessel-k-2373",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/conical_bell.jpg",
+    "model_number": "K-2373-0"
+  },
+  {
+    "id": "K-MICA-ROUND-01",
+    "name": "Kohler Mica 16-Inch Ultra-Thin Round Vessel Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 34000,
+    "dimensions": {
+      "width": 1.33,
+      "depth": 1.33,
+      "height": 0.4,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "luxury"
+    ],
+    "finishes": [
+      "honed_black",
+      "white"
+    ],
+    "features": [
+      "Ultra-thin 6mm rim ceramic technology (Supramic)",
+      "CleanCoat stain-resistant hydrophobic coating",
+      "Striking contemporary contrast in matte finishes"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Consumes less raw material due to high-tensile formulation"
+    ],
+    "installation_requirements": [
+      "Countertop cut-out for 1-1/4 inch waste pipe"
+    ],
+    "compatible_product_ids": [
+      "K-COMPOSED-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/mica-round-vessel",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/mica_basin.jpg",
+    "model_number": "K-90012IN-0"
+  },
+  {
+    "id": "K-VERTICYL-01",
+    "name": "Kohler Verticyl Rectangular Undermount Sink",
+    "category": "basin",
+    "subcategory": "undermount_basin",
+    "price_inr": 15500,
+    "dimensions": {
+      "width": 1.65,
+      "depth": 1.3,
+      "height": 0.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern"
+    ],
+    "finishes": [
+      "white",
+      "black_black"
+    ],
+    "features": [
+      "Vertical sides create a deep, geometric basin interior",
+      "Seamless undercounter mount maximizes counter work space",
+      "Vitreous china construction"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% recyclable ceramic"
+    ],
+    "installation_requirements": [
+      "Countertop undermount cutout"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathroom-sinks/verticyl-undermount-k-2882",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/verticyl.jpg",
+    "model_number": "K-2882-0"
+  },
+  {
+    "id": "K-DEVONSHIRE-PEDESTAL-01",
+    "name": "Kohler Devonshire 27-Inch Pedestal Sink",
+    "category": "basin",
+    "subcategory": "pedestal_sink",
+    "price_inr": 32000,
+    "dimensions": {
+      "width": 2.25,
+      "depth": 1.65,
+      "height": 2.8,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "traditional"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Classic molded edging complements Devonshire suite",
+      "Generous deck space for toiletries",
+      "Integrated overflow"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Vitreous china longevity"
+    ],
+    "installation_requirements": [
+      "Wall bracket and pedestal floor anchor"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-FAUCET-01",
+      "K-DEVONSHIRE-TOILET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathroom-sinks/devonshire-pedestal-k-2286",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_pedestal.jpg",
+    "model_number": "K-2286-1-0"
+  },
+  {
+    "id": "K-REFINED-WALL-FAUCET-01",
+    "name": "Kohler Composed Wall-Mount Dual-Handle Faucet",
+    "category": "faucet",
+    "subcategory": "wall_mount_basin_faucet",
+    "price_inr": 48000,
+    "dimensions": {
+      "width": 0.85,
+      "depth": 0.8,
+      "height": 0.3,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "titanium",
+      "polished_chrome"
+    ],
+    "features": [
+      "Ultra-clean rectilinear wall-mount form",
+      "ScratchShield PVD coating protects finish against abrasive wear",
+      "Precision quarter-turn ceramic valves"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled",
+      "Eco-friendly PVD coating"
+    ],
+    "installation_requirements": [
+      "In-wall rough-in valve"
+    ],
+    "compatible_product_ids": [
+      "K-MICA-ROUND-01",
+      "K-VEIL-BASIN-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/faucets/composed-wall-mount",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/composed_wall_faucet.jpg",
+    "model_number": "K-73111-4-CP"
+  },
+  {
+    "id": "K-MALLECO-TOUCH-FAUCET-01",
+    "name": "Kohler Tone Touchless Single-Handle Bathroom Sink Faucet",
+    "category": "faucet",
+    "subcategory": "sensor_touchless_faucet",
+    "price_inr": 38000,
+    "dimensions": {
+      "width": 0.28,
+      "depth": 0.65,
+      "height": 0.72,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "tech_forward",
+      "transitional"
+    ],
+    "finishes": [
+      "matte_black_with_brass_accents",
+      "polished_chrome"
+    ],
+    "features": [
+      "State-of-the-art proximity sensor activation under spout",
+      "Two-tone split finish combines matte black with warm brushed brass",
+      "Battery powered with LED low-battery indicator"
+    ],
+    "water_consumption": {
+      "rate": 4.0,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.0 LPM"
+    },
+    "sustainability_attributes": [
+      "Eliminates inadvertent water running"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount",
+      "6 AA batteries"
+    ],
+    "compatible_product_ids": [
+      "K-CAXTON-01",
+      "K-HARKEN-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/tone-touchless-faucet-k-27382",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/tone_faucet.jpg",
+    "model_number": "K-27382-CP"
+  },
+  {
+    "id": "K-ALEO-WALL-MIXER-01",
+    "name": "Kohler Aleo In-Wall Concealed Basin Mixer",
+    "category": "faucet",
+    "subcategory": "wall_mount_basin_faucet",
+    "price_inr": 21000,
+    "dimensions": {
+      "width": 0.75,
+      "depth": 0.68,
+      "height": 0.28,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Compact wall plate houses single-control lever and spout",
+      "Conceals water supply in wall to keep vanity completely clear",
+      "Ceramic disc valve cartridge"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "In-wall concealed mixer box"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-CHALICE-ROUND-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/faucets/aleo-wall-mixer",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/aleo_wall_mixer.jpg",
+    "model_number": "K-72290IN-4-CP"
+  },
+  {
+    "id": "K-FINIAL-TRAD-FAUCET-01",
+    "name": "Kohler Finial Traditional Widespread Faucet",
+    "category": "faucet",
+    "subcategory": "widespread_deck_mount",
+    "price_inr": 49000,
+    "dimensions": {
+      "width": 0.85,
+      "depth": 0.72,
+      "height": 0.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "traditional"
+    ],
+    "finishes": [
+      "polished_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Graceful swan-neck arched spout and ornate tear-drop handles",
+      "Solid brass valve bodies and waterways",
+      "Includes matching pop-up drain assembly"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "3-hole 8-inch widespread deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-MEMOIRS-PEDESTAL-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/finial-traditional-faucet-k-310",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/finial_faucet.jpg",
+    "model_number": "K-310-4M-CP"
+  },
+  {
+    "id": "K-ROUND-WATERFALL-SHOWER-01",
+    "name": "Kohler Real Rain Overhead Waterfall & Shower Panel",
+    "category": "shower",
+    "subcategory": "overhead_rain_shower",
+    "price_inr": 145000,
+    "dimensions": {
+      "width": 1.58,
+      "depth": 1.58,
+      "height": 0.4,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "zen",
+      "modern"
+    ],
+    "finishes": [
+      "matte_black",
+      "brushed_brass",
+      "white"
+    ],
+    "features": [
+      "Engineered to replicate a real summer rainstorm using gravity-fed reservoir technology",
+      "Deluge feature releases a reservoir burst of 2 liters of warm water at touch of button",
+      "775 individual silicone spray nozzles create authentic falling rain drop sizes and velocities"
+    ],
+    "water_consumption": {
+      "rate": 7.6,
+      "unit": "LPM Normal / 18 LPM Deluge",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 7.6 LPM (Eco Rain Mode)"
+    },
+    "sustainability_attributes": [
+      "Gravity-fed mechanism maximizes droplet size without excess water pressure"
+    ],
+    "installation_requirements": [
+      "Ceiling flush mount framing with dedicated high-flow thermostatic valve"
+    ],
+    "compatible_product_ids": [
+      "K-THERMOSTATIC-TRIM-01",
+      "K-DTV-MODE-DIGITAL-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/real-rain-overhead-panel-k-76728",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/real_rain.jpg",
+    "model_number": "K-76728-CP"
+  },
+  {
+    "id": "K-WATERTILE-BODYSPRAY-01",
+    "name": "Kohler WaterTile 54-Nozzle Square Body Spray",
+    "category": "shower",
+    "subcategory": "body_spray",
+    "price_inr": 14500,
+    "dimensions": {
+      "width": 0.42,
+      "depth": 0.25,
+      "height": 0.42,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "luxury",
+      "minimalist"
+    ],
+    "finishes": [
+      "matte_black",
+      "polished_chrome",
+      "brushed_brass"
+    ],
+    "features": [
+      "Low-profile design mounts virtually flush to finished shower tile",
+      "54 MasterClean spray nozzles deliver wide, soothing hydrotherapy envelopment",
+      "Adjustable sprayface swivels 20 degrees in any direction for customized body target"
+    ],
+    "water_consumption": {
+      "rate": 5.7,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 5.7 LPM (1.5 GPM)"
+    },
+    "sustainability_attributes": [
+      "WaterSense compliant low-flow hydrotherapy"
+    ],
+    "installation_requirements": [
+      "1/2-inch NPT internal plumbing in shower wall"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-THERMOSTATIC-TRIM-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/watertile-square-body-spray-k-8002",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/watertile_spray.jpg",
+    "model_number": "K-8002-CP"
+  },
+  {
+    "id": "K-DEVONSHIRE-SHOWER-TRIM-01",
+    "name": "Kohler Devonshire Rite-Temp Shower and Valve Trim Set",
+    "category": "shower",
+    "subcategory": "shower_valve_trim",
+    "price_inr": 19500,
+    "dimensions": {
+      "width": 0.58,
+      "depth": 0.55,
+      "height": 0.58,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "traditional",
+      "transitional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "vibrant_brushed_nickel",
+      "oil_rubbed_bronze"
+    ],
+    "features": [
+      "Includes single-function showerhead with Katalyst air induction and decorative wall arm",
+      "Classic molded trim plate with ergonomic lever handle",
+      "Rite-Temp pressure balance maintains steady water comfort"
+    ],
+    "water_consumption": {
+      "rate": 6.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 6.6 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified showerhead"
+    ],
+    "installation_requirements": [
+      "Kohler Rite-Temp in-wall valve body"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-FAUCET-01",
+      "K-DEVONSHIRE-TOILET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/devonshire-rite-temp-shower-trim-k-ts395",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_shower_trim.jpg",
+    "model_number": "K-TS395-4-CP"
+  },
+  {
+    "id": "K-EXHALE-FILTER-SHOWER-01",
+    "name": "Kohler Exhale Showerhead with Integrated Dechlorinating Water Filter",
+    "category": "shower",
+    "subcategory": "overhead_rain_shower",
+    "price_inr": 16500,
+    "dimensions": {
+      "width": 0.52,
+      "depth": 0.52,
+      "height": 0.45,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "wellness"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_white"
+    ],
+    "features": [
+      "Built-in replaceable filter cartridge neutralizes chlorine, heavy metals, and hard water minerals",
+      "Reduces skin irritation and hair damage from municipal chlorinated water",
+      "Four spray patterns: Full Coverage, Drenching Rain, Intense Massage, and Soft Silk"
+    ],
+    "water_consumption": {
+      "rate": 7.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 7.6 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled",
+      "Improves skin health naturally"
+    ],
+    "installation_requirements": [
+      "Standard 1/2-inch shower arm"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-VALVE-TRIM-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/showers/exhale-filtered-showerhead",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/exhale_shower.jpg",
+    "model_number": "K-72900IN-CP"
+  },
+  {
+    "id": "K-ARCHER-ALCOVE-BATH-01",
+    "name": "Kohler Archer 60 x 32 Inch Deep Soaking Alcove Bath",
+    "category": "bathtub",
+    "subcategory": "alcove_bath",
+    "price_inr": 62000,
+    "dimensions": {
+      "width": 2.67,
+      "depth": 5.0,
+      "height": 1.58,
+      "unit": "ft"
+    },
+    "styles": [
+      "transitional",
+      "modern"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Features Comfort Depth slotted overflow that allows 2 inches deeper water than standard tubs",
+      "Lumbar arch supports natural spine curve during long relaxing baths",
+      "Molded armrests and integral front apron for clean alcove finish"
+    ],
+    "water_consumption": {
+      "rate": 210.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Deep Soaking Alcove Standard"
+    },
+    "sustainability_attributes": [
+      "Durable acrylic with fiberglass backing lasts 25+ years"
+    ],
+    "installation_requirements": [
+      "Three-wall alcove framing"
+    ],
+    "compatible_product_ids": [
+      "K-AVID-FAUCET-01",
+      "K-MODERNLIFE-03"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/shop-bathtubs/archer-60-alcove-bath-k-1123",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/archer_bath.jpg",
+    "model_number": "K-1123-0"
+  },
+  {
+    "id": "K-VOLUTE-FREESTANDING-01",
+    "name": "Kohler Volute 67 x 31 Inch Modern Freestanding Acrylic Bath",
+    "category": "bathtub",
+    "subcategory": "freestanding_luxury_bath",
+    "price_inr": 175000,
+    "dimensions": {
+      "width": 2.58,
+      "depth": 5.58,
+      "height": 1.92,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Sculptural flared silhouette with thin rim profile creates an airy modern visual anchor",
+      "Dual sloping backrests accommodate comfortable bathing from either end",
+      "Integral slotted overflow with pre-installed pop-up drain"
+    ],
+    "water_consumption": {
+      "rate": 240.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Freestanding Soaking Standard"
+    },
+    "sustainability_attributes": [
+      "High-grade Lucite acrylic maintains heat and resists scratching"
+    ],
+    "installation_requirements": [
+      "Floor drain connection and floor-mounted bath filler"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-FLOOR-FILLER-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/bathtubs/volute-freestanding",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/volute_bath.jpg",
+    "model_number": "K-20925IN-0"
+  },
+  {
+    "id": "K-MARIPOSA-WHIRLPOOL-01",
+    "name": "Kohler Mariposa 60 x 36 Inch Hydrotherapy Whirlpool Bath",
+    "category": "bathtub",
+    "subcategory": "whirlpool_bath",
+    "price_inr": 135000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 5.0,
+      "height": 1.67,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "wellness",
+      "transitional"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "6 independently adjustable hydro-massage water jets target tension in back, legs, and feet",
+      "Custom pneumatic remote allows dialing water massage intensity from soft to invigorating",
+      "Molded lumbar support and contoured armrests"
+    ],
+    "water_consumption": {
+      "rate": 230.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Hydrotherapy Whirlpool System"
+    },
+    "sustainability_attributes": [
+      "Self-draining pump prevents stagnant water accumulation"
+    ],
+    "installation_requirements": [
+      "Dedicated 220V/15A electrical circuit for whirlpool pump",
+      "Drop-in deck framing"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-DEVONSHIRE-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/shop-bathtubs/mariposa-60-whirlpool-k-1242",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/mariposa_bath.jpg",
+    "model_number": "K-1242-0"
+  },
+  {
+    "id": "K-VERDERA-SINGLE-DOOR-01",
+    "name": "Kohler Verdera 20 x 30 Inch Aluminum Mirrored Medicine Cabinet",
+    "category": "accessory",
+    "subcategory": "medicine_cabinet",
+    "price_inr": 24000,
+    "dimensions": {
+      "width": 1.67,
+      "depth": 0.4,
+      "height": 2.5,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "space_saver"
+    ],
+    "finishes": [
+      "anodized_aluminum"
+    ],
+    "features": [
+      "Full mirrored exterior door, mirrored interior back wall, and mirrored interior door",
+      "Two adjustable tempered glass shelves store grooming essentials neatly",
+      "Slow-close door hinges prevent slamming and mirror breakage"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Anodized rust-free aluminum structure"
+    ],
+    "installation_requirements": [
+      "Surface or recessed wall mounting"
+    ],
+    "compatible_product_ids": [
+      "K-JAS-VANITY-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/mirrors-medicine-cabinets/verdera-medicine-cabinet-k-99002",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/verdera_single.jpg",
+    "model_number": "K-99002-NA"
+  },
+  {
+    "id": "K-ARTIFACTS-HOTELIER-01",
+    "name": "Kohler Artifacts 24-Inch Hotelier Towel Rack with Shelf",
+    "category": "accessory",
+    "subcategory": "towel_shelf",
+    "price_inr": 19500,
+    "dimensions": {
+      "width": 2.15,
+      "depth": 0.85,
+      "height": 0.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "luxury",
+      "traditional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "vintage_nickel",
+      "oil_rubbed_bronze"
+    ],
+    "features": [
+      "Top slatted hotel-style rack stacks fresh dry towels while lower rail holds bath sheets in use",
+      "Edwardian decorative brackets complement classical master bath suites",
+      "Solid cast metal alloy build handles heavy wet towel loads effortlessly"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Heirloom solid metal construction"
+    ],
+    "installation_requirements": [
+      "Solid wall mounting with lag anchors"
+    ],
+    "compatible_product_ids": [
+      "K-ARTIFACTS-BATH-02",
+      "K-MEMOIRS-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/artifacts-hotelier-k-72575",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/artifacts_hotelier.jpg",
+    "model_number": "K-72575-CP"
+  },
+  {
+    "id": "K-PURIST-GRAB-BAR-01",
+    "name": "Kohler Purist 18-Inch Decorative ADA Safety Grab Bar",
+    "category": "accessory",
+    "subcategory": "grab_bar",
+    "price_inr": 9800,
+    "dimensions": {
+      "width": 1.65,
+      "depth": 0.28,
+      "height": 0.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "universal_design",
+      "minimalist"
+    ],
+    "finishes": [
+      "matte_black",
+      "brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Supports up to 300 lbs weight capacity, blending universal safety with high-end architecture",
+      "Sleek Purist cylindrical profile eliminates institutional aesthetic",
+      "Concealed mounting flange covers hardware cleanly"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Universal lifelong accessibility design"
+    ],
+    "installation_requirements": [
+      "Requires solid 2x4 wood blocking in shower/bath wall studs"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-STATEMENT-01",
+      "K-ARCHER-ALCOVE-BATH-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/purist-18-grab-bar-k-11891",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_grab_bar.jpg",
+    "model_number": "K-11891-CP"
+  },
+  {
+    "id": "K-PURIST-PAPER-HOLDER-01",
+    "name": "Kohler Purist Pivoting Toilet Paper Holder",
+    "category": "accessory",
+    "subcategory": "paper_holder",
+    "price_inr": 6200,
+    "dimensions": {
+      "width": 0.75,
+      "depth": 0.32,
+      "height": 0.2,
+      "unit": "ft"
+    },
+    "styles": [
+      "minimalist",
+      "modern",
+      "luxury"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Innovative pivoting arm makes roll replacement effortless with no spring mechanism to lose",
+      "Coordinates with Purist faucets and shower trims",
+      "Solid brass construction"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Durable brass material lasts decades"
+    ],
+    "installation_requirements": [
+      "Wall anchor installation adjacent to toilet"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-NUMI2-01",
+      "K-MODERNLIFE-03"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/purist-toilet-paper-holder-k-14444",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/purist_paper_holder.jpg",
+    "model_number": "K-14444-CP"
+  },
+  {
+    "id": "K-CONTEMPORARY-CORNER-BASKET-01",
+    "name": "Kohler Contemporary Solid Brass Shower Corner Storage Basket",
+    "category": "accessory",
+    "subcategory": "shower_basket",
+    "price_inr": 8200,
+    "dimensions": {
+      "width": 0.75,
+      "depth": 0.75,
+      "height": 0.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Tucks securely into 90-degree shower corners to store bottles and soaps without cluttering floor",
+      "Open wire grid drainage design prevents standing water and soap residue accumulation",
+      "Solid brass fabrication guarantees no rust in high-moisture shower zones"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% rustproof brass material"
+    ],
+    "installation_requirements": [
+      "Tile wall anchor screws"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-PURIST-VALVE-TRIM-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/shower-corner-basket-k-1897",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/corner_basket.jpg",
+    "model_number": "K-1897-CP"
+  },
+  {
+    "id": "K-SAN-RAPHAEL-COMFORT-01",
+    "name": "Kohler San Raphael Comfort Height Low-Profile One-Piece Toilet",
+    "category": "toilet",
+    "subcategory": "one_piece_floor_mount",
+    "price_inr": 68000,
+    "dimensions": {
+      "width": 1.45,
+      "depth": 2.5,
+      "height": 1.95,
+      "unit": "ft"
+    },
+    "styles": [
+      "luxury",
+      "modern",
+      "transitional"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Low-profile contemporary silhouette with concealed skirted trapway",
+      "Twin touch-actuator flush options for liquid and solid waste",
+      "Includes French Curve quiet-close toilet seat"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPF",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPF"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "12-inch floor rough-in"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/toilets/shop-toilets/san-raphael-comfort-height-toilet",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/san_raphael_comfort.jpg",
+    "model_number": "K-3722IN-0"
+  },
+  {
+    "id": "K-CLEAN-TOUCH-SPRAY-01",
+    "name": "Kohler Luxe Hygiene Spray Health Faucet with Metal Hose",
+    "category": "accessory",
+    "subcategory": "hygiene_spray",
+    "price_inr": 3600,
+    "dimensions": {
+      "width": 0.22,
+      "depth": 0.32,
+      "height": 0.6,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "matte_black",
+      "vibrant_brushed_modern_brass",
+      "polished_chrome"
+    ],
+    "features": [
+      "Precision front trigger with thumb lock for continuous gentle spray",
+      "Anti-bacterial flexible 1.2m reinforced metal hose",
+      "Wall bracket with mounting hardware"
+    ],
+    "water_consumption": {
+      "rate": 3.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "Precision Spray 3.5 LPM"
+    },
+    "sustainability_attributes": [
+      "Water-based personal hygiene"
+    ],
+    "installation_requirements": [
+      "Standard 1/2-inch wall supply outlet"
+    ],
+    "compatible_product_ids": [
+      "K-MODERNLIFE-03",
+      "K-VEIL-WH-02"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/accessories/luxe-hygiene-spray",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/luxe_spray.jpg",
+    "model_number": "K-12066IN-CP"
+  },
+  {
+    "id": "K-ARRESTO-VANITY-01",
+    "name": "Kohler Arresto 42-Inch Industrial Chic Floating Vanity",
+    "category": "vanity",
+    "subcategory": "wall_mount_vanity",
+    "price_inr": 118000,
+    "dimensions": {
+      "width": 3.5,
+      "depth": 1.9,
+      "height": 1.9,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "industrial",
+      "minimalist"
+    ],
+    "finishes": [
+      "matte_black_steel",
+      "smoked_oak"
+    ],
+    "features": [
+      "Matte black steel framework with natural smoked oak drawer fronts",
+      "Heavy-duty soft-close dovetailed drawers with integrated organization inserts",
+      "Engineered stone slab top with centered basin cutout"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Sustainably harvested timber and recyclable steel"
+    ],
+    "installation_requirements": [
+      "Heavy-duty wall anchor blocking"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/vanities/arresto-42",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/arresto_vanity.jpg",
+    "model_number": "K-99120IN-F69"
+  },
+  {
+    "id": "K-ARCHER-VANITY-01",
+    "name": "Kohler Archer 24-Inch Petite Bathroom Vanity with Vitreous Top",
+    "category": "vanity",
+    "subcategory": "freestanding_vanity",
+    "price_inr": 49000,
+    "dimensions": {
+      "width": 2.0,
+      "depth": 1.6,
+      "height": 2.8,
+      "unit": "ft"
+    },
+    "styles": [
+      "transitional",
+      "space_saver",
+      "budget_conscious"
+    ],
+    "finishes": [
+      "white",
+      "dark_walnut"
+    ],
+    "features": [
+      "Comfortable compact footprint tailored for half-baths and tight spaces",
+      "Beveled edge details coordinating with the Archer collection",
+      "Integrated vitreous china sink top with 4-inch faucet centers"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "CARB Phase 2 compliant"
+    ],
+    "installation_requirements": [
+      "Floor waste and water supply"
+    ],
+    "compatible_product_ids": [
+      "K-TAUT-FAUCET-01",
+      "K-ARCHER-ALCOVE-BATH-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/vanities/archer-24",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/archer_vanity.jpg",
+    "model_number": "K-2449-F69"
+  },
+  {
+    "id": "K-BOULEVARD-VESSEL-01",
+    "name": "Kohler Boulevard Oval Vessel Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 26000,
+    "dimensions": {
+      "width": 1.95,
+      "depth": 1.35,
+      "height": 0.45,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "luxury"
+    ],
+    "finishes": [
+      "white",
+      "matte_black"
+    ],
+    "features": [
+      "Elongated organic oval form with softly rounded interior corners",
+      "High-density vitreous china with stain-resistant glaze",
+      "Creates graceful visual balance on wider vanity countertops"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "100% recyclable vitrified ceramic"
+    ],
+    "installation_requirements": [
+      "Countertop drain hole cutout"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-01",
+      "K-JUTE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/boulevard-vessel",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/boulevard_basin.jpg",
+    "model_number": "K-2947IN-0"
+  },
+  {
+    "id": "K-ARCHER-UNDERMOUNT-01",
+    "name": "Kohler Archer 19-Inch Undermount Sink with Beveled Edges",
+    "category": "basin",
+    "subcategory": "undermount_basin",
+    "price_inr": 14000,
+    "dimensions": {
+      "width": 1.62,
+      "depth": 1.28,
+      "height": 0.58,
+      "unit": "ft"
+    },
+    "styles": [
+      "transitional",
+      "modern"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Distinctive beveled edges draw the eye toward the center of the basin",
+      "Undercounter installation integrates seamlessly with granite or quartz counters",
+      "Vitreous china construction with overflow"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Durable ceramic lasts decades"
+    ],
+    "installation_requirements": [
+      "Undermount mounting clips and adhesive"
+    ],
+    "compatible_product_ids": [
+      "K-HARKEN-VANITY-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathroom-sinks/archer-undermount-k-2355",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/archer_sink.jpg",
+    "model_number": "K-2355-0"
+  },
+  {
+    "id": "K-MINIMAL-ROUND-BASIN-01",
+    "name": "Kohler Rondeau Mini 14-Inch Round Cloakroom Basin",
+    "category": "basin",
+    "subcategory": "countertop_vessel",
+    "price_inr": 16500,
+    "dimensions": {
+      "width": 1.17,
+      "depth": 1.17,
+      "height": 0.42,
+      "unit": "ft"
+    },
+    "styles": [
+      "space_saver",
+      "minimalist",
+      "zen"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Petite 14-inch circular footprint fits narrow shelves and mini powder rooms",
+      "Deep basin walls maximize water containment despite micro diameter",
+      "Vitreous china durability"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Material-efficient micro footprint"
+    ],
+    "installation_requirements": [
+      "Countertop cut-out for drain"
+    ],
+    "compatible_product_ids": [
+      "K-TAUT-FAUCET-01",
+      "K-PATIO-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/sinks/rondeau-mini",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/rondeau_basin.jpg",
+    "model_number": "K-2688IN-0"
+  },
+  {
+    "id": "K-MODERNLIFE-FAUCET-01",
+    "name": "Kohler ModernLife Tall Vessel Single-Lever Basin Faucet",
+    "category": "faucet",
+    "subcategory": "single_lever_tall",
+    "price_inr": 19500,
+    "dimensions": {
+      "width": 0.25,
+      "depth": 0.62,
+      "height": 1.1,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Slender cylindrical body designed specifically to pair with ModernLife basins",
+      "Eco-smart aerator introduces micro-air bubbles to soften stream while cutting flow rate",
+      "Smooth glide single ceramic cartridge"
+    ],
+    "water_consumption": {
+      "rate": 4.0,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.0 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled saves 35% water"
+    ],
+    "installation_requirements": [
+      "Single hole deck mount"
+    ],
+    "compatible_product_ids": [
+      "K-FOREFRONT-01",
+      "K-BOULEVARD-VESSEL-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/faucets/modernlife-tall-faucet",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/modernlife_faucet.jpg",
+    "model_number": "K-77738IN-4-CP"
+  },
+  {
+    "id": "K-HONOLULU-WALL-FAUCET-01",
+    "name": "Kohler Stillness Wall-Mount Two-Handle Basin Faucet",
+    "category": "faucet",
+    "subcategory": "wall_mount_basin_faucet",
+    "price_inr": 42000,
+    "dimensions": {
+      "width": 0.82,
+      "depth": 0.78,
+      "height": 0.32,
+      "unit": "ft"
+    },
+    "styles": [
+      "zen",
+      "minimalist",
+      "modern"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Pared-down essentialist tubular form brings calming spa aesthetic to the wall",
+      "8-1/4 inch tubular spout reach",
+      "Streamlined lever handles provide intuitive temperature and volume modulation"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "In-wall rough-in two-handle valve"
+    ],
+    "compatible_product_ids": [
+      "K-VEIL-BASIN-01",
+      "K-VOX-RECT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/stillness-wall-mount-faucet-k-t944",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/stillness_faucet.jpg",
+    "model_number": "K-T944-4-CP"
+  },
+  {
+    "id": "K-ARCHER-FAUCET-01",
+    "name": "Kohler Archer Single-Handle Centerset Bathroom Faucet",
+    "category": "faucet",
+    "subcategory": "single_lever_deck_mount",
+    "price_inr": 18500,
+    "dimensions": {
+      "width": 0.3,
+      "depth": 0.58,
+      "height": 0.65,
+      "unit": "ft"
+    },
+    "styles": [
+      "transitional",
+      "modern"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "brushed_nickel"
+    ],
+    "features": [
+      "Art Deco faceted styling with fluid sculpted lines",
+      "Flexible supply lines and pre-assembled escutcheon simplify single or 3-hole installation",
+      "Ceramic disc valve exceeds industry longevity benchmarks by two times"
+    ],
+    "water_consumption": {
+      "rate": 4.5,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 4.5 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense certified"
+    ],
+    "installation_requirements": [
+      "Single hole or 3-hole 4-inch centerset installation"
+    ],
+    "compatible_product_ids": [
+      "K-ARCHER-UNDERMOUNT-01",
+      "K-ARCHER-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/faucets/archer-single-handle-faucet-k-11076",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/archer_faucet.jpg",
+    "model_number": "K-11076-4-CP"
+  },
+  {
+    "id": "K-AWAKEN-SHOWER-SET-01",
+    "name": "Kohler Awaken Deluxe Shower Kit with Slidebar & Multi-Spray Handshower",
+    "category": "shower",
+    "subcategory": "hand_shower",
+    "price_inr": 21500,
+    "dimensions": {
+      "width": 0.4,
+      "depth": 0.35,
+      "height": 2.5,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "transitional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Includes 24-inch brass slidebar with adjustable height and angle slider bracket",
+      "Multi-function handshower features Wide Coverage, Intense Drenching, and Targeted Massage sprays",
+      "Smooth 60-inch metal shower hose resists kinks and twists"
+    ],
+    "water_consumption": {
+      "rate": 6.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 6.6 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense labeled eco-shower"
+    ],
+    "installation_requirements": [
+      "Standard 1/2-inch water supply wall drop-elbow"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-VALVE-TRIM-01",
+      "K-RAIN-ROUND-10-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/awaken-shower-kit-k-98361",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/awaken_shower_kit.jpg",
+    "model_number": "K-98361-CP"
+  },
+  {
+    "id": "K-ARCHER-SHOWER-TRIM-01",
+    "name": "Kohler Archer Rite-Temp Bath and Shower Trim with Diverter Spout",
+    "category": "shower",
+    "subcategory": "shower_valve_trim",
+    "price_inr": 24500,
+    "dimensions": {
+      "width": 0.6,
+      "depth": 0.65,
+      "height": 0.6,
+      "unit": "ft"
+    },
+    "styles": [
+      "transitional",
+      "classic"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "vibrant_brushed_nickel"
+    ],
+    "features": [
+      "Includes pressure-balancing valve trim, Katalyst showerhead, and slip-fit diverter bath spout",
+      "Rite-Temp diaphragm keeps water temperature stable regardless of household pressure shifts",
+      "Coordinating beveled escutcheon"
+    ],
+    "water_consumption": {
+      "rate": 6.6,
+      "unit": "LPM",
+      "is_water_saving": true,
+      "efficiency_rating": "WaterSense 6.6 LPM"
+    },
+    "sustainability_attributes": [
+      "WaterSense showerhead saves water"
+    ],
+    "installation_requirements": [
+      "Requires Rite-Temp in-wall valve body"
+    ],
+    "compatible_product_ids": [
+      "K-ARCHER-ALCOVE-BATH-01",
+      "K-ARCHER-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/showers/archer-bath-shower-trim-k-ts11077",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/archer_shower_trim.jpg",
+    "model_number": "K-TS11077-4-CP"
+  },
+  {
+    "id": "K-SINGULIER-BATH-FILLER-01",
+    "name": "Kohler Singulier Floor-Mounted Bath Spout with Handshower",
+    "category": "faucet",
+    "subcategory": "freestanding_bath_filler",
+    "price_inr": 72000,
+    "dimensions": {
+      "width": 0.5,
+      "depth": 1.1,
+      "height": 3.0,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Sculptural single-pillar floor column designed for contemporary freestanding tubs",
+      "Includes slim baton handshower and 1.5m hose",
+      "Single-lever joystick controls water temperature and flow rate"
+    ],
+    "water_consumption": {
+      "rate": 25.0,
+      "unit": "LPM Spout / 6.6 LPM Handshower",
+      "is_water_saving": true,
+      "efficiency_rating": "Rapid Fill with Eco Handshower"
+    },
+    "sustainability_attributes": [
+      "WaterSense handshower"
+    ],
+    "installation_requirements": [
+      "Underfloor mounting bracket anchored to solid floor"
+    ],
+    "compatible_product_ids": [
+      "K-VOLUTE-FREESTANDING-01",
+      "K-UNDERSCORE-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/faucets/singulier-floor-bath-filler",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/singulier_filler.jpg",
+    "model_number": "K-72792IN-CP"
+  },
+  {
+    "id": "K-MEMOIRS-ALCOVE-BATH-01",
+    "name": "Kohler Memoirs 60 x 32 Inch Classic Alcove Bath with Integral Apron",
+    "category": "bathtub",
+    "subcategory": "alcove_bath",
+    "price_inr": 68000,
+    "dimensions": {
+      "width": 2.67,
+      "depth": 5.0,
+      "height": 1.62,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "traditional",
+      "luxury"
+    ],
+    "finishes": [
+      "white",
+      "biscuit"
+    ],
+    "features": [
+      "Stepped architectural detailing coordinates with the full Memoirs suite",
+      "Generous 60 x 32 inch bathing well with molded lumbar contour",
+      "Integral apron with access panel"
+    ],
+    "water_consumption": {
+      "rate": 215.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Standard Alcove Soaking Bath"
+    },
+    "sustainability_attributes": [
+      "Reinforced acrylic maintains water warmth"
+    ],
+    "installation_requirements": [
+      "Three-wall alcove framing"
+    ],
+    "compatible_product_ids": [
+      "K-MEMOIRS-VANITY-01",
+      "K-MEMOIRS-TOILET-01",
+      "K-ARTIFACTS-FAUCET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/shop-bathtubs/memoirs-alcove-bath-k-721",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/memoirs_bath.jpg",
+    "model_number": "K-721-0"
+  },
+  {
+    "id": "K-SUNSTRUCK-OVAL-BATH-01",
+    "name": "Kohler Sunstruck 66 x 36 Inch Freestanding Oval Bath",
+    "category": "bathtub",
+    "subcategory": "freestanding_luxury_bath",
+    "price_inr": 185000,
+    "dimensions": {
+      "width": 3.0,
+      "depth": 5.5,
+      "height": 2.05,
+      "unit": "ft"
+    },
+    "styles": [
+      "transitional",
+      "luxury",
+      "modern"
+    ],
+    "finishes": [
+      "white"
+    ],
+    "features": [
+      "Gracefully contoured oval silhouette creates a captivating centerpiece in luxury bathrooms",
+      "Ergonomic bathing well with lumbar support at both ends",
+      "Textured slip-resistant bottom"
+    ],
+    "water_consumption": {
+      "rate": 255.0,
+      "unit": "Litres Full Capacity",
+      "is_water_saving": false,
+      "efficiency_rating": "Deep Freestanding Soak"
+    },
+    "sustainability_attributes": [
+      "High-efficiency insulation keeps bathwater warm longer"
+    ],
+    "installation_requirements": [
+      "Floor drain connection and floor-mounted tub filler"
+    ],
+    "compatible_product_ids": [
+      "K-PURIST-FLOOR-FILLER-01",
+      "K-PURIST-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/bathtubs/shop-bathtubs/sunstruck-freestanding-bath-k-6368",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/sunstruck_bath.jpg",
+    "model_number": "K-6368-0"
+  },
+  {
+    "id": "K-DEVONSHIRE-TOWEL-BAR-01",
+    "name": "Kohler Devonshire 24-Inch Traditional Towel Bar",
+    "category": "accessory",
+    "subcategory": "towel_bar",
+    "price_inr": 6500,
+    "dimensions": {
+      "width": 2.15,
+      "depth": 0.32,
+      "height": 0.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "vibrant_brushed_nickel",
+      "oil_rubbed_bronze"
+    ],
+    "features": [
+      "Traditional molded escutcheons capture vintage American craftsmanship",
+      "Heavy-gauge brass and zinc alloy holds large bath sheets securely",
+      "Concealed screw mounting"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Solid metal alloy durability"
+    ],
+    "installation_requirements": [
+      "Drywall anchors or wall stud mounting"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-VANITY-01",
+      "K-DEVONSHIRE-TOILET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/devonshire-24-towel-bar-k-10551",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_towel_bar.jpg",
+    "model_number": "K-10551-CP"
+  },
+  {
+    "id": "K-DEVONSHIRE-ROBE-HOOK-01",
+    "name": "Kohler Devonshire Double Robe Hook",
+    "category": "accessory",
+    "subcategory": "robe_hook",
+    "price_inr": 3600,
+    "dimensions": {
+      "width": 0.3,
+      "depth": 0.32,
+      "height": 0.35,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "vibrant_brushed_nickel"
+    ],
+    "features": [
+      "Two prongs hold two robes or towels in a single compact wall footprint",
+      "Matches Devonshire faucets and suite fittings",
+      "Corrosion-resistant finish"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Lifetime metal durability"
+    ],
+    "installation_requirements": [
+      "Wall anchor installation"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-VANITY-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/devonshire-robe-hook-k-10555",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_hook.jpg",
+    "model_number": "K-10555-CP"
+  },
+  {
+    "id": "K-MODERNLIFE-MIRROR-01",
+    "name": "Kohler ModernLife 24 x 36 Inch LED Lighted Bathroom Mirror",
+    "category": "accessory",
+    "subcategory": "lighted_mirror",
+    "price_inr": 34000,
+    "dimensions": {
+      "width": 2.0,
+      "depth": 0.18,
+      "height": 3.0,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "space_saver"
+    ],
+    "finishes": [
+      "frosted_border_illumination"
+    ],
+    "features": [
+      "Front-lit diffused LED border provides shadow-free facial grooming light",
+      "Touch sensor switch with memory dimming preserves previous brightness level",
+      "Copper-free mirror glass resists moisture delamination"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Energy efficient LEDs (less than 28 watts power draw)"
+    ],
+    "installation_requirements": [
+      "Concealed 220V power point behind mirror"
+    ],
+    "compatible_product_ids": [
+      "K-MODERNLIFE-03",
+      "K-FOREFRONT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/mirrors/modernlife-led-mirror",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/modernlife_mirror.jpg",
+    "model_number": "K-77789IN-NA"
+  },
+  {
+    "id": "K-ALEO-TOWEL-RING-01",
+    "name": "Kohler Aleo Modern Rectangular Towel Ring",
+    "category": "accessory",
+    "subcategory": "towel_ring",
+    "price_inr": 4500,
+    "dimensions": {
+      "width": 0.65,
+      "depth": 0.25,
+      "height": 0.55,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "matte_black"
+    ],
+    "features": [
+      "Architectural rectangular ring geometry coordinates with contemporary single-lever faucets",
+      "Holds hand towels neatly beside the vanity",
+      "Solid zinc alloy body"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Corrosion resistant metal construction"
+    ],
+    "installation_requirements": [
+      "Wall anchor drywall screws"
+    ],
+    "compatible_product_ids": [
+      "K-JULIUS-FAUCET-01",
+      "K-FOREFRONT-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/accessories/aleo-towel-ring",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/aleo_ring.jpg",
+    "model_number": "K-72288IN-CP"
+  },
+  {
+    "id": "K-STATEMENT-DRAIN-SQUARE-01",
+    "name": "Kohler Square Tile-In Floor Drain with Removable Grate",
+    "category": "accessory",
+    "subcategory": "floor_drain",
+    "price_inr": 9500,
+    "dimensions": {
+      "width": 0.5,
+      "depth": 0.5,
+      "height": 0.25,
+      "unit": "ft"
+    },
+    "styles": [
+      "modern",
+      "minimalist",
+      "zen"
+    ],
+    "finishes": [
+      "matte_black",
+      "brushed_stainless",
+      "polished_chrome"
+    ],
+    "features": [
+      "Compact 6 x 6 inch square tile-in drain integrates discreetly into shower floor tile patterns",
+      "High-flow capacity handles up to 35 LPM shower runoff with zero ponding",
+      "Includes hair strainer and odor-block water seal trap"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "304 stainless steel resists chemical etching"
+    ],
+    "installation_requirements": [
+      "Standard 2-inch or 3-inch shower drain waste pipe"
+    ],
+    "compatible_product_ids": [
+      "K-STATEMENT-01",
+      "K-RAIN-ROUND-10-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.co.in/products/accessories/square-tile-drain",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/square_drain.jpg",
+    "model_number": "K-97345IN-CP"
+  },
+  {
+    "id": "K-DEVONSHIRE-PAPER-HOLDER-01",
+    "name": "Kohler Devonshire Traditional Toilet Paper Holder",
+    "category": "accessory",
+    "subcategory": "paper_holder",
+    "price_inr": 5200,
+    "dimensions": {
+      "width": 0.75,
+      "depth": 0.32,
+      "height": 0.22,
+      "unit": "ft"
+    },
+    "styles": [
+      "classic",
+      "transitional"
+    ],
+    "finishes": [
+      "polished_chrome",
+      "vibrant_brushed_nickel",
+      "oil_rubbed_bronze"
+    ],
+    "features": [
+      "Traditional stepped escutcheon matching Devonshire suite",
+      "Spring-loaded roller mechanism ensures firm roll retention",
+      "Premium metal build"
+    ],
+    "water_consumption": null,
+    "sustainability_attributes": [
+      "Solid brass and zinc alloy"
+    ],
+    "installation_requirements": [
+      "Wall anchor mounting"
+    ],
+    "compatible_product_ids": [
+      "K-DEVONSHIRE-TOILET-01"
+    ],
+    "incompatible_product_ids": [],
+    "source_url": "https://www.kohler.com/en/products/accessories/devonshire-toilet-paper-holder-k-10554",
+    "verification_status": "unverified",
+    "image_url": "/assets/products/devonshire_paper_holder.jpg",
+    "model_number": "K-10554-CP"
+  }
+]

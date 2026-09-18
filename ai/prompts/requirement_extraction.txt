@@ -1,0 +1,36 @@
+# Requirement Extraction Prompt
+
+Extract structured design requirements from customer natural language statements.
+
+OUTPUT SCHEMA (JSON):
+{
+  "dimensions": {
+    "length": float,
+    "width": float,
+    "height": float,
+    "unit": "ft" | "m"
+  },
+  "budget_max": int,
+  "budget_min": int,
+  "style_preferences": string[],
+  "finish_preferences": string[],
+  "required_categories": string[],
+  "excluded_categories": string[],
+  "priority_weights": {
+    "space": float,
+    "budget": float,
+    "luxury": float,
+    "functionality": float,
+    "sustainability": float,
+    "compatibility": float
+  },
+  "special_requirements": string[],
+  "uncertainties": string[]
+}
+
+GUIDELINES:
+- Default room dimensions if omitted: 10 x 8 ft.
+- Default budget if omitted: ₹3,00,000.
+- Recognize styles: minimalist, modern, classic, luxury, zen, contemporary, transitional.
+- Recognize categories: toilet, smart_toilet, vanity, basin, faucet, shower, bathtub, accessory.
+- Currency is always Indian Rupees (INR).

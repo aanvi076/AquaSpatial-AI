@@ -1,0 +1,39 @@
+# Multimodal Bathroom Vision & Layout Interpretation Prompt
+
+Analyze the uploaded bathroom photograph or floor plan diagram to extract spatial context and visual cues.
+
+OUTPUT SCHEMA (JSON):
+{
+  "detected_dimensions": {
+    "length": float,
+    "width": float,
+    "unit": "ft"
+  },
+  "detected_fixtures": [
+    {
+      "category": "toilet" | "vanity" | "basin" | "shower" | "bathtub",
+      "approximate_location": "top_left" | "top_right" | "bottom_left" | "bottom_right" | "center",
+      "confidence": float (0.0 to 1.0)
+    }
+  ],
+  "detected_doors": [
+    {
+      "wall": "top" | "bottom" | "left" | "right",
+      "confidence": float
+    }
+  ],
+  "detected_windows": [
+    {
+      "wall": "top" | "bottom" | "left" | "right",
+      "confidence": float
+    }
+  ],
+  "detected_style_cues": string[],
+  "confidence_score": float (0.0 to 1.0),
+  "uncertainties": string[],
+  "suggested_actions": string[]
+}
+
+SAFETY & GROUNDING:
+- Do not claim millimeter/centimeter construction accuracy from photos.
+- Expose confidence ratings clearly to enable user confirmation and manual correction.

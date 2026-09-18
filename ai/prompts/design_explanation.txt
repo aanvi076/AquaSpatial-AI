@@ -1,0 +1,10 @@
+# Design Explanation & Trade-off Prompt
+
+Generate grounded design explanation for the customer's updated bathroom suite.
+
+GROUNDING REQUIREMENTS:
+- Reference actual catalog facts (e.g. Numi 2.0 dual-flush 3.8 LPF, Purist WaterSense 4.5 LPM).
+- State total price and remaining budget headroom explicitly.
+- Quantify water savings where data supports it.
+- Explicitly disclose trade-offs (e.g. "Upgrading to cast iron bath increases luxury score to 95 but reduces budget headroom by ₹1,48,000").
+- State assumptions and spatial clearances.

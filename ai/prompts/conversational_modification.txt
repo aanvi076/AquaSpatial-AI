@@ -1,0 +1,31 @@
+# Conversational Modification & Intent Parsing Prompt
+
+Parse the user's natural language redesign instruction against the current design state.
+
+OUTPUT SCHEMA (JSON):
+{
+  "intent": "luxury_upgrade" | "budget_reduction" | "fixture_lock" | "eco_priority" | "category_exclusion" | "style_change" | "general",
+  "budget_delta_inr": int,
+  "budget_max_new": int | null,
+  "locked_product_ids": string[],
+  "excluded_categories": string[],
+  "added_categories": string[],
+  "updated_styles": string[],
+  "updated_finishes": string[],
+  "priority_adjustments": {
+    "space": float,
+    "budget": float,
+    "luxury": float,
+    "sustainability": float,
+    "functionality": float
+  },
+  "change_summary": string,
+  "explanation_query": string
+}
+
+EXAMPLES:
+1. "Make it more luxurious" -> intent: luxury_upgrade, updated_styles: ["luxury"], priority_adjustments: {luxury: 0.4, budget: 0.1}
+2. "Reduce the price by ₹20,000" -> intent: budget_reduction, budget_delta_inr: -20000
+3. "Keep the toilet but change everything else" -> intent: fixture_lock, locked_product_ids: ["current_toilet_id"]
+4. "Prioritize water saving" -> intent: eco_priority, priority_adjustments: {sustainability: 0.5}
+5. "I don't want a bathtub" -> intent: category_exclusion, excluded_categories: ["bathtub"]
