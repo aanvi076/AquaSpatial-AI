@@ -280,6 +280,8 @@ python -m unittest discover -s tests
 
 ---
 
-## License
+## License & Academic Disclaimer
 
 This project is developed for the **KOHLER AI Bathroom Designer Challenge**. Grounded catalog data, model numbers, and brand trademarks are property of **Kohler Co.**
+
+*Submitted as an individual academic case-study prototype for the Kohler-MITWPU AI Research Lab.*
