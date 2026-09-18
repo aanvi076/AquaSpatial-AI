@@ -274,7 +274,6 @@ python -m unittest discover -s tests
 
 - [System Architecture Deep Dive](docs/ARCHITECTURE.md)
 - [REST API Reference](docs/API_DOCUMENTATION.md)
-- [Catalog Verification Audit Report](docs/PRODUCT_URL_VERIFICATION_REPORT.md)
 - [Demonstration & Scenario Guide](demo/README.md)
 - [Competition Presentation Outline](presentation/README.md)
 
