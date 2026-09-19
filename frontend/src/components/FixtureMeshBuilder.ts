@@ -479,21 +479,121 @@ export function buildProductMesh(
       const sForm = sData.form;
 
       if (sForm === 'shower_door_pivot' || sForm === 'shower_door_walkin') {
-        // Full-height glass shower enclosure panel (height ~6.8 ft)
-        const panel = new THREE.Mesh(
-          new THREE.BoxGeometry(w, 6.8, 0.05),
-          mats.glass
-        );
-        panel.position.set(0, 3.4, d / 2);
-        group.add(panel);
+        // Full-height architectural glass shower enclosure (height 6.5 ft)
+        const doorW = Math.max(2.5, w);
+        const doorH = 6.5;
 
-        // Chrome hinge & vertical handle
-        const handle = new THREE.Mesh(
-          new THREE.CylinderGeometry(0.03, 0.03, 1.6, 8),
+        // 1. Sleek metallic top header rail / roller track
+        const headerRail = new THREE.Mesh(
+          new THREE.BoxGeometry(doorW, 0.08, 0.08),
           mats.fixtureMetal
         );
-        handle.position.set(w * 0.35, 3.4, d / 2 + 0.06);
-        group.add(handle);
+        headerRail.position.set(0, doorH + 0.04, 0);
+        headerRail.castShadow = true;
+        group.add(headerRail);
+
+        // 2. Metallic bottom threshold guide
+        const bottomThreshold = new THREE.Mesh(
+          new THREE.BoxGeometry(doorW, 0.04, 0.08),
+          mats.fixtureMetal
+        );
+        bottomThreshold.position.set(0, 0.02, 0);
+        bottomThreshold.receiveShadow = true;
+        group.add(bottomThreshold);
+
+        // 3. Side wall jamb profiles
+        const leftJamb = new THREE.Mesh(
+          new THREE.BoxGeometry(0.05, doorH, 0.07),
+          mats.fixtureMetal
+        );
+        leftJamb.position.set(-doorW / 2 + 0.025, doorH / 2, 0);
+        group.add(leftJamb);
+
+        const rightJamb = new THREE.Mesh(
+          new THREE.BoxGeometry(0.05, doorH, 0.07),
+          mats.fixtureMetal
+        );
+        rightJamb.position.set(doorW / 2 - 0.025, doorH / 2, 0);
+        group.add(rightJamb);
+
+        if (sForm === 'shower_door_walkin') {
+          // Sliding Bypass Doors: Two overlapping tempered glass panels with top roller wheels (Levity style)
+          const panelW = doorW * 0.54;
+
+          // Front Sliding Glass Panel
+          const frontPanel = new THREE.Mesh(
+            new THREE.BoxGeometry(panelW, doorH * 0.96, 0.035),
+            mats.glass
+          );
+          frontPanel.position.set(-doorW * 0.22, doorH * 0.49, 0.025);
+          group.add(frontPanel);
+
+          // Rear Fixed/Sliding Glass Panel
+          const rearPanel = new THREE.Mesh(
+            new THREE.BoxGeometry(panelW, doorH * 0.96, 0.035),
+            mats.glass
+          );
+          rearPanel.position.set(doorW * 0.22, doorH * 0.49, -0.025);
+          group.add(rearPanel);
+
+          // Top Roller Wheels
+          [-doorW * 0.35, -doorW * 0.09, doorW * 0.09, doorW * 0.35].forEach((rx) => {
+            const roller = new THREE.Mesh(
+              new THREE.CylinderGeometry(0.05, 0.05, 0.04, 16),
+              mats.fixtureMetal
+            );
+            roller.rotation.x = Math.PI / 2;
+            roller.position.set(rx, doorH - 0.02, 0);
+            group.add(roller);
+          });
+
+          // Horizontal Towel Bar / Pull Handle on Front Panel
+          const towelBar = new THREE.Mesh(
+            new THREE.CylinderGeometry(0.022, 0.022, panelW * 0.65, 12),
+            mats.fixtureMetal
+          );
+          towelBar.rotation.z = Math.PI / 2;
+          towelBar.position.set(-doorW * 0.22, 3.2, 0.09);
+          group.add(towelBar);
+        } else {
+          // Pivot Door: Frameless pivot glass with vertical architectural handle & pivot hinges (Revel style)
+          const glassPanel = new THREE.Mesh(
+            new THREE.BoxGeometry(doorW * 0.92, doorH * 0.96, 0.035),
+            mats.glass
+          );
+          glassPanel.position.set(0, doorH * 0.49, 0);
+          group.add(glassPanel);
+
+          // Top & Bottom Pivot Hinges
+          [0.15, doorH - 0.15].forEach((hy) => {
+            const hinge = new THREE.Mesh(
+              new THREE.BoxGeometry(0.08, 0.14, 0.09),
+              mats.fixtureMetal
+            );
+            hinge.position.set(-doorW * 0.42, hy, 0);
+            group.add(hinge);
+          });
+
+          // Vertical Sleek Cylindrical Door Handle (Back-to-Back)
+          const handle = new THREE.Mesh(
+            new THREE.CylinderGeometry(0.025, 0.025, 1.8, 12),
+            mats.fixtureMetal
+          );
+          handle.position.set(doorW * 0.32, 3.4, 0.07);
+          handle.castShadow = true;
+          group.add(handle);
+
+          // Handle standoffs
+          [2.6, 4.2].forEach((sy) => {
+            const standoff = new THREE.Mesh(
+              new THREE.CylinderGeometry(0.02, 0.02, 0.08, 8),
+              mats.fixtureMetal
+            );
+            standoff.rotation.x = Math.PI / 2;
+            standoff.position.set(doorW * 0.32, sy, 0.035);
+            group.add(standoff);
+          });
+        }
       } else if (sForm === 'handshower_slide_bar') {
         // Vertical slide rail along wall + handheld wand
         const railH = 2.4;

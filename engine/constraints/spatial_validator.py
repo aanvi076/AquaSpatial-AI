@@ -95,6 +95,9 @@ def validate_spatial_layout(
             if (p_a.category == "faucet" and p_b.category in {"basin", "vanity"}) or \
                (p_b.category == "faucet" and p_a.category in {"basin", "vanity"}):
                 continue
+            # Exception: shower door enclosure co-located with showerhead/valves
+            if (p_a.category == "shower" and p_b.category == "shower"):
+                continue
             if (p_a.category == "basin" and p_b.category == "vanity") or \
                (p_b.category == "basin" and p_a.category == "vanity"):
                 # Vessel basin placed on top of countertop vanity is permissible

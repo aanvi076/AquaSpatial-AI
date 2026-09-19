@@ -112,8 +112,11 @@ class LayoutGenerator:
         # -------------------------------------------------------
         # 1. WET ZONE: Shower / Bathtub — top-right corner
         # -------------------------------------------------------
-        # Shower enclosure minimum 3x3ft; showerhead catalog size forced to min 3x3
-        sh_prod = showers[0] if showers else None
+        # Partition shower fixtures into doors vs showerheads/trims
+        shower_doors = [p for p in showers if "door" in p.name.lower() or "door" in (p.subcategory or "").lower()]
+        shower_fixtures = [p for p in showers if p not in shower_doors]
+
+        sh_prod = shower_fixtures[0] if shower_fixtures else (shower_doors[0] if shower_doors else None)
         b_prod = bathtubs[0] if bathtubs else None
         v_prod = vanities[0] if vanities else (basins[0] if basins else None)
         t_prod = toilets[0] if toilets else None
@@ -138,15 +141,46 @@ class LayoutGenerator:
         wet_y_max = 0.0
         wet_front_clearance = 2.0  # NKBA front access into shower/tub
 
+        def _place_shower_components(base_x: float, base_y: float):
+            # Place primary shower fixture (e.g. rain showerhead or enclosure)
+            if shower_fixtures:
+                placements.append(FixturePlacement(
+                    product_id=shower_fixtures[0].id, category="shower",
+                    x=base_x, y=base_y, width=sw, depth=sd,
+                    rotation=0, clearance_front=wet_front_clearance, zone="wet"
+                ))
+                # If a shower door is also in the bundle, place it at the enclosure threshold
+                if shower_doors:
+                    door_p = shower_doors[0]
+                    door_w = min(sw, max(2.5, self._get_dim_feet(door_p, sw, 0.25)[0]))
+                    placements.append(FixturePlacement(
+                        product_id=door_p.id, category="shower",
+                        x=base_x, y=base_y + sd - 0.25, width=door_w, depth=0.25,
+                        rotation=0, clearance_front=wet_front_clearance, zone="wet"
+                    ))
+                # Any additional shower trims / valves / handshowers
+                for extra_sh in shower_fixtures[1:]:
+                    placements.append(FixturePlacement(
+                        product_id=extra_sh.id, category="shower",
+                        x=base_x + 0.15, y=base_y + sd * 0.45, width=0.4, depth=0.3,
+                        rotation=0, clearance_front=0.5, zone="wet"
+                    ))
+            elif shower_doors:
+                # Only shower door in bundle
+                door_p = shower_doors[0]
+                door_w = min(sw, max(2.5, self._get_dim_feet(door_p, sw, 0.25)[0]))
+                placements.append(FixturePlacement(
+                    product_id=door_p.id, category="shower",
+                    x=base_x, y=base_y, width=door_w, depth=sd,
+                    rotation=0, clearance_front=wet_front_clearance, zone="wet"
+                ))
+
         if sh_prod and b_prod:
             # Both shower and bathtub: shower in top-right corner, bathtub along top wall to the left
             sh_x = rL - sw - WALL_GAP
             sh_y = WALL_GAP
-            placements.append(FixturePlacement(
-                product_id=sh_prod.id, category="shower",
-                x=sh_x, y=sh_y, width=sw, depth=sd,
-                rotation=0, clearance_front=wet_front_clearance, zone="wet"
-            ))
+            _place_shower_components(sh_x, sh_y)
+
             # Bathtub to the left of shower along top wall
             b_x = self._clamp(sh_x - bw - 0.3, WALL_GAP, rL - bw - WALL_GAP)
             b_y = WALL_GAP
@@ -162,11 +196,7 @@ class LayoutGenerator:
             # Shower only: top-right corner
             sh_x = rL - sw - WALL_GAP
             sh_y = WALL_GAP
-            placements.append(FixturePlacement(
-                product_id=sh_prod.id, category="shower",
-                x=sh_x, y=sh_y, width=sw, depth=sd,
-                rotation=0, clearance_front=wet_front_clearance, zone="wet"
-            ))
+            _place_shower_components(sh_x, sh_y)
             wet_x_min = sh_x
             wet_y_max = WALL_GAP + sd
 
@@ -345,6 +375,9 @@ class LayoutGenerator:
                 # Skip faucet-on-vanity overlaps (mounted on countertop)
                 if (pa.category == "faucet" and pb.category in {"vanity", "basin"}) or \
                    (pb.category == "faucet" and pa.category in {"vanity", "basin"}):
+                    continue
+                # Skip shower fixtures in the same wet enclosure (e.g. shower door + showerhead)
+                if (pa.category == "shower" and pb.category == "shower"):
                     continue
                 if check_sat_collision(ra, rb):
                     has_violation = True

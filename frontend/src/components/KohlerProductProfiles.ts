@@ -209,7 +209,7 @@ export const KOHLER_PRODUCT_PROFILES: Record<string, ProductVisualProfile> = {
   'K-PURIST-VALVE-TRIM-01':{ type: 'shower', data: { form: 'shower_trim', discDiameter: 0.25, discThickness: 0.04 } },
   'K-THERMOSTATIC-TRIM-01':{ type: 'shower', data: { form: 'shower_trim', discDiameter: 0.28, discThickness: 0.05 } },
   'K-DTV-MODE-DIGITAL-01': { type: 'shower', data: { form: 'digital_valve', discDiameter: 0.3, discThickness: 0.04 } },
-  'K-LEVO-DOOR-01':        { type: 'shower', data: { form: 'shower_door_pivot', discDiameter: 0.15, discThickness: 0.05 } },
+  'K-LEVO-DOOR-01':        { type: 'shower', data: { form: 'shower_door_walkin', discDiameter: 0.15, discThickness: 0.05 } },
   'K-REVEL-PIVOT-01':      { type: 'shower', data: { form: 'shower_door_pivot', discDiameter: 0.15, discThickness: 0.05 } },
   'K-GRADMATE-WALKIN-01':  { type: 'shower', data: { form: 'shower_door_walkin', discDiameter: 0.15, discThickness: 0.05 } },
   'K-ROUND-WATERFALL-SHOWER-01': { type: 'shower', data: { form: 'rain_round_large', discDiameter: 0.9, discThickness: 0.12, armLength: 1.1 } },
@@ -282,6 +282,9 @@ export function getProductProfile(productId: string, category: string): ProductV
   }
   if (cat.includes('faucet')) {
     return { type: 'faucet', data: { form: 'tall_single_lever', spoutHeight: 0.85, handleCount: 1, spoutReach: 0.5 } };
+  }
+  if (productId.toLowerCase().includes('door') || cat.includes('door')) {
+    return { type: 'shower', data: { form: 'shower_door_pivot', discDiameter: 0.15, discThickness: 0.05 } };
   }
   if (cat.includes('shower')) {
     return { type: 'shower', data: { form: 'rain_round_large', discDiameter: 0.75, discThickness: 0.08 } };

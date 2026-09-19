@@ -345,13 +345,14 @@ export const BathroomView3D: React.FC<BathroomView3DProps> = ({
         roughness: 0.2,
         metalness: 0.1,
       }),
-      glass: new THREE.MeshPhysicalMaterial({
-        color: 0xffffff,
+      glass: new THREE.MeshStandardMaterial({
+        color: 0x93c5fd,
         transparent: true,
-        opacity: 0.35,
-        roughness: 0.05,
-        transmission: 0.9,
-        thickness: 0.5,
+        opacity: 0.45,
+        roughness: 0.1,
+        metalness: 0.2,
+        side: THREE.DoubleSide,
+        depthWrite: false,
       }),
       mirror: new THREE.MeshStandardMaterial({
         color: 0xe2e8f0,
