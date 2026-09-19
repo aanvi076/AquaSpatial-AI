@@ -275,7 +275,7 @@ python -m unittest discover -s tests
 - [System Architecture Deep Dive](docs/ARCHITECTURE.md)
 - [REST API Reference](docs/API_DOCUMENTATION.md)
 - [Demonstration & Scenario Guide](demo/README.md)
-- [Competition Presentation Outline](presentation/README.md)
+- [Competition Presentation Deck (PDF)](presentation/KOHLER%20AI%20Bathroom%20Designer%20%26%20Planner%20(TRACK%201).pdf)
 
 ---
 
