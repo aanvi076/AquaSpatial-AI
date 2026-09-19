@@ -6,6 +6,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688)](https://fastapi.tiangolo.com/)
 [![Three.js](https://img.shields.io/badge/Three.js-r128-black)](https://threejs.org/)
 [![Tests](https://img.shields.io/badge/Tests-87%2F87%20Passing-success)](https://github.com/)
+[![Demo Video](https://img.shields.io/badge/Demo-Google%20Drive-red)](https://drive.google.com/drive/folders/11-DvT51yejBw_h8ZwHywUT_I7tDJpQCc)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 An intelligent, multimodal, constraint-aware bathroom design platform engineered for **KOHLER**. Built on the principle that **generative AI expands the design search space, while deterministic engineering logic guarantees physical and financial feasibility**.
@@ -272,10 +273,11 @@ python -m unittest discover -s tests
 
 ## Documentation & Resources
 
+- [Video Demonstration & Google Drive Folder](https://drive.google.com/drive/folders/11-DvT51yejBw_h8ZwHywUT_I7tDJpQCc)
+- [Prompt Engineering & Testing Artifacts (PDF)](demo/kohler_ai_track1_prompts%20used.pdf)
+- [Competition Presentation Deck (PDF)](presentation/KOHLER%20AI%20Bathroom%20Designer%20%26%20Planner%20(TRACK%201).pdf)
 - [System Architecture Deep Dive](docs/ARCHITECTURE.md)
 - [REST API Reference](docs/API_DOCUMENTATION.md)
-- [Demonstration & Scenario Guide](demo/README.md)
-- [Competition Presentation Deck (PDF)](presentation/KOHLER%20AI%20Bathroom%20Designer%20%26%20Planner%20(TRACK%201).pdf)
 
 ---
 
