@@ -11,6 +11,10 @@
 
 An intelligent, multimodal, constraint-aware bathroom design platform engineered for **KOHLER**. Built on the principle that **generative AI expands the design search space, while deterministic engineering logic guarantees physical and financial feasibility**.
 
+> 🎥 **Video Demonstration & Drive Folder**: [Watch Walkthrough & Demo Assets](https://drive.google.com/drive/folders/11-DvT51yejBw_h8ZwHywUT_I7tDJpQCc)  
+> 📊 **Competition Pitch Deck**: [View Presentation (PDF)](presentation/KOHLER%20AI%20Bathroom%20Designer%20%26%20Planner%20(TRACK%201).pdf)  
+> 📝 **Prompt Engineering Artifacts**: [View Prompts & Test Scenarios (PDF)](demo/kohler_ai_track1_prompts%20used.pdf)
+
 ---
 
 ## Table of Contents
