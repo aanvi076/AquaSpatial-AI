@@ -1,4 +1,4 @@
-# KOHLER AI Bathroom Designer & Planner
+# AquaSpatial AI — Multimodal 3D Bathroom Designer & Spatial Planner
 
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb)](https://reactjs.org/)
@@ -6,14 +6,9 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688)](https://fastapi.tiangolo.com/)
 [![Three.js](https://img.shields.io/badge/Three.js-r128-black)](https://threejs.org/)
 [![Tests](https://img.shields.io/badge/Tests-87%2F87%20Passing-success)](https://github.com/)
-[![Demo Video](https://img.shields.io/badge/Demo-Google%20Drive-red)](https://drive.google.com/drive/folders/11-DvT51yejBw_h8ZwHywUT_I7tDJpQCc)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-An intelligent, multimodal, constraint-aware bathroom design platform engineered for **KOHLER**. Built on the principle that **generative AI expands the design search space, while deterministic engineering logic guarantees physical and financial feasibility**.
-
-> 🎥 **Video Demonstration & Drive Folder**: [Watch Walkthrough & Demo Assets](https://drive.google.com/drive/folders/11-DvT51yejBw_h8ZwHywUT_I7tDJpQCc)  
-> 📊 **Competition Pitch Deck**: [View Presentation (PDF)](presentation/KOHLER%20AI%20Bathroom%20Designer%20%26%20Planner%20(TRACK%201).pdf)  
-> 📝 **Prompt Engineering Artifacts**: [View Prompts & Test Scenarios (PDF)](demo/kohler_ai_track1_prompts%20used.pdf)
+**AquaSpatial AI** is an intelligent, multimodal, constraint-aware bathroom design & space planning platform. Built on the principle that **generative AI expands the design search space, while deterministic engineering logic guarantees physical and financial feasibility**.
 
 ---
 
@@ -38,15 +33,15 @@ An intelligent, multimodal, constraint-aware bathroom design platform engineered
 
 Standard generative AI tools often produce visually appealing bathroom concepts that cannot be constructed—violating minimum architectural clearances, ignoring plumbing wall constraints, hallucinating non-existent fixture models, and providing inaccurate pricing.
 
-The **KOHLER AI Bathroom Designer** solves this by coupling natural language and multimodal intent with a rigorous deterministic engineering pipeline:
+**AquaSpatial AI** solves this by coupling natural language and multimodal intent with a rigorous deterministic engineering pipeline:
 
-1. **Authentic Kohler Catalog Intelligence**: 131 grounded products spanning Toilets, Basins, Faucets, Showers, Bathtubs, Vanities, and Mirrors with official INR pricing, exact dimensions, flow rates, and catalog links.
+1. **Curated Sanitary Catalog Intelligence**: 130+ grounded products spanning Toilets, Basins, Faucets, Showers, Bathtubs, Vanities, and Mirrors with official pricing, exact dimensions, flow rates, and catalog links.
 2. **Deterministic Spatial Engine**: 2D Oriented Bounding Box (OBB) collision detection using the Separating Axis Theorem (SAT), NKBA clearance verification, door swing safety, and wet/dry zoning.
 3. **Multi-Objective Optimization**: Automated synthesis of 5 Pareto-optimal design suites (*Balanced*, *Luxury*, *Eco*, *Space Saver*, *Personalized*).
 4. **3D WebGL Studio & 2D Floor Plan**: Interactive Three.js parametric visualization with camera presets, finish switcher (*Polished Chrome*, *Matte Black*, *Vibrant Moderne Brass*), clearance envelopes, and Katalyst water flow.
 5. **AI Design Copilot & Multimodal Vision**: Conversational natural language redesign with locked fixture preservation, coupled with computer vision floor plan and photo ingestion.
-6. **Sustainability & What-If Intelligence**: National Building Code (NBC) water savings modeling, INR utility bill reduction, CO2 offset, and Section 14 sensitivity analysis.
-7. **Procurement Bill of Materials (BOM)**: Comprehensive itemized specification schedule with 18% GST, rough-in plumbing allowances, and instant printable A4 PDF / CSV / JSON export.
+6. **Sustainability & What-If Intelligence**: National Building Code (NBC) water savings modeling, utility bill reduction, CO2 offset, and Section 14 sensitivity analysis.
+7. **Procurement Bill of Materials (BOM)**: Comprehensive itemized specification schedule with GST, rough-in plumbing allowances, and instant printable A4 PDF / CSV / JSON export.
 
 ---
 
@@ -54,16 +49,16 @@ The **KOHLER AI Bathroom Designer** solves this by coupling natural language and
 
 ### 1. Multi-Objective Design Suites
 - **Balanced Tier**: Optimized cost-to-luxury ratio.
-- **Luxury Tier**: Flagship intelligent products (Numi 2.0, DTV digital showering).
+- **Luxury Tier**: Flagship intelligent products (smart toilets, digital showering).
 - **Eco Tier**: WaterSense certified fixtures minimizing municipal consumption.
 - **Space Saver Tier**: Compact footprints maximizing standing circulation.
 - **Personalized Tier**: Tailored to explicit user style, budget, and category inputs.
 
 ### 2. Interactive 3D WebGL Showroom & 2D Plan
-- Real-time Three.js rendering of authentic Kohler fixture geometry.
+- Real-time Three.js rendering of authentic sanitary fixture geometry.
 - Floating camera controls (*Isometric*, *Top Plan*, *Front View*).
 - Interactive finish customization (*Chrome*, *Matte Black*, *Brushed Brass*).
-- Visual clearance overlays (cyan safety envelopes) and Katalyst water particles.
+- Visual clearance overlays (cyan safety envelopes) and dynamic water particle effects.
 
 ### 3. Conversational AI Copilot & Vision
 - Natural language refinement (*"make it more luxurious"*, *"reduce budget by ₹20,000"*, *"remove the bathtub"*).
@@ -72,12 +67,12 @@ The **KOHLER AI Bathroom Designer** solves this by coupling natural language and
 
 ### 4. Sustainability & Section 14 What-If Matrix
 - Calculates exact annual water savings (liters and gallons) vs NBC baseline.
-- Estimates annual utility bill savings in Indian Rupees (INR) and carbon offset ($kg\ CO_2e$).
+- Estimates annual utility bill savings and carbon offset ($kg\ CO_2e$).
 - Parameterized What-If sensitivity analysis: Spend delta ROI, bathtub removal trade-offs, and cost driver identification.
 
 ### 5. Procurement Bill of Materials & PDF Export
-- Itemized fixture schedule with official Kohler model numbers and MRP.
-- Financial tax math: Fixture Subtotal, 18% GST, 10% rough-in contingency, Grand Project Total.
+- Itemized fixture schedule with model numbers and MRP.
+- Financial tax math: Fixture Subtotal, GST, rough-in contingency, Grand Project Total.
 - **Print / Save as PDF**: Clean luxury A4 spec sheet rendered via an in-memory iframe print bridge without popup blocker interference.
 
 ---
@@ -111,9 +106,9 @@ The **KOHLER AI Bathroom Designer** solves this by coupling natural language and
                    └─────────────────┬───────────────┘
                                      │
 ┌────────────────────────────────────▼────────────────────────────────────┐
-│                    AUTHENTIC KOHLER CATALOG DATA                        │
-│   `data/products/kohler_catalog.json` (131 Verified Fixtures)           │
-│   - Official SKUs, Dimensions, Prices (INR), Flow Rates, PDP URLs       │
+│                    VERIFIED SANITARY CATALOG DATA                       │
+│   `data/products/kohler_catalog.json` (130+ Grounded Fixtures)          │
+│   - Verified SKUs, Dimensions, Prices, Flow Rates, and Specifications   │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -287,6 +282,4 @@ python -m unittest discover -s tests
 
 ## License
 
-This project is developed for the Kohler AI Case Study Challenge. All product names, trademarks, and registered trademarks are property of their respective owners. Kohler product specifications, imagery, and 3D models are used for demonstration and educational purposes.
-
-*Submitted as an individual academic case-study prototype for the Kohler-MITWPU AI Research Lab.*
+This project is licensed under the MIT License. All catalog specifications, imagery, and 3D assets are utilized for architectural demonstration and educational purposes.
