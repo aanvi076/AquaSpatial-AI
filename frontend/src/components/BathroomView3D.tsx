@@ -5,7 +5,7 @@ import {
   Layers, 
   Droplets, 
   Sparkles, 
-  ShieldCheck
+  Box
 } from 'lucide-react';
 import type { SpatialLayout, KohlerProduct, FixturePlacement } from '../types';
 import { buildProductMesh, getPlacementCenterAndBounds } from './FixtureMeshBuilder';
@@ -18,6 +18,8 @@ interface BathroomView3DProps {
   roomWidth?: number;
   themeStyle?: string;
   onSelectFixture?: (productId: string) => void;
+  viewMode?: 'view3d' | 'view2d';
+  onToggleViewMode?: (mode: 'view3d' | 'view2d') => void;
 }
 
 export const BathroomView3D: React.FC<BathroomView3DProps> = ({
@@ -27,7 +29,9 @@ export const BathroomView3D: React.FC<BathroomView3DProps> = ({
   roomLength = 10,
   roomWidth = 8,
   themeStyle = 'modern',
-  onSelectFixture
+  onSelectFixture,
+  viewMode = 'view3d',
+  onToggleViewMode
 }) => {
   const mountRef = useRef<HTMLDivElement>(null);
   const [activeFinish, setActiveFinish] = useState<'chrome' | 'matte_black' | 'gold'>('chrome');
@@ -455,134 +459,131 @@ export const BathroomView3D: React.FC<BathroomView3DProps> = ({
     : products.length;
 
   return (
-    <div className="card" style={{ padding: 0, overflow: 'hidden', position: 'relative' }}>
+    <div className="card" style={{ padding: 0, overflow: 'hidden', position: 'relative', width: '100%', boxSizing: 'border-box' }}>
       {/* Visual Studio Header & Segmented Toolbar */}
-      <div style={{
-        padding: '12px 20px',
-        backgroundColor: 'var(--color-white)',
-        borderBottom: '1px solid var(--color-grey-200)',
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: '12px'
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Sparkles size={16} color="var(--color-black)" />
-          <h3 style={{ fontSize: '15px', fontWeight: 700, color: 'var(--color-grey-800)', margin: 0 }}>
-            3D Realistic Product Visualization
-          </h3>
-          <span style={{ fontSize: '12px', color: 'var(--color-grey-500)' }}>
-            (Left-click orbit • Right-click pan • Scroll zoom)
+      <div className="viewport-toolbar-header">
+        {/* Title & Telemetry Row */}
+        <div className="viewport-title-row">
+          <div className="viewport-title-group">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+              <Sparkles size={14} color="var(--accent-black)" />
+              <h3 className="viewport-heading">
+                3D Realistic Visualization
+              </h3>
+            </div>
+            <span className="viewport-telemetry-badge">
+              {layout ? `${layout.room_length} × ${layout.room_width} ft` : `${roomLength} × ${roomWidth} ft`} &bull; {activeProductCount} {activeProductCount === 1 ? 'Fixture' : 'Fixtures'}
+            </span>
+          </div>
+          <span className="viewport-hint">
+            Left-drag: Orbit &bull; Right-drag: Pan &bull; Scroll: Zoom
           </span>
         </div>
 
-        {/* Action Controls */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-          
-          {/* Camera View Angle Selector */}
-          <div className="seg-capsule">
+        {/* Logical Control Groups Ribbon */}
+        <div className="viewport-controls-ribbon">
+          {/* Group 1: View */}
+          {onToggleViewMode && (
+            <div className="cad-toolbar-group" title="Viewport Mode">
+              <button
+                type="button"
+                onClick={() => onToggleViewMode('view3d')}
+                className={`cad-toolbar-btn ${viewMode === 'view3d' ? 'is-active' : ''}`}
+              >
+                <Box size={12} />
+                <span>3D Perspective</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => onToggleViewMode('view2d')}
+                className={`cad-toolbar-btn ${viewMode === 'view2d' ? 'is-active' : ''}`}
+              >
+                <Layers size={12} />
+                <span>2D Plan</span>
+              </button>
+            </div>
+          )}
+
+          {/* Group 2: Camera */}
+          <div className="cad-toolbar-group" title="Camera Angles">
             <button
               type="button"
               onClick={() => setCameraView('iso')}
-              className={cameraPreset === 'iso' ? 'is-active' : ''}
+              className={`cad-toolbar-btn ${cameraPreset === 'iso' ? 'is-active' : ''}`}
             >
               Isometric
             </button>
             <button
               type="button"
               onClick={() => setCameraView('top')}
-              className={cameraPreset === 'top' ? 'is-active' : ''}
+              className={`cad-toolbar-btn ${cameraPreset === 'top' ? 'is-active' : ''}`}
             >
-              Top Plan
+              Top
             </button>
             <button
               type="button"
               onClick={() => setCameraView('front')}
-              className={cameraPreset === 'front' ? 'is-active' : ''}
+              className={`cad-toolbar-btn ${cameraPreset === 'front' ? 'is-active' : ''}`}
             >
               Front
             </button>
           </div>
 
-          {/* Material Finish Switcher */}
-          <div className="seg-capsule">
+          {/* Group 3: Finish */}
+          <div className="cad-toolbar-group" title="Fixture Metal Finish">
             <button
               type="button"
               onClick={() => setActiveFinish('chrome')}
-              title="Polished Chrome"
-              className={activeFinish === 'chrome' ? 'is-active' : ''}
+              className={`cad-toolbar-btn ${activeFinish === 'chrome' ? 'is-active' : ''}`}
             >
-              <span style={{
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #e2e8f0, #94a3b8)',
-                display: 'inline-block'
-              }} />
-              Chrome
+              <span className="finish-dot finish-chrome" />
+              <span>Chrome</span>
             </button>
             <button
               type="button"
               onClick={() => setActiveFinish('matte_black')}
-              title="Matte Black"
-              className={activeFinish === 'matte_black' ? 'is-active' : ''}
+              className={`cad-toolbar-btn ${activeFinish === 'matte_black' ? 'is-active' : ''}`}
             >
-              <span style={{
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                backgroundColor: '#18181b',
-                display: 'inline-block'
-              }} />
-              Black
+              <span className="finish-dot finish-black" />
+              <span>Black</span>
             </button>
             <button
               type="button"
               onClick={() => setActiveFinish('gold')}
-              title="French Gold / Brushed Brass"
-              className={activeFinish === 'gold' ? 'is-active' : ''}
+              className={`cad-toolbar-btn ${activeFinish === 'gold' ? 'is-active' : ''}`}
             >
-              <span style={{
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #f59e0b, #d97706)',
-                display: 'inline-block'
-              }} />
-              Gold
+              <span className="finish-dot finish-gold" />
+              <span>Gold</span>
             </button>
           </div>
 
-          {/* Clearance Toggle */}
-          <button
-            type="button"
-            onClick={() => setShowClearances(!showClearances)}
-            className={`btn btn-sm ${showClearances ? 'btn-primary' : 'btn-secondary'}`}
-            title="Toggle NKBA 3D Clearance Envelopes"
-          >
-            <Layers size={13} />
-            <span>Clearance</span>
-          </button>
+          {/* Group 4: Visualization */}
+          <div className="cad-toolbar-group" title="Visualization Layers">
+            <button
+              type="button"
+              onClick={() => setShowClearances(!showClearances)}
+              className={`cad-toolbar-btn ${showClearances ? 'is-active' : ''}`}
+            >
+              <Layers size={12} />
+              <span>Clearance</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowWaterSpray(!showWaterSpray)}
+              className={`cad-toolbar-btn ${showWaterSpray ? 'is-active' : ''}`}
+            >
+              <Droplets size={12} />
+              <span>Water Flow</span>
+            </button>
+          </div>
 
-          {/* Water Spray Toggle */}
-          <button
-            type="button"
-            onClick={() => setShowWaterSpray(!showWaterSpray)}
-            className={`btn btn-sm ${showWaterSpray ? 'btn-primary' : 'btn-secondary'}`}
-            title="Toggle Katalyst Water Spray Animation"
-          >
-            <Droplets size={13} />
-            <span>Water Flow</span>
-          </button>
-
-          {/* Reset Camera */}
+          {/* Group 5: Reset */}
           <button
             type="button"
             onClick={() => setCameraView('iso')}
-            className="btn btn-secondary btn-sm"
-            style={{ padding: '6px 10px' }}
+            className="cad-icon-btn"
             title="Reset Camera View"
+            aria-label="Reset Camera"
           >
             <RotateCcw size={13} />
           </button>
@@ -590,63 +591,37 @@ export const BathroomView3D: React.FC<BathroomView3DProps> = ({
       </div>
 
       {/* 3D WebGL Canvas Container */}
-      <div style={{ position: 'relative', width: '100%', height: '540px', backgroundColor: '#f8fafc' }}>
+      <div style={{ position: 'relative', width: '100%', height: '540px', backgroundColor: '#f8fafc', minWidth: 0, overflow: 'hidden' }}>
         <div ref={mountRef} style={{ width: '100%', height: '100%', cursor: 'grab' }} />
 
         {/* Legend / Overlay Badge */}
-        <div style={{
-          position: 'absolute',
-          top: '12px',
-          left: '12px',
-          pointerEvents: 'none',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '6px'
-        }}>
+        {showClearances && (
           <div style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.94)',
+            position: 'absolute',
+            bottom: '12px',
+            left: '12px',
+            pointerEvents: 'none',
+            backgroundColor: 'rgba(255, 255, 255, 0.92)',
             backdropFilter: 'blur(8px)',
-            border: '1px solid var(--color-grey-200)',
-            borderRadius: '6px',
-            padding: '6px 12px',
-            fontSize: '12px',
-            color: 'var(--color-grey-800)',
-            boxShadow: 'var(--shadow-subtle)',
+            border: '1px solid #06b6d4',
+            borderRadius: '5px',
+            padding: '4px 8px',
+            fontSize: '11px',
+            color: '#0891b2',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px'
           }}>
-            <ShieldCheck size={14} color="var(--color-eco-green)" />
-            <span>
-              {layout ? `${layout.room_length} × ${layout.room_width} ft` : `${roomLength} × ${roomWidth} ft`} &bull;{' '}
-              {activeProductCount} {activeProductCount === 1 ? 'Fixture' : 'Fixtures'} Placed
-            </span>
+            <span style={{
+              width: '7px',
+              height: '7px',
+              borderRadius: '50%',
+              backgroundColor: '#06b6d4',
+              display: 'inline-block'
+            }} />
+            <span>Cyan zones: NKBA / Kohler front clearances</span>
           </div>
-
-          {showClearances && (
-            <div style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.94)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid #06b6d4',
-              borderRadius: '6px',
-              padding: '5px 10px',
-              fontSize: '11px',
-              color: '#0891b2',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px'
-            }}>
-              <span style={{
-                width: '7px',
-                height: '7px',
-                borderRadius: '50%',
-                backgroundColor: '#06b6d4',
-                display: 'inline-block'
-              }} />
-              <span>Cyan zones: NKBA / Kohler front clearances</span>
-            </div>
-          )}
-        </div>
+        )}
 
         {/* Fixture Inspection Tooltip Card */}
         {selectedFixture && (

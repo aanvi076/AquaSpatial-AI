@@ -3,9 +3,10 @@ import {
   Layers, 
   Eye, 
   EyeOff, 
-  ShieldCheck, 
   RotateCw, 
   Sparkles,
+  Box,
+  ShieldCheck,
   ExternalLink
 } from 'lucide-react';
 import type { SpatialLayout, FixturePlacement, SpatialValidationResult, KohlerProduct } from '../types';
@@ -17,6 +18,8 @@ interface FloorPlan2DProps {
   products: KohlerProduct[];
   onGenerateLayout?: () => void;
   loading?: boolean;
+  viewMode?: 'view3d' | 'view2d';
+  onToggleViewMode?: (mode: 'view3d' | 'view2d') => void;
 }
 
 export const FloorPlan2D: React.FC<FloorPlan2DProps> = ({
@@ -25,6 +28,8 @@ export const FloorPlan2D: React.FC<FloorPlan2DProps> = ({
   products,
   onGenerateLayout,
   loading = false,
+  viewMode = 'view2d',
+  onToggleViewMode
 }) => {
   const [showClearances, setShowClearances] = useState<boolean>(true);
   const [showZoning, setShowZoning] = useState<boolean>(true);
@@ -63,51 +68,83 @@ export const FloorPlan2D: React.FC<FloorPlan2DProps> = ({
   const isFeasible = spatialValidation?.is_feasible ?? !layout.has_collisions;
 
   return (
-    <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '24px' }}>
+    <div className="card" style={{ display: 'flex', flexDirection: 'column', padding: 0, overflow: 'hidden', width: '100%', boxSizing: 'border-box' }}>
       {/* Top Toolbar */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Layers size={18} color="var(--color-black)" />
-            <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-grey-800)', margin: 0 }}>
-              Architectural Schematic Floor Plan
-            </h3>
+      <div className="viewport-toolbar-header">
+        {/* Title & Telemetry Row */}
+        <div className="viewport-title-row">
+          <div className="viewport-title-group">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+              <Layers size={15} color="var(--accent-black)" />
+              <h3 className="viewport-heading">
+                2D Architectural Floor Plan
+              </h3>
+            </div>
+            <span className="viewport-telemetry-badge">
+              {roomLength} × {roomWidth} ft &bull; {isFeasible ? 'NKBA & IBC Compliant' : 'Clearance Conflicts'}
+            </span>
           </div>
-          <span className={`badge-tier ${isFeasible ? 'badge-verified' : 'badge-bad'}`}>
-            {isFeasible ? 'NKBA & IBC Code Compliant' : 'Clearance Conflicts'}
+          <span className="viewport-hint">
+            Click fixtures to inspect rough-in measurements
           </span>
         </div>
 
-        {/* View Controls & Action */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <button
-            type="button"
-            onClick={() => setShowClearances(!showClearances)}
-            className={`btn btn-sm ${showClearances ? 'btn-primary' : 'btn-secondary'}`}
-          >
-            {showClearances ? <Eye size={13} /> : <EyeOff size={13} />}
-            Clearances
-          </button>
+        {/* Controls Ribbon */}
+        <div className="viewport-controls-ribbon">
+          {/* Group 1: View */}
+          {onToggleViewMode && (
+            <div className="cad-toolbar-group" title="Viewport Mode">
+              <button
+                type="button"
+                onClick={() => onToggleViewMode('view3d')}
+                className={`cad-toolbar-btn ${viewMode === 'view3d' ? 'is-active' : ''}`}
+              >
+                <Box size={12} />
+                <span>3D Perspective</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => onToggleViewMode('view2d')}
+                className={`cad-toolbar-btn ${viewMode === 'view2d' ? 'is-active' : ''}`}
+              >
+                <Layers size={12} />
+                <span>2D Plan</span>
+              </button>
+            </div>
+          )}
 
-          <button
-            type="button"
-            onClick={() => setShowZoning(!showZoning)}
-            className={`btn btn-sm ${showZoning ? 'btn-primary' : 'btn-secondary'}`}
-          >
-            {showZoning ? <Eye size={13} /> : <EyeOff size={13} />}
-            Wet/Dry Zones
-          </button>
+          {/* Group 2: Overlays */}
+          <div className="cad-toolbar-group" title="Plan Overlays">
+            <button
+              type="button"
+              onClick={() => setShowClearances(!showClearances)}
+              className={`cad-toolbar-btn ${showClearances ? 'is-active' : ''}`}
+            >
+              {showClearances ? <Eye size={12} /> : <EyeOff size={12} />}
+              <span>Clearances</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowZoning(!showZoning)}
+              className={`cad-toolbar-btn ${showZoning ? 'is-active' : ''}`}
+            >
+              {showZoning ? <Eye size={12} /> : <EyeOff size={12} />}
+              <span>Wet/Dry Zones</span>
+            </button>
+          </div>
 
+          {/* Group 3: Re-Layout Action */}
           {onGenerateLayout && (
             <button
               type="button"
               onClick={onGenerateLayout}
-              className="btn btn-secondary btn-sm"
+              className="cad-toolbar-btn btn-cad-secondary"
               disabled={loading}
               title="Recompute procedural fixture placements"
+              style={{ border: '1px solid var(--border-light)', borderRadius: '6px' }}
             >
-              <RotateCw size={13} className={loading ? 'spin-icon' : ''} />
-              Re-Layout
+              <RotateCw size={12} className={loading ? 'spin-icon' : ''} />
+              <span>Re-Layout</span>
             </button>
           )}
         </div>

@@ -3,29 +3,19 @@ import {
   CheckCircle2, 
   AlertTriangle, 
   Droplets, 
-  Maximize2, 
-  ExternalLink, 
-  Plus, 
   Trash2, 
   ShieldCheck, 
-  Compass,
-  Cpu,
-  Layers,
-  ShoppingBag,
-  Sparkles,
-  MessageSquare,
-  Wand2,
-  GitCompare,
-  FileSpreadsheet,
-  Receipt,
-  Box,
-  ChevronDown,
-  ChevronUp,
-  RotateCw,
-  TrendingUp,
-  Leaf,
-  Send,
-  X
+  ShoppingBag, 
+  Sparkles, 
+  MessageSquare, 
+  Wand2, 
+  FileSpreadsheet, 
+  Receipt, 
+  RotateCw, 
+  Leaf, 
+  Send, 
+  X, 
+  Check 
 } from 'lucide-react';
 import { apiService } from './services/api';
 import type { 
@@ -48,10 +38,19 @@ import { WhatIfMatrixView } from './components/WhatIfMatrixView';
 import { BOMExportModal } from './components/BOMExportModal';
 import { BathroomView3D } from './components/BathroomView3D';
 
+// Workflow Stages: Design → Products → AI Refinement → Spatial Validation → Sustainability → BOM
+type WorkflowStage = 'design' | 'products' | 'copilot' | 'spatial' | 'sustainability' | 'bom';
+
 export function App() {
   // System health state
   const [health, setHealth] = useState<HealthResponse | null>(null);
   const [apiError, setApiError] = useState<string | null>(null);
+
+  // Workflow Stage
+  const [activeStage, setActiveStage] = useState<WorkflowStage>('design');
+
+  // Canvas Viewport Mode: 'view3d' | 'view2d'
+  const [viewportMode, setViewportMode] = useState<'view3d' | 'view2d'>('view3d');
 
   // Design brief requirements state
   const [roomLength, setRoomLength] = useState<number>(10);
@@ -66,11 +65,6 @@ export function App() {
   ]);
   const [excludedCategories] = useState<string[]>([]);
 
-  // Studio Navigation: 'view3d' | 'layout' | 'design' | 'products' | 'copilot' | 'insights'
-  const [activeTab, setActiveTab] = useState<'view3d' | 'layout' | 'design' | 'products' | 'copilot' | 'insights'>('view3d');
-  const [activeInsightTab, setActiveInsightTab] = useState<'tradeoffs' | 'sustainability'>('tradeoffs');
-  const [showFeasibilityDetails, setShowFeasibilityDetails] = useState<boolean>(false);
-
   // Natural Language Ingestion state
   const [nlRequirementText, setNlRequirementText] = useState('');
   const [extractingNl, setExtractingNl] = useState(false);
@@ -81,14 +75,14 @@ export function App() {
   const [loadingSustainability, setLoadingSustainability] = useState<boolean>(false);
   const [isBOMModalOpen, setIsBOMModalOpen] = useState<boolean>(false);
 
-  // Floating Chat overlay state
+  // Floating Chat FAB / Drawer state
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 'welcome',
       sender: 'assistant',
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      text: 'Welcome to the Kohler AI Design Copilot. Ask me to modify fixtures, adjust budget, swap finishes, or optimize water savings.',
+      text: 'Kohler AI Studio Copilot active. Inquire about fixture substitutions, budget optimization, spatial compliance, or finish coordination.',
     }
   ]);
   const [chatInput, setChatInput] = useState('');
@@ -97,7 +91,6 @@ export function App() {
   // Catalog state
   const [products, setProducts] = useState<KohlerProduct[]>([]);
   const [allCatalogProducts, setAllCatalogProducts] = useState<KohlerProduct[]>([]);
-  const [loadingCatalog, setLoadingCatalog] = useState(true);
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [ecoFilterOnly, setEcoFilterOnly] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -110,7 +103,6 @@ export function App() {
     'K-STATEMENT-01'
   ]);
   const [validation, setValidation] = useState<ConstraintValidationResponse | null>(null);
-  const [validating, setValidating] = useState<boolean>(false);
 
   // Spatial Layout state
   const [spatialLayout, setSpatialLayout] = useState<SpatialLayout | null>(null);
@@ -147,7 +139,6 @@ export function App() {
   useEffect(() => {
     async function loadCatalog() {
       try {
-        setLoadingCatalog(true);
         const data = await apiService.getCatalog({
           category: activeCategory,
           water_saving_only: ecoFilterOnly,
@@ -158,8 +149,6 @@ export function App() {
         }
       } catch (err) {
         console.error('Catalog load error:', err);
-      } finally {
-        setLoadingCatalog(false);
       }
     }
     loadCatalog();
@@ -248,7 +237,7 @@ export function App() {
       if (extracted.budget_max) setBudgetMax(extracted.budget_max);
       if (extracted.style_preferences?.length) setSelectedStyle(extracted.style_preferences[0]);
       if (extracted.required_categories?.length) setRequiredCategories(extracted.required_categories);
-      setNlFeedback(`Extracted: ${extracted.dimensions?.length}x${extracted.dimensions?.width} ft, ₹${extracted.budget_max?.toLocaleString('en-IN')}, style: ${extracted.style_preferences?.[0]}`);
+      setNlFeedback(`Applied: ${extracted.dimensions?.length}x${extracted.dimensions?.width} ft, ₹${extracted.budget_max?.toLocaleString('en-IN')}, style: ${extracted.style_preferences?.[0]}`);
     } catch (err: any) {
       console.error('Failed to extract requirements:', err);
       setNlFeedback('Error extracting requirements.');
@@ -266,7 +255,6 @@ export function App() {
     if (design.layout) {
       setSpatialLayout(design.layout);
     }
-    setActiveTab('view3d');
   };
 
   // Apply detected room from multimodal vision
@@ -279,13 +267,11 @@ export function App() {
     setRoomWidth(dimensions.width);
     if (styles.length > 0) setSelectedStyle(styles[0]);
     if (requiredCats.length > 0) setRequiredCategories(requiredCats);
-    setActiveTab('view3d');
   };
 
   // Apply substitutions from What-If Sensitivity Engine
   const handleApplySubstitutions = (newProductIds: string[]) => {
     setSelectedProductIds(newProductIds);
-    setActiveTab('view3d');
   };
 
   // Automatically recalculate sustainability metrics when bundle changes
@@ -312,7 +298,6 @@ export function App() {
   // Run deterministic constraint validation
   useEffect(() => {
     async function runValidation() {
-      setValidating(true);
       try {
         const reqs: DesignRequirements = {
           dimensions: { length: roomLength, width: roomWidth, unit: 'ft' },
@@ -330,8 +315,6 @@ export function App() {
         setValidation(res);
       } catch (err) {
         console.error('Validation error:', err);
-      } finally {
-        setValidating(false);
       }
     }
     runValidation();
@@ -441,293 +424,208 @@ export function App() {
   const roomArea = (roomLength * roomWidth).toFixed(1);
   const selectedSuite = alternatives.find((alt) => alt.design_id === selectedDesignId);
   const annualSavedGallons = sustainabilityReport ? Math.round(sustainabilityReport.annual_water_saved_liters * 0.264172) : 5800;
+  const currentTotalCost = validation?.total_cost_inr ?? 0;
+  const budgetHeadroom = budgetMax - currentTotalCost;
 
   return (
-    <div className="kohler-app">
+    <div className="arch-workspace">
       {apiError && (
-        <div style={{ background: '#fee2e2', color: '#991b1b', padding: '8px 16px', fontSize: '13px', textAlign: 'center', borderBottom: '1px solid #fecaca' }}>
-          <AlertTriangle size={14} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
+        <div style={{ background: '#fee2e2', color: '#991b1b', padding: '6px 16px', fontSize: '12px', textAlign: 'center', borderBottom: '1px solid #fecaca' }}>
+          <AlertTriangle size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
           {apiError}
         </div>
       )}
-      {/* 1. Header matching reference */}
-      <header className="app-header">
-        <div className="container header-inner">
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <span className="brand-logo">KOHLER.</span>
-            <span className="brand-subtitle">AI Bathroom Designer &amp; Planner {health?.status === "healthy" ? "• Live" : ""}</span>
+
+      {/* 1. Top Control Strip / Architectural Bar */}
+      <header className="arch-top-bar">
+        <div className="brand-badge-group">
+          <div className="brand-wordmark">
+            <span>KOHLER</span>
+            <span className="brand-dot">•</span>
+            <span style={{ fontWeight: 600, color: 'var(--text-secondary)' }}>STUDIO AI</span>
+          </div>
+          <span className="brand-tag">
+            {selectedSuite?.name || (health?.status === 'healthy' ? 'CAD ENGINE READY' : 'OFFLINE')}
+          </span>
+        </div>
+
+        {/* 2. Interactive Workflow Pipeline Stepper */}
+        <nav className="workflow-pipeline" aria-label="Workflow Stages">
+          <button
+            type="button"
+            onClick={() => setActiveStage('design')}
+            className={`workflow-step-btn ${activeStage === 'design' ? 'is-active' : ''}`}
+          >
+            <span className="workflow-step-num">01</span>
+            <Sparkles size={13} />
+            <span>Design</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveStage('products')}
+            className={`workflow-step-btn ${activeStage === 'products' ? 'is-active' : ''}`}
+          >
+            <span className="workflow-step-num">02</span>
+            <ShoppingBag size={13} />
+            <span>Products</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveStage('copilot')}
+            className={`workflow-step-btn ${activeStage === 'copilot' ? 'is-active' : ''}`}
+          >
+            <span className="workflow-step-num">03</span>
+            <MessageSquare size={13} />
+            <span>AI Refine</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveStage('spatial')}
+            className={`workflow-step-btn ${activeStage === 'spatial' ? 'is-active' : ''}`}
+          >
+            <span className="workflow-step-num">04</span>
+            <ShieldCheck size={13} />
+            <span>Spatial</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveStage('sustainability')}
+            className={`workflow-step-btn ${activeStage === 'sustainability' ? 'is-active' : ''}`}
+          >
+            <span className="workflow-step-num">05</span>
+            <Leaf size={13} />
+            <span>Eco Insights</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              setActiveStage('bom');
+              setIsBOMModalOpen(true);
+            }}
+            className={`workflow-step-btn ${activeStage === 'bom' ? 'is-active' : ''}`}
+          >
+            <span className="workflow-step-num">06</span>
+            <Receipt size={13} />
+            <span>BOM Spec</span>
+          </button>
+        </nav>
+
+        {/* 3. Top Metrics & Quick Action */}
+        <div className="top-metrics-group">
+          <div className="metric-pill metric-pill-eco" title="Calculated annual water conservation">
+            <Leaf size={12} />
+            <span>{annualSavedGallons.toLocaleString()} Gal/yr</span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-            {/* Water Savings & Price Preview */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px' }}>
-              <span className="badge-eco">
-                <Leaf size={13} />
-                <span>{annualSavedGallons.toLocaleString()} Gal saved/yr</span>
-              </span>
-              <span style={{ fontWeight: 800, color: 'var(--color-black)', fontSize: '15px' }}>
-                ₹{(validation?.total_cost_inr ?? 0).toLocaleString('en-IN')}
-              </span>
-            </div>
-
-            {/* Specification & BOM Button */}
-            <button
-              type="button"
-              onClick={() => setIsBOMModalOpen(true)}
-              className="btn btn-primary"
-            >
-              <Receipt size={15} />
-              <span>Specification &amp; BOM</span>
-            </button>
+          <div className="metric-pill metric-pill-budget" title="Current bundle total price">
+            <span>₹{currentTotalCost.toLocaleString('en-IN')}</span>
           </div>
+
+          <button
+            type="button"
+            onClick={() => setIsBOMModalOpen(true)}
+            className="btn-cad btn-cad-primary"
+          >
+            <Receipt size={13} />
+            <span>Export BOM</span>
+          </button>
         </div>
       </header>
 
-      {/* 2. Main Studio Content */}
-      <main className="container" style={{ marginTop: '24px', marginBottom: '80px', flex: 1 }}>
-        {/* Studio Tabs Navigation */}
-        <div className="studio-tabs">
-          <button
-            type="button"
-            onClick={() => setActiveTab('view3d')}
-            className={`studio-tab-btn ${activeTab === 'view3d' ? 'is-active' : ''}`}
-          >
-            <Box size={15} />
-            <span>3D Visualizer</span>
-            <span className="studio-tab-badge">WebGL</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab('layout')}
-            className={`studio-tab-btn ${activeTab === 'layout' ? 'is-active' : ''}`}
-          >
-            <Layers size={15} />
-            <span>2D Floor Plan</span>
-            <span className="studio-tab-badge">
-              {spatialValidation?.is_feasible ? 'Valid' : 'Schematic'}
+      {/* 4. Main Architectural Workspace Layout */}
+      <main className="workspace-body">
+        
+        {/* Left Architectural Workbench (Contextual Stage Tools) */}
+        <aside className="arch-workbench">
+          <div className="workbench-header">
+            <div className="workbench-title">
+              {activeStage === 'design' && <><Sparkles size={14} /> Design Brief &amp; Suites</>}
+              {activeStage === 'products' && <><ShoppingBag size={14} /> Kohler Catalog ({products.length})</>}
+              {activeStage === 'copilot' && <><MessageSquare size={14} /> AI Multimodal Copilot</>}
+              {activeStage === 'spatial' && <><ShieldCheck size={14} /> Spatial &amp; NKBA Validation</>}
+              {activeStage === 'sustainability' && <><Leaf size={14} /> Sustainability &amp; What-If</>}
+              {activeStage === 'bom' && <><Receipt size={14} /> Specification &amp; BOM</>}
+            </div>
+            <span style={{ fontSize: '11px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+              {selectedProducts.length} Items Placed
             </span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab('design')}
-            className={`studio-tab-btn ${activeTab === 'design' ? 'is-active' : ''}`}
-          >
-            <Sparkles size={15} />
-            <span>Design Suites</span>
-            <span className="studio-tab-badge">{alternatives.length} Suites</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab('products')}
-            className={`studio-tab-btn ${activeTab === 'products' ? 'is-active' : ''}`}
-          >
-            <ShoppingBag size={15} />
-            <span>Product Showroom</span>
-            <span className="studio-tab-badge">{allCatalogProducts.length || 131} Products</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab('copilot')}
-            className={`studio-tab-btn ${activeTab === 'copilot' ? 'is-active' : ''}`}
-          >
-            <MessageSquare size={15} />
-            <span>AI Copilot &amp; Vision</span>
-            <span className="studio-tab-badge">Multimodal</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab('insights')}
-            className={`studio-tab-btn ${activeTab === 'insights' ? 'is-active' : ''}`}
-          >
-            <TrendingUp size={15} />
-            <span>What-If &amp; Eco Insights</span>
-            <span className="studio-tab-badge">Analytics</span>
-          </button>
-        </div>
-
-        {/* 3. Hero Visualizer Stage (When 3D or 2D tab is active) */}
-        {(activeTab === 'view3d' || activeTab === 'layout') && (
-          <div style={{ marginBottom: '32px' }}>
-            {/* View Mode Header */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px', flexWrap: 'wrap', gap: '10px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                <h2 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--color-grey-800)', margin: 0 }}>
-                  {activeTab === 'view3d' ? '3D Realistic Product Visualization' : '2D Architectural Floor Plan'}
-                </h2>
-                <span style={{ fontSize: '12px', color: 'var(--color-grey-500)', fontWeight: 500 }}>
-                  ({selectedSuite?.name || 'Standard Suite'})
-                </span>
-              </div>
-
-              {/* Segmented Switcher Capsule */}
-              <div className="seg-capsule">
-                <button
-                  type="button"
-                  id="toggle-view-3d"
-                  onClick={() => setActiveTab('view3d')}
-                  className={activeTab === 'view3d' ? 'is-active' : ''}
-                >
-                  <Box size={14} />
-                  <span>3D View</span>
-                </button>
-                <button
-                  type="button"
-                  id="toggle-view-2d"
-                  onClick={() => setActiveTab('layout')}
-                  className={activeTab === 'layout' ? 'is-active' : ''}
-                >
-                  <Layers size={14} />
-                  <span>2D Floor Plan</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Viewport Stage */}
-            <div className="viewport-container">
-              <div style={{ width: '100%', height: '100%', display: activeTab === 'view3d' ? 'block' : 'none' }}>
-                <BathroomView3D
-                  layout={spatialLayout}
-                  products={selectedProducts}
-                  selectedProductIds={selectedProductIds}
-                  roomLength={roomLength}
-                  roomWidth={roomWidth}
-                  themeStyle={selectedStyle}
-                  onSelectFixture={(productId) => {
-                    const p = (allCatalogProducts.length > 0 ? allCatalogProducts : products).find(prod => prod.id === productId);
-                    if (p) {
-                      setActiveCategory(p.category);
-                      setActiveTab('products');
-                    }
-                  }}
-                />
-              </div>
-              <div style={{ width: '100%', height: '100%', display: activeTab === 'layout' ? 'block' : 'none' }}>
-                <FloorPlan2D
-                  layout={spatialLayout}
-                  spatialValidation={spatialValidation}
-                  products={products}
-                  onGenerateLayout={handleGenerateLayout}
-                  loading={generatingLayout}
-                />
-              </div>
-            </div>
           </div>
-        )}
 
-        {/* 4. Layout Grid: Brief Form + Tab Views */}
-        <div style={{ display: 'grid', gridTemplateColumns: (activeTab === 'view3d' || activeTab === 'layout') ? '380px 1fr' : '1fr', gap: '24px', alignItems: 'start' }}>
-          
-          {/* LEFT: DESIGN BRIEF & ROOM CONTROLS (Always visible in 3D/2D views) */}
-          {(activeTab === 'view3d' || activeTab === 'layout') && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              
-              {/* Design Brief Card */}
-              <div className="card">
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Compass size={18} color="var(--color-black)" />
-                    <h2 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-grey-800)', margin: 0 }}>Design Brief</h2>
-                  </div>
-                  <span style={{ fontSize: '11px', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 600 }}>
-                    Studio Input
-                  </span>
-                </div>
-
-                {/* Natural Language Prompt */}
-                <div style={{
-                  backgroundColor: 'var(--color-grey-50)',
-                  border: '1px solid var(--color-grey-200)',
-                  borderRadius: '6px',
-                  padding: '12px',
-                  marginBottom: '16px'
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
-                    <Wand2 size={13} color="var(--color-grey-700)" />
-                    <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--color-grey-800)' }}>
-                      Describe your ideal bathroom
-                    </span>
+          <div className="workbench-content">
+            
+            {/* STAGE 1: DESIGN BRIEF & SUITES */}
+            {activeStage === 'design' && (
+              <>
+                {/* Natural Language Prompt Box */}
+                <div style={{ background: 'var(--bg-subtle)', border: '1px solid var(--border-light)', borderRadius: '8px', padding: '12px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+                    <label className="cad-label" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                      <Wand2 size={12} /> Natural Language Ingestion
+                    </label>
                   </div>
                   <div style={{ display: 'flex', gap: '6px' }}>
                     <input
                       type="text"
-                      className="form-input"
-                      placeholder="e.g. 10x8 luxury master bath under 3.5 lakhs..."
+                      className="cad-input"
+                      placeholder="e.g. 10x8 luxury minimalist bathroom under 3L"
                       value={nlRequirementText}
                       onChange={(e) => setNlRequirementText(e.target.value)}
-                      style={{ fontSize: '12px', padding: '6px 10px' }}
+                      onKeyDown={(e) => e.key === 'Enter' && handleExtractNlRequirements()}
                     />
                     <button
                       type="button"
                       onClick={handleExtractNlRequirements}
-                      disabled={extractingNl || !nlRequirementText.trim()}
-                      className="btn btn-primary btn-sm"
+                      disabled={extractingNl}
+                      className="btn-cad btn-cad-primary"
                     >
-                      {extractingNl ? 'Parsing...' : 'Parse'}
+                      {extractingNl ? 'Parsing...' : 'Extract'}
                     </button>
                   </div>
                   {nlFeedback && (
-                    <div style={{ fontSize: '11px', color: 'var(--color-eco-green)', marginTop: '6px', fontWeight: 600 }}>
-                      ✓ {nlFeedback}
+                    <div style={{ fontSize: '11px', color: 'var(--eco-green)', marginTop: '6px' }}>
+                      {nlFeedback}
                     </div>
                   )}
                 </div>
 
-                {/* Bathroom Boundaries */}
-                <div style={{ marginBottom: '16px' }}>
-                  <label className="form-label">
-                    BATHROOM BOUNDARIES (FEET)
-                  </label>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-                    <div>
-                      <span style={{ fontSize: '11px', color: 'var(--color-grey-500)', display: 'block', marginBottom: '2px' }}>Length (X)</span>
-                      <input
-                        type="number"
-                        className="form-input"
-                        value={roomLength}
-                        onChange={(e) => setRoomLength(Math.max(4, Number(e.target.value)))}
-                        min={4}
-                        max={30}
-                        step={0.5}
-                      />
-                    </div>
-                    <div>
-                      <span style={{ fontSize: '11px', color: 'var(--color-grey-500)', display: 'block', marginBottom: '2px' }}>Width (Y)</span>
-                      <input
-                        type="number"
-                        className="form-input"
-                        value={roomWidth}
-                        onChange={(e) => setRoomWidth(Math.max(4, Number(e.target.value)))}
-                        min={4}
-                        max={30}
-                        step={0.5}
-                      />
-                    </div>
+                {/* Dimensions Stepper */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                  <div className="cad-input-group">
+                    <label className="cad-label">Length (ft)</label>
+                    <input
+                      type="number"
+                      min={5}
+                      max={25}
+                      step={0.5}
+                      value={roomLength}
+                      onChange={(e) => setRoomLength(parseFloat(e.target.value) || 10)}
+                      className="cad-input"
+                    />
                   </div>
-                  <div style={{ 
-                    marginTop: '8px', 
-                    fontSize: '12px', 
-                    color: 'var(--color-grey-700)', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: '4px' 
-                  }}>
-                    <Maximize2 size={13} />
-                    <span>Gross Floor Area: <strong>{roomArea} sq. ft</strong> ({(Number(roomArea) * 0.0929).toFixed(1)} m&sup2;)</span>
+                  <div className="cad-input-group">
+                    <label className="cad-label">Width (ft)</label>
+                    <input
+                      type="number"
+                      min={4}
+                      max={20}
+                      step={0.5}
+                      value={roomWidth}
+                      onChange={(e) => setRoomWidth(parseFloat(e.target.value) || 8)}
+                      className="cad-input"
+                    />
                   </div>
                 </div>
 
-                {/* Budget Ceiling */}
-                <div style={{ marginBottom: '16px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                    <label className="form-label" style={{ margin: 0 }}>
-                      BUDGET CEILING
-                    </label>
-                    <span style={{ fontSize: '15px', fontWeight: 800, color: 'var(--color-black)' }}>
+                {/* Budget Slider */}
+                <div className="cad-input-group">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <label className="cad-label">Max Budget</label>
+                    <span style={{ fontSize: '13px', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>
                       ₹{budgetMax.toLocaleString('en-IN')}
                     </span>
                   </div>
@@ -735,67 +633,58 @@ export function App() {
                     type="range"
                     min={50000}
                     max={1000000}
-                    step={25000}
+                    step={10000}
                     value={budgetMax}
-                    onChange={(e) => setBudgetMax(Number(e.target.value))}
+                    onChange={(e) => setBudgetMax(parseInt(e.target.value, 10))}
+                    className="cad-range"
                   />
-                  <div style={{ display: 'flex', gap: '6px', marginTop: '8px' }}>
-                    {[150000, 300000, 500000, 800000].map((preset) => (
+                </div>
+
+                {/* Aesthetic Theme */}
+                <div className="cad-input-group">
+                  <label className="cad-label">Aesthetic Style</label>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
+                    {['minimalist', 'contemporary', 'modern', 'traditional', 'transitional'].map((st) => (
                       <button
-                        key={preset}
+                        key={st}
                         type="button"
-                        onClick={() => setBudgetMax(preset)}
-                        className={`btn btn-sm ${budgetMax === preset ? 'btn-primary' : 'btn-secondary'}`}
-                        style={{ flex: 1, padding: '4px 0' }}
+                        onClick={() => setSelectedStyle(st)}
+                        className="btn-cad"
+                        style={{
+                          textTransform: 'capitalize',
+                          fontSize: '11px',
+                          background: selectedStyle === st ? 'var(--accent-black)' : 'var(--bg-subtle)',
+                          color: selectedStyle === st ? '#ffffff' : 'var(--text-secondary)',
+                          border: `1px solid ${selectedStyle === st ? 'var(--accent-black)' : 'var(--border-light)'}`,
+                        }}
                       >
-                        ₹{(preset / 100000).toFixed(1)}L
+                        {st}
                       </button>
                     ))}
                   </div>
                 </div>
 
-                {/* Aesthetic Style */}
-                <div style={{ marginBottom: '16px' }}>
-                  <label className="form-label">
-                    AESTHETIC STYLE THEME
-                  </label>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px' }}>
-                    {[
-                      { id: 'minimalist', label: 'Minimalist Modern' },
-                      { id: 'luxury', label: 'Classic Luxury' },
-                      { id: 'zen', label: 'Japanese Zen' },
-                      { id: 'contemporary', label: 'Contemporary' },
-                    ].map((style) => (
-                      <button
-                        key={style.id}
-                        type="button"
-                        onClick={() => setSelectedStyle(style.id)}
-                        className={`btn btn-sm ${selectedStyle === style.id ? 'btn-primary' : 'btn-secondary'}`}
-                        style={{ textAlign: 'center', justifyContent: 'center' }}
-                      >
-                        {style.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Required Fixtures */}
-                <div style={{ marginBottom: '20px' }}>
-                  <label className="form-label">
-                    REQUIRED FIXTURES
-                  </label>
+                {/* Required Fixtures Selection */}
+                <div className="cad-input-group">
+                  <label className="cad-label">Required Fixture Categories</label>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                    {['toilet', 'basin', 'faucet', 'shower', 'bathtub', 'vanity', 'accessory'].map((cat) => {
-                      const isSelected = requiredCategories.includes(cat);
+                    {['toilet', 'basin', 'faucet', 'shower', 'bathtub', 'mirror', 'vanity', 'shower_door'].map((cat) => {
+                      const isReq = requiredCategories.includes(cat);
                       return (
                         <button
                           key={cat}
                           type="button"
                           onClick={() => toggleRequiredCategory(cat)}
-                          className={`btn btn-sm ${isSelected ? 'btn-primary' : 'btn-secondary'}`}
-                          style={{ textTransform: 'capitalize', padding: '4px 10px' }}
+                          className="btn-cad btn-cad-secondary"
+                          style={{
+                            fontSize: '11px',
+                            padding: '4px 8px',
+                            background: isReq ? 'var(--bg-muted)' : 'transparent',
+                            borderColor: isReq ? 'var(--border-medium)' : 'var(--border-light)',
+                            fontWeight: isReq ? 700 : 500,
+                          }}
                         >
-                          {isSelected ? '✓ ' : '+ '}
+                          {isReq && <Check size={11} style={{ marginRight: '2px' }} />}
                           {cat.replace('_', ' ')}
                         </button>
                       );
@@ -803,333 +692,125 @@ export function App() {
                   </div>
                 </div>
 
-                {/* Primary CTA */}
-                <button
-                  type="button"
-                  onClick={handleFetchAlternatives}
-                  disabled={loadingAlternatives}
-                  className="btn btn-primary btn-block"
-                >
-                  <Sparkles size={15} />
-                  <span>{loadingAlternatives ? 'Generating...' : 'Generate Design Alternatives'}</span>
-                </button>
-              </div>
-
-              {/* Feasibility & Clearance Checks Drawer */}
-              <div className="card" style={{ padding: '16px' }}>
-                <div 
-                  onClick={() => setShowFeasibilityDetails(!showFeasibilityDetails)}
-                  style={{ 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    userSelect: 'none'
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Cpu size={16} color="var(--color-black)" />
-                    <div>
-                      <h3 style={{ fontSize: '14px', fontWeight: 700, color: 'var(--color-grey-800)', margin: 0 }}>
-                        Feasibility &amp; Clearances
-                      </h3>
-                      <div style={{ fontSize: '11px', color: 'var(--color-grey-500)' }}>
-                        {validation?.is_feasible ? 'Physical & financial checks pass' : `${validation?.violations.length || 1} constraint note(s)`}
-                      </div>
-                    </div>
+                {/* Curated Alternatives List */}
+                <div style={{ marginTop: '10px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                    <label className="cad-label">Curated Design Suites</label>
+                    <button
+                      type="button"
+                      onClick={handleFetchAlternatives}
+                      style={{ fontSize: '11px', color: 'var(--text-muted)', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
+                    >
+                      <RotateCw size={11} /> Re-Optimize
+                    </button>
                   </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className={`badge-tier ${validation?.is_feasible ? 'badge-verified' : 'badge-bad'}`}>
-                      {validating ? 'CHECKING...' : validation?.is_feasible ? 'FEASIBLE' : 'ATTENTION'}
-                    </span>
-                    {showFeasibilityDetails ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                  </div>
+                  <DesignAlternativesView
+                    alternatives={alternatives}
+                    selectedDesignId={selectedDesignId}
+                    onSelectAlternative={handleSelectAlternative}
+                    onRefreshAlternatives={handleFetchAlternatives}
+                    loading={loadingAlternatives}
+                  />
                 </div>
-
-                {/* Summary Row */}
-                <div style={{ 
-                  display: 'grid', 
-                  gridTemplateColumns: 'repeat(3, 1fr)', 
-                  gap: '6px', 
-                  marginTop: '12px',
-                  paddingTop: '10px',
-                  borderTop: '1px solid var(--color-grey-200)',
-                  fontSize: '11px',
-                  textAlign: 'center'
-                }}>
-                  <div style={{ backgroundColor: 'var(--color-grey-50)', padding: '6px', borderRadius: '4px', border: '1px solid var(--color-grey-200)' }}>
-                    <span style={{ color: 'var(--color-grey-500)', display: 'block', fontSize: '10px' }}>HEADROOM</span>
-                    <span style={{ fontWeight: 700, color: (validation?.budget_headroom_inr ?? 0) >= 0 ? 'var(--color-eco-green)' : 'var(--color-warn)' }}>
-                      {(validation?.budget_headroom_inr ?? 0) >= 0 ? '+' : ''}₹{Math.round((validation?.budget_headroom_inr ?? 0) / 1000)}k
-                    </span>
-                  </div>
-                  <div style={{ backgroundColor: 'var(--color-grey-50)', padding: '6px', borderRadius: '4px', border: '1px solid var(--color-grey-200)' }}>
-                    <span style={{ color: 'var(--color-grey-500)', display: 'block', fontSize: '10px' }}>COLLISIONS</span>
-                    <span style={{ fontWeight: 700, color: (spatialValidation?.collisions.length ?? 0) === 0 ? 'var(--color-eco-green)' : 'var(--color-warn)' }}>
-                      {spatialValidation?.collisions.length ?? 0} Overlaps
-                    </span>
-                  </div>
-                  <div style={{ backgroundColor: 'var(--color-grey-50)', padding: '6px', borderRadius: '4px', border: '1px solid var(--color-grey-200)' }}>
-                    <span style={{ color: 'var(--color-grey-500)', display: 'block', fontSize: '10px' }}>CIRCULATION</span>
-                    <span style={{ fontWeight: 700, color: 'var(--color-black)' }}>
-                      {spatialValidation ? `${(spatialValidation.usable_ratio * 100).toFixed(0)}%` : '80%'}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Expanded Details */}
-                {showFeasibilityDetails && (
-                  <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: '1px solid var(--color-grey-200)', fontSize: '12px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                      <span style={{ color: 'var(--color-grey-600)' }}>Total Price:</span>
-                      <strong style={{ color: 'var(--color-grey-800)' }}>₹{validation?.total_cost_inr.toLocaleString('en-IN') ?? 0}</strong>
-                    </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                      <span style={{ color: 'var(--color-grey-600)' }}>Budget Ceiling:</span>
-                      <span style={{ color: 'var(--color-grey-800)' }}>₹{budgetMax.toLocaleString('en-IN')}</span>
-                    </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                      <span style={{ color: 'var(--color-grey-600)' }}>Remaining:</span>
-                      <strong style={{ color: (validation?.budget_headroom_inr ?? 0) >= 0 ? 'var(--color-eco-green)' : 'var(--color-warn)' }}>
-                        {(validation?.budget_headroom_inr ?? 0) >= 0 ? '+' : ''}₹{validation?.budget_headroom_inr.toLocaleString('en-IN') ?? 0}
-                      </strong>
-                    </div>
-
-                    {validation?.violations && validation.violations.length > 0 ? (
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginTop: '8px' }}>
-                        {validation.violations.map((v, i) => (
-                          <div key={i} style={{ fontSize: '11px', color: 'var(--color-warn)', background: 'var(--color-warn-bg)', border: '1px solid var(--color-warn-border)', padding: '4px 8px', borderRadius: '4px' }}>
-                            &bull; {v}
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div style={{ fontSize: '11px', color: 'var(--color-eco-green)', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '6px' }}>
-                        <CheckCircle2 size={13} />
-                        <span>All spatial clearances verified compliant.</span>
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* RIGHT: MAIN VIEW CONTENT */}
-          <div style={{ width: '100%' }}>
-            
-            {/* TAB 1: DESIGN ALTERNATIVES SUITES */}
-            {activeTab === 'design' && (
-              <DesignAlternativesView
-                alternatives={alternatives}
-                selectedDesignId={selectedDesignId}
-                onSelectAlternative={handleSelectAlternative}
-                onRefreshAlternatives={handleFetchAlternatives}
-                loading={loadingAlternatives}
-              />
+              </>
             )}
 
-            {/* TAB 2: PRODUCT SHOWROOM & CATALOG EXPLORER */}
-            {activeTab === 'products' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                {/* Semantic Search */}
+            {/* STAGE 2: PRODUCT CATALOG */}
+            {activeStage === 'products' && (
+              <>
                 <SemanticSearchBar
-                  onAddProduct={toggleProductInBundle}
+                  onAddProduct={(productId: string) => toggleProductInBundle(productId)}
                   selectedProductIds={selectedProductIds}
                 />
 
-                {/* Filter Controls */}
-                <div className="card" style={{ padding: '16px' }}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
-                    {/* Categories */}
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                      {[
-                        { id: 'all', label: 'All Catalog' },
-                        { id: 'smart_toilet', label: 'Smart Toilets' },
-                        { id: 'toilet', label: 'Toilets' },
-                        { id: 'vanity', label: 'Vanities' },
-                        { id: 'basin', label: 'Basins' },
-                        { id: 'shower', label: 'Showers' },
-                        { id: 'faucet', label: 'Faucets' },
-                        { id: 'bathtub', label: 'Bathtubs' },
-                        { id: 'accessory', label: 'Accessories' },
-                      ].map((cat) => (
-                        <button
-                          key={cat.id}
-                          type="button"
-                          onClick={() => setActiveCategory(cat.id)}
-                          className={`btn btn-sm ${activeCategory === cat.id ? 'btn-primary' : 'btn-secondary'}`}
-                          style={{ padding: '4px 10px' }}
-                        >
-                          {cat.label}
-                        </button>
-                      ))}
-                    </div>
-
-                    {/* Eco Toggle */}
+                {/* Category Filtering Chips */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
+                  {[
+                    { id: 'all', label: 'All Fixtures' },
+                    { id: 'toilet', label: 'Toilets' },
+                    { id: 'basin', label: 'Basins' },
+                    { id: 'faucet', label: 'Faucets' },
+                    { id: 'shower', label: 'Showers' },
+                    { id: 'bathtub', label: 'Bathtubs' },
+                    { id: 'mirror', label: 'Mirrors' },
+                    { id: 'vanity', label: 'Vanities' },
+                    { id: 'shower_door', label: 'Shower Doors' }
+                  ].map((c) => (
                     <button
+                      key={c.id}
                       type="button"
-                      onClick={() => setEcoFilterOnly(!ecoFilterOnly)}
-                      className={`btn btn-sm ${ecoFilterOnly ? 'btn-primary' : 'btn-secondary'}`}
+                      onClick={() => setActiveCategory(c.id)}
+                      className="btn-cad"
+                      style={{
+                        fontSize: '11px',
+                        padding: '4px 8px',
+                        background: activeCategory === c.id ? 'var(--accent-black)' : 'var(--bg-subtle)',
+                        color: activeCategory === c.id ? '#ffffff' : 'var(--text-secondary)',
+                        border: `1px solid ${activeCategory === c.id ? 'var(--accent-black)' : 'var(--border-light)'}`,
+                      }}
                     >
-                      <Leaf size={13} />
-                      <span>WaterSense / Eco Only</span>
+                      {c.label}
                     </button>
-                  </div>
-
-                  {/* Search Input */}
-                  <div style={{ marginTop: '12px' }}>
-                    <input
-                      type="text"
-                      className="form-input"
-                      placeholder="Filter Kohler products by SKU, name, feature, or style..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                    />
-                  </div>
+                  ))}
                 </div>
 
-                {/* Product Grid */}
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '13px', color: 'var(--color-grey-500)', fontWeight: 600 }}>
-                      SHOWING {filteredProducts.length} GROUNDED KOHLER PRODUCTS
-                    </span>
-                    <span style={{ fontSize: '12px', color: 'var(--color-grey-700)' }}>
-                      Click product to toggle inclusion in active design bundle
-                    </span>
-                  </div>
+                {/* WaterSense Filter */}
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    checked={ecoFilterOnly}
+                    onChange={(e) => setEcoFilterOnly(e.target.checked)}
+                  />
+                  <span>Show WaterSense / Eco-efficient fixtures only</span>
+                </label>
 
-                  {loadingCatalog ? (
-                    <div className="card" style={{ padding: '48px', textAlign: 'center', color: 'var(--color-grey-500)' }}>
-                      Loading verified Kohler catalog products...
-                    </div>
-                  ) : (
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '16px' }}>
-                      {filteredProducts.map((prod) => {
-                        const inBundle = selectedProductIds.includes(prod.id);
-                        return (
-                          <div
-                            key={prod.id}
-                            className="card"
-                            style={{
-                              position: 'relative',
-                              display: 'flex',
-                              flexDirection: 'column',
-                              justifyContent: 'space-between',
-                              borderColor: inBundle ? 'var(--color-black)' : 'var(--color-grey-200)',
-                              borderWidth: inBundle ? '2px' : '1px',
-                              padding: '18px'
-                            }}
-                          >
-                            <div>
-                              {/* Top Badges */}
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                                <span className="badge-verified">
-                                  <ShieldCheck size={12} />
-                                  Real Kohler SKU
-                                </span>
-                                {prod.water_consumption?.is_water_saving && (
-                                  <span className="badge-eco">
-                                    <Droplets size={11} />
-                                    {prod.water_consumption.rate} {prod.water_consumption.unit}
-                                  </span>
-                                )}
-                              </div>
-
-                              {/* Title & SKU */}
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span style={{ fontSize: '11px', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                                  {prod.model_number || prod.id} &bull; {prod.category.replace('_', ' ')}
-                                </span>
-                                {prod.source_url && (
-                                  <a
-                                    href={prod.source_url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style={{ color: 'var(--color-grey-700)', display: 'inline-flex', alignItems: 'center', gap: '2px', fontSize: '11px', fontWeight: 600 }}
-                                  >
-                                    Specs <ExternalLink size={10} />
-                                  </a>
-                                )}
-                              </div>
-
-                              <h4 style={{ fontSize: '15px', fontWeight: 700, color: 'var(--color-grey-800)', margin: '4px 0 6px 0' }}>
-                                {prod.name}
-                              </h4>
-
-                              {/* Dimensions and Specs */}
-                              <div style={{ fontSize: '12px', color: 'var(--color-grey-500)', display: 'flex', gap: '12px', marginBottom: '10px' }}>
-                                <span>Footprint: {prod.dimensions.width} &times; {prod.dimensions.depth} ft</span>
-                                <span>H: {prod.dimensions.height} ft</span>
-                              </div>
-
-                              {/* Features Tags */}
-                              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginBottom: '14px' }}>
-                                {prod.features.slice(0, 3).map((feat, fIdx) => (
-                                  <span
-                                    key={fIdx}
-                                    style={{
-                                      fontSize: '11px',
-                                      color: 'var(--color-grey-700)',
-                                      backgroundColor: 'var(--color-grey-100)',
-                                      border: '1px solid var(--color-grey-200)',
-                                      padding: '2px 6px',
-                                      borderRadius: '4px'
-                                    }}
-                                  >
-                                    {feat}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-
-                            {/* Bottom Price & Action */}
-                            <div style={{
-                              display: 'flex',
-                              justifyContent: 'space-between',
-                              alignItems: 'center',
-                              borderTop: '1px solid var(--color-grey-200)',
-                              paddingTop: '12px',
-                              marginTop: '8px'
-                            }}>
-                              <div>
-                                <span style={{ fontSize: '10px', color: 'var(--color-grey-500)', display: 'block', textTransform: 'uppercase' }}>PRICE</span>
-                                <span style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-black)' }}>
-                                  ₹{prod.price_inr.toLocaleString('en-IN')}
-                                </span>
-                              </div>
-
-                              <button
-                                type="button"
-                                onClick={() => toggleProductInBundle(prod.id)}
-                                className={`btn btn-sm ${inBundle ? 'btn-secondary' : 'btn-primary'}`}
-                              >
-                                {inBundle ? (
-                                  <>
-                                    <Trash2 size={13} />
-                                    <span>Remove</span>
-                                  </>
-                                ) : (
-                                  <>
-                                    <Plus size={13} />
-                                    <span>Add to Bundle</span>
-                                  </>
-                                )}
-                              </button>
-                            </div>
+                {/* Catalog Product Grid */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxHeight: '420px', overflowY: 'auto' }}>
+                  {filteredProducts.map((p) => {
+                    const isSelected = selectedProductIds.includes(p.id);
+                    return (
+                      <div
+                        key={p.id}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '10px 12px',
+                          borderRadius: '6px',
+                          background: isSelected ? 'var(--bg-muted)' : 'var(--bg-surface)',
+                          border: `1px solid ${isSelected ? 'var(--border-focus)' : 'var(--border-light)'}`,
+                          gap: '10px'
+                        }}
+                      >
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontSize: '11px', color: 'var(--text-dim)', textTransform: 'uppercase', fontWeight: 600 }}>
+                            {p.category.replace('_', ' ')} &bull; {p.model_number || p.id}
                           </div>
-                        );
-                      })}
-                    </div>
-                  )}
+                          <div style={{ fontWeight: 600, color: 'var(--text-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                            {p.name}
+                          </div>
+                          <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-black)', marginTop: '2px' }}>
+                            ₹{p.price_inr?.toLocaleString('en-IN')}
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => toggleProductInBundle(p.id)}
+                          className={`btn-cad ${isSelected ? 'btn-cad-secondary' : 'btn-cad-primary'}`}
+                          style={{ fontSize: '11px', padding: '5px 9px' }}
+                        >
+                          {isSelected ? 'Remove' : '+ Add'}
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
-              </div>
+              </>
             )}
 
-            {/* TAB 3: CONVERSATIONAL COPILOT & MULTIMODAL VISION */}
-            {activeTab === 'copilot' && (
+            {/* STAGE 3: AI REFINEMENT & VISION */}
+            {activeStage === 'copilot' && (
               <ConversationalPanel
                 currentRequirements={{
                   dimensions: { length: roomLength, width: roomWidth, unit: 'ft' },
@@ -1145,255 +826,332 @@ export function App() {
               />
             )}
 
-            {/* TAB 4: WHAT-IF & SUSTAINABILITY INSIGHTS */}
-            {activeTab === 'insights' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                {/* Sub-Navigation */}
+            {/* STAGE 4: SPATIAL VALIDATION & CODE */}
+            {activeStage === 'spatial' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <div style={{
+                  padding: '12px',
+                  borderRadius: '8px',
+                  background: spatialValidation?.is_feasible ? 'var(--eco-bg)' : 'var(--warn-bg)',
+                  border: `1px solid ${spatialValidation?.is_feasible ? 'var(--eco-border)' : 'var(--warn-border)'}`,
                   display: 'flex',
-                  justifyContent: 'space-between',
                   alignItems: 'center',
-                  borderBottom: '1px solid var(--color-grey-200)',
-                  paddingBottom: '12px',
-                  flexWrap: 'wrap',
                   gap: '10px'
                 }}>
-                  <div style={{ display: 'flex', gap: '8px' }}>
-                    <button
-                      type="button"
-                      onClick={() => setActiveInsightTab('tradeoffs')}
-                      className={`btn btn-sm ${activeInsightTab === 'tradeoffs' ? 'btn-primary' : 'btn-secondary'}`}
-                    >
-                      <GitCompare size={14} />
-                      <span>What-If Trade-Off Matrix</span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setActiveInsightTab('sustainability')}
-                      className={`btn btn-sm ${activeInsightTab === 'sustainability' ? 'btn-primary' : 'btn-secondary'}`}
-                    >
-                      <Leaf size={14} />
-                      <span>Sustainability &amp; Eco Intelligence</span>
-                    </button>
+                  {spatialValidation?.is_feasible ? (
+                    <CheckCircle2 size={18} color="var(--eco-green)" />
+                  ) : (
+                    <AlertTriangle size={18} color="var(--warn-red)" />
+                  )}
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '13px', color: spatialValidation?.is_feasible ? 'var(--eco-green)' : 'var(--warn-red)' }}>
+                      {spatialValidation?.is_feasible ? 'NKBA Spatial Feasibility Passed' : 'Spatial Constraint Violations Detected'}
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                      Room Envelope: {roomLength} × {roomWidth} ft ({roomArea} sq ft)
+                    </div>
                   </div>
-
-                  <button
-                    type="button"
-                    onClick={() => setIsBOMModalOpen(true)}
-                    className="btn btn-secondary btn-sm"
-                  >
-                    <FileSpreadsheet size={14} />
-                    <span>Specification BOM</span>
-                  </button>
                 </div>
 
-                {/* Sub-View Content */}
-                {activeInsightTab === 'tradeoffs' && (
-                  <WhatIfMatrixView
-                    alternatives={alternatives}
-                    currentProductIds={selectedProductIds}
-                    roomLength={roomLength}
-                    roomWidth={roomWidth}
-                    budgetMax={budgetMax}
-                    onApplySubstitutions={handleApplySubstitutions}
-                  />
+                {/* Violations breakdown */}
+                {spatialValidation && spatialValidation.violations && spatialValidation.violations.length > 0 && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <div className="cad-label">Detected Code Violations</div>
+                    {spatialValidation.violations.map((v, i) => (
+                      <div key={i} style={{ padding: '8px 10px', background: 'var(--warn-bg)', border: '1px solid var(--warn-border)', borderRadius: '4px', fontSize: '11.5px', color: 'var(--warn-red)' }}>
+                        &bull; {v}
+                      </div>
+                    ))}
+                  </div>
                 )}
 
-                {activeInsightTab === 'sustainability' && (
-                  <SustainabilityCard report={sustainabilityReport} loading={loadingSustainability} />
-                )}
+                <div className="cad-input-group">
+                  <div className="cad-label">Spatial Layout Generation</div>
+                  <button
+                    type="button"
+                    onClick={handleGenerateLayout}
+                    disabled={generatingLayout}
+                    className="btn-cad btn-cad-primary"
+                  >
+                    <RotateCw size={13} />
+                    {generatingLayout ? 'Recomputing Vector Placements...' : 'Regenerate Spatial CAD Layout'}
+                  </button>
+                </div>
               </div>
             )}
+
+            {/* STAGE 5: SUSTAINABILITY & WHAT-IF */}
+            {activeStage === 'sustainability' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <SustainabilityCard
+                  report={sustainabilityReport}
+                  loading={loadingSustainability}
+                />
+                <WhatIfMatrixView
+                  alternatives={alternatives}
+                  currentProductIds={selectedProductIds}
+                  roomLength={roomLength}
+                  roomWidth={roomWidth}
+                  budgetMax={budgetMax}
+                  onApplySubstitutions={handleApplySubstitutions}
+                />
+              </div>
+            )}
+
+            {/* STAGE 6: BOM SPECIFICATION */}
+            {activeStage === 'bom' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'center', padding: '24px 12px' }}>
+                <Receipt size={32} style={{ margin: '0 auto', color: 'var(--accent-black)' }} />
+                <h3 style={{ fontSize: '16px', fontWeight: 700 }}>Kohler Specification &amp; Bill of Materials</h3>
+                <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                  Complete architectural schedule ready for procurement, rough-in plumbing specifications, and contractor export.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setIsBOMModalOpen(true)}
+                  className="btn-cad btn-cad-primary"
+                  style={{ marginTop: '8px' }}
+                >
+                  <FileSpreadsheet size={14} /> Open Full Specification Schedule
+                </button>
+              </div>
+            )}
+
           </div>
-        </div>
+        </aside>
+
+        {/* Center Canvas Stage (Interactive 3D WebGL & 2D Floor Plan) */}
+        <section className="arch-canvas-stage">
+          
+          <div className="viewport-card">
+            {/* 3D WebGL Showroom Viewport */}
+            <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view3d' ? 'block' : 'none', minWidth: 0, overflow: 'hidden' }}>
+              <BathroomView3D
+                layout={spatialLayout}
+                products={selectedProducts}
+                selectedProductIds={selectedProductIds}
+                roomLength={roomLength}
+                roomWidth={roomWidth}
+                themeStyle={selectedStyle}
+                viewMode={viewportMode}
+                onToggleViewMode={setViewportMode}
+                onSelectFixture={(_productId: string) => {
+                  setActiveStage('products');
+                }}
+              />
+            </div>
+
+            {/* 2D Architectural Floor Plan Viewport */}
+            <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view2d' ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
+              <FloorPlan2D
+                layout={spatialLayout}
+                products={selectedProducts}
+                spatialValidation={spatialValidation}
+                onGenerateLayout={handleGenerateLayout}
+                loading={generatingLayout}
+                viewMode={viewportMode}
+                onToggleViewMode={setViewportMode}
+              />
+            </div>
+          </div>
+
+          {/* Bottom Placed Fixture Ribbon */}
+          <div className="fixture-ribbon-card">
+            <span className="fixture-ribbon-label">Placed Fixtures ({selectedProducts.length})</span>
+            {selectedProducts.map((p) => (
+              <div
+                key={p.id}
+                className="fixture-item-chip"
+                onClick={() => {
+                  setActiveStage('products');
+                  setSearchQuery(p.id);
+                }}
+                title={`Click to inspect ${p.name}`}
+              >
+                <Droplets size={12} color="var(--text-muted)" />
+                <div>
+                  <div style={{ fontWeight: 600, fontSize: '11.5px', maxWidth: '140px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                    {p.name}
+                  </div>
+                  <div style={{ fontSize: '10px', color: 'var(--text-dim)' }}>
+                    ₹{p.price_inr?.toLocaleString('en-IN')}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleProductInBundle(p.id);
+                  }}
+                  style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-dim)', padding: '2px' }}
+                >
+                  <X size={12} />
+                </button>
+              </div>
+            ))}
+          </div>
+
+        </section>
+
+        {/* Right Architectural Summary & Feasibility Drawer */}
+        <aside className="arch-summary-drawer">
+          <div>
+            <div className="summary-section-title">Project Spatial Feasibility</div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+              <div style={{ background: 'var(--bg-subtle)', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
+                <span style={{ fontSize: '10px', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Space Fit</span>
+                <span style={{ fontSize: '14px', fontWeight: 800, color: 'var(--accent-black)' }}>
+                  {spatialValidation?.is_feasible ? '100% Valid' : 'Check Code'}
+                </span>
+              </div>
+              <div style={{ background: 'var(--bg-subtle)', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
+                <span style={{ fontSize: '10px', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Budget Delta</span>
+                <span style={{ fontSize: '14px', fontWeight: 800, color: budgetHeadroom >= 0 ? 'var(--eco-green)' : 'var(--warn-red)' }}>
+                  {budgetHeadroom >= 0 ? `+₹${budgetHeadroom.toLocaleString('en-IN')}` : `-₹${Math.abs(budgetHeadroom).toLocaleString('en-IN')}`}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="summary-section-title">Specification Summary</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '12px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+                <span>Total Fixtures</span>
+                <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{selectedProducts.length}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+                <span>Room Dimensions</span>
+                <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{roomLength} × {roomWidth} ft</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+                <span>Annual Water Saved</span>
+                <span style={{ fontWeight: 700, color: 'var(--eco-green)' }}>{annualSavedGallons.toLocaleString()} Gal</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)', borderTop: '1px solid var(--border-light)', paddingTop: '6px' }}>
+                <span style={{ fontWeight: 700 }}>Total Project Cost</span>
+                <span style={{ fontWeight: 800, color: 'var(--accent-black)', fontSize: '14px' }}>
+                  ₹{currentTotalCost.toLocaleString('en-IN')}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: 'auto' }}>
+            <button
+              type="button"
+              onClick={() => setIsBOMModalOpen(true)}
+              className="btn-cad btn-cad-primary"
+              style={{ width: '100%' }}
+            >
+              <Receipt size={13} />
+              <span>Full Specification Schedule</span>
+            </button>
+            <button
+              type="button"
+              onClick={handleClearBundle}
+              className="btn-cad btn-cad-secondary"
+              style={{ width: '100%' }}
+            >
+              <Trash2 size={13} />
+              <span>Clear Current Bundle</span>
+            </button>
+          </div>
+        </aside>
+
       </main>
 
-      {/* 5. Floating AI Chat FAB & Overlay */}
+      {/* 5. Floating AI Copilot Concierge FAB & Drawer */}
       <button
         type="button"
-        id="chat-toggle-fab"
-        className="chat-fab"
         onClick={() => setIsChatOpen(!isChatOpen)}
-        title={isChatOpen ? "Close AI Designer" : "Chat with AI Designer"}
+        className="chat-fab"
+        aria-label="Toggle Kohler AI Copilot"
       >
-        {isChatOpen ? <X size={22} /> : <MessageSquare size={22} />}
+        <MessageSquare size={16} />
+        <span>Copilot</span>
       </button>
 
       {isChatOpen && (
         <div className="chat-overlay">
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            height: '100%',
-            backgroundColor: 'var(--color-white)'
-          }}>
-            {/* Overlay Header */}
-            <div style={{
-              padding: '14px 18px',
-              borderBottom: '1px solid var(--color-grey-200)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between'
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <div style={{ width: '28px', height: '28px', borderRadius: '4px', backgroundColor: 'var(--color-black)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Sparkles size={15} />
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '13px', fontWeight: 700, color: 'var(--color-grey-800)', margin: 0 }}>
-                    Kohler Design Assistant
-                  </h4>
-                  <span style={{ fontSize: '10px', color: 'var(--color-grey-500)', fontWeight: 600 }}>
-                    {isChatSending ? 'Thinking…' : 'AI Tool-Calling Agent'}
-                  </span>
-                </div>
-              </div>
-              <button
-                type="button"
-                onClick={() => setIsChatOpen(false)}
-                style={{ color: 'var(--color-grey-400)', border: 'none', background: 'transparent', cursor: 'pointer', padding: '4px' }}
-              >
-                <X size={18} />
-              </button>
+          <div style={{ padding: '12px 16px', background: 'var(--bg-subtle)', borderBottom: '1px solid var(--border-light)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <MessageSquare size={15} color="var(--accent-black)" />
+              <span style={{ fontWeight: 700, fontSize: '13px' }}>Kohler AI Copilot</span>
             </div>
-
-            {/* Overlay Messages */}
-            <div style={{
-              flex: 1,
-              padding: '16px',
-              overflowY: 'auto',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '12px'
-            }}>
-              {chatMessages.map((msg) => {
-                const isUser = msg.sender === 'user';
-                return (
-                  <div
-                    key={msg.id}
-                    style={{
-                      alignSelf: isUser ? 'flex-end' : 'flex-start',
-                      maxWidth: '88%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '3px'
-                    }}
-                  >
-                    <div className={`chat-bubble ${isUser ? 'chat-bubble-user' : 'chat-bubble-assistant'}`}>
-                      {msg.text}
-                    </div>
-                  </div>
-                );
-              })}
-              {isChatSending && (
-                <div style={{ alignSelf: 'flex-start', maxWidth: '88%' }}>
-                  <div className="chat-bubble chat-bubble-assistant" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px' }}>
-                    <div style={{ width: '12px', height: '12px', border: '2px solid #cbd5e1', borderTop: '2px solid #000', borderRadius: '50%', animation: 'spin 0.6s linear infinite' }} />
-                    Adjusting design layout...
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Overlay Input */}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleSendFloatingChatMessage(chatInput);
-              }}
-              style={{
-                padding: '12px',
-                borderTop: '1px solid var(--color-grey-200)',
-                display: 'flex',
-                gap: '8px'
-              }}
+            <button
+              type="button"
+              onClick={() => setIsChatOpen(false)}
+              style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-dim)' }}
             >
-              <input
-                type="text"
-                className="form-input"
-                placeholder="Ask to refine fixtures, budget, style..."
-                value={chatInput}
-                onChange={(e) => setChatInput(e.target.value)}
-                disabled={isChatSending}
-                style={{ height: '38px', fontSize: '12px' }}
-              />
-              <button
-                type="submit"
-                className="btn btn-primary"
-                disabled={isChatSending || !chatInput.trim()}
-                style={{ height: '38px', padding: '0 14px' }}
+              <X size={15} />
+            </button>
+          </div>
+
+          <div style={{ flex: 1, padding: '14px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {chatMessages.map((msg) => (
+              <div
+                key={msg.id}
+                style={{
+                  alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start',
+                  maxWidth: '85%',
+                  padding: '9px 13px',
+                  borderRadius: '8px',
+                  fontSize: '12.5px',
+                  background: msg.sender === 'user' ? 'var(--accent-black)' : 'var(--bg-muted)',
+                  color: msg.sender === 'user' ? '#ffffff' : 'var(--text-primary)',
+                  border: msg.sender === 'user' ? 'none' : '1px solid var(--border-light)',
+                }}
               >
-                <Send size={14} />
-              </button>
-            </form>
+                <div>{msg.text}</div>
+                {msg.tradeoffs && msg.tradeoffs.length > 0 && (
+                  <div style={{ marginTop: '6px', fontSize: '11px', opacity: 0.85 }}>
+                    <strong>Trade-offs:</strong> {msg.tradeoffs.join(', ')}
+                  </div>
+                )}
+              </div>
+            ))}
+            {isChatSending && (
+              <div style={{ alignSelf: 'flex-start', padding: '6px 10px', fontSize: '12px', color: 'var(--text-muted)' }}>
+                Copilot analyzing catalog constraints...
+              </div>
+            )}
+          </div>
+
+          <div style={{ padding: '10px 14px', borderTop: '1px solid var(--border-light)', display: 'flex', gap: '6px' }}>
+            <input
+              type="text"
+              className="cad-input"
+              placeholder="Ask Copilot (e.g. swap to matte black fixtures)..."
+              value={chatInput}
+              onChange={(e) => setChatInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSendFloatingChatMessage(chatInput)}
+            />
+            <button
+              type="button"
+              onClick={() => handleSendFloatingChatMessage(chatInput)}
+              disabled={isChatSending}
+              className="btn-cad btn-cad-primary"
+            >
+              <Send size={13} />
+            </button>
           </div>
         </div>
       )}
 
-      {/* 6. Bottom Selected Bundle Dock */}
-      <footer className="bundle-dock">
-        <div className="bundle-dock-inner">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', overflow: 'hidden' }}>
-            <div>
-              <span style={{ fontSize: '11px', color: 'var(--color-grey-500)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700 }}>
-                Active Design Bundle ({selectedProductIds.length} Fixtures)
-              </span>
-              <div style={{ display: 'flex', gap: '6px', marginTop: '4px', overflowX: 'auto', maxWidth: '640px' }}>
-                {selectedProducts.map((p) => (
-                  <span
-                    key={p.id}
-                    className="bundle-tag-pill"
-                  >
-                    {p.name.split(' ')[1] || p.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+      {/* 6. Specification & BOM Export Modal */}
+      {isBOMModalOpen && (
+        <BOMExportModal
+          isOpen={isBOMModalOpen}
+          onClose={() => setIsBOMModalOpen(false)}
+          productIds={selectedProductIds}
+          projectTitle="Kohler Master Bathroom"
+          roomDimensions={`${roomLength} × ${roomWidth} ft`}
+          themeStyle={selectedStyle}
+        />
+      )}
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexShrink: 0 }}>
-            <div style={{ textAlign: 'right' }}>
-              <span style={{ fontSize: '10px', color: 'var(--color-grey-500)', display: 'block', textTransform: 'uppercase', fontWeight: 600 }}>TOTAL ESTIMATE</span>
-              <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-black)' }}>
-                ₹{(validation?.total_cost_inr ?? 0).toLocaleString('en-IN')}
-              </span>
-            </div>
-
-            <button
-              type="button"
-              onClick={handleClearBundle}
-              className="btn btn-secondary btn-sm"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
-            >
-              <RotateCw size={13} />
-              <span>Clear</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setIsBOMModalOpen(true)}
-              className="btn btn-primary"
-              style={{ fontSize: '13px', padding: '8px 16px' }}
-            >
-              <Receipt size={14} />
-              <span>Generate &amp; Export BOM</span>
-            </button>
-          </div>
-        </div>
-      </footer>
-
-      {/* 7. Bill of Materials Modal */}
-      <BOMExportModal
-        isOpen={isBOMModalOpen}
-        onClose={() => setIsBOMModalOpen(false)}
-        productIds={selectedProductIds}
-        projectTitle="Kohler Master Bathroom Design"
-        roomDimensions={`${roomLength} x ${roomWidth} ft`}
-        themeStyle={selectedStyle}
-      />
     </div>
   );
 }
-
 export default App;

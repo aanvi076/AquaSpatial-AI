@@ -36,28 +36,28 @@ export const SemanticSearchBar: React.FC<SemanticSearchBarProps> = ({
   };
 
   return (
-    <div className="card" style={{ padding: '20px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-        <Sparkles size={16} color="var(--color-black)" />
-        <h4 style={{ fontSize: '15px', fontWeight: 700, color: 'var(--color-grey-800)' }}>
-          AI Catalog Search &amp; Natural Language Discovery
+    <div className="card" style={{ padding: '14px 16px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+        <Sparkles size={15} color="var(--color-black)" />
+        <h4 style={{ fontSize: '13px', fontWeight: 700, color: 'var(--color-grey-800)', margin: 0 }}>
+          Natural Language Discovery
         </h4>
       </div>
 
-      <form onSubmit={handleSearch} style={{ display: 'flex', gap: '8px' }}>
-        <div style={{ position: 'relative', flex: 1 }}>
+      <form onSubmit={handleSearch} style={{ display: 'flex', gap: '8px', width: '100%', alignItems: 'center' }}>
+        <div style={{ position: 'relative', flex: 1, minWidth: 0 }}>
           <input
             type="text"
             className="form-input"
-            placeholder="Search by feature (e.g. 'smart toilet with heated seat', 'bluetooth rainhead shower', 'freestanding soaking tub')..."
+            placeholder="e.g. 'smart toilet with heated seat'…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            style={{ paddingLeft: '38px', height: '42px' }}
+            style={{ paddingLeft: '34px', height: '38px', width: '100%', boxSizing: 'border-box' }}
           />
-          <Search size={16} color="var(--color-grey-400)" style={{ position: 'absolute', left: '12px', top: '13px' }} />
+          <Search size={14} color="var(--color-grey-400)" style={{ position: 'absolute', left: '10px', top: '12px' }} />
         </div>
-        <button type="submit" className="btn btn-primary" style={{ height: '42px' }} disabled={searching}>
-          {searching ? 'Searching...' : 'Search'}
+        <button type="submit" className="btn btn-primary" style={{ height: '38px', flexShrink: 0 }} disabled={searching}>
+          {searching ? '…' : 'Search'}
         </button>
       </form>
 
