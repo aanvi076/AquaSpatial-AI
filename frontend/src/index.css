@@ -252,43 +252,115 @@ body {
   font-weight: 700;
 }
 
-/* 4. Main Workspace Grid - Optimized for Laptops & Desktops */
+/* 4. Main Workspace Grid - Stage Specific Layouts */
 .workspace-body {
   flex: 1;
-  display: grid;
-  grid-template-columns: minmax(300px, 340px) minmax(0, 1fr) minmax(260px, 300px);
-  gap: 14px;
-  padding: 14px 20px 20px 20px;
   width: 100%;
   max-width: 100vw;
   margin: 0 auto;
   box-sizing: border-box;
   overflow-x: hidden;
+  padding: 14px 20px 20px 20px;
+}
+
+.workspace-body.stage-design {
+  display: grid;
+  grid-template-columns: minmax(360px, 440px) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.workspace-body.stage-products {
+  display: grid;
+  grid-template-columns: minmax(330px, 370px) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.workspace-body.stage-copilot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.workspace-body.stage-spatial {
+  display: grid;
+  grid-template-columns: minmax(280px, 320px) minmax(0, 1fr) minmax(260px, 300px);
+  gap: 14px;
+}
+
+.workspace-body.stage-sustainability {
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
+  gap: 16px;
+}
+
+.workspace-body.stage-bom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Stage Planning Container Cards */
+.planning-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: calc(100vh - 84px);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.planning-card-content {
+  padding: 16px 18px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
 }
 
 /* Laptop resolution (1280px - 1440px) */
 @media (max-width: 1440px) {
   .workspace-body {
-    grid-template-columns: minmax(280px, 310px) minmax(0, 1fr) minmax(230px, 260px);
-    gap: 12px;
     padding: 12px 16px 16px 16px;
+  }
+  .workspace-body.stage-spatial {
+    grid-template-columns: minmax(270px, 300px) minmax(0, 1fr) minmax(230px, 260px);
+    gap: 12px;
+  }
+  .workspace-body.stage-design {
+    grid-template-columns: minmax(340px, 400px) minmax(0, 1fr);
+    gap: 14px;
   }
 }
 
-/* Compact Laptop resolution (<= 1366px and 1280px) */
+/* Compact Laptop resolution (<= 1300px) */
 @media (max-width: 1300px) {
-  .workspace-body {
-    grid-template-columns: minmax(280px, 310px) minmax(0, 1fr);
+  .workspace-body.stage-spatial {
+    grid-template-columns: minmax(270px, 300px) minmax(0, 1fr);
     gap: 12px;
-    padding: 12px 14px 16px 14px;
   }
-  .arch-summary-drawer {
+  .workspace-body.stage-spatial .arch-summary-drawer {
     display: none;
+  }
+  .workspace-body.stage-sustainability {
+    grid-template-columns: minmax(0, 1fr);
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media (max-width: 1024px) {
-  .workspace-body {
+  .workspace-body.stage-design,
+  .workspace-body.stage-products,
+  .workspace-body.stage-spatial,
+  .workspace-body.stage-sustainability {
     grid-template-columns: minmax(0, 1fr);
     display: flex;
     flex-direction: column;

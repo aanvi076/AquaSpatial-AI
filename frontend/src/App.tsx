@@ -9,7 +9,6 @@ import {
   Sparkles, 
   MessageSquare, 
   Wand2, 
-  FileSpreadsheet, 
   Receipt, 
   RotateCw, 
   Leaf, 
@@ -36,6 +35,7 @@ import { ConversationalPanel } from './components/ConversationalPanel';
 import { SustainabilityCard } from './components/SustainabilityCard';
 import { WhatIfMatrixView } from './components/WhatIfMatrixView';
 import { BOMExportModal } from './components/BOMExportModal';
+import { BOMSpecView } from './components/BOMSpecView';
 import { BathroomView3D } from './components/BathroomView3D';
 
 // Workflow Stages: Design → Products → AI Refinement → Spatial Validation → Sustainability → BOM
@@ -503,10 +503,7 @@ export function App() {
 
           <button
             type="button"
-            onClick={() => {
-              setActiveStage('bom');
-              setIsBOMModalOpen(true);
-            }}
+            onClick={() => setActiveStage('bom')}
             className={`workflow-step-btn ${activeStage === 'bom' ? 'is-active' : ''}`}
           >
             <span className="workflow-step-num">06</span>
@@ -538,31 +535,24 @@ export function App() {
       </header>
 
       {/* 4. Main Architectural Workspace Layout */}
-      <main className="workspace-body">
+      <main className={`workspace-body stage-${activeStage}`}>
         
-        {/* Left Architectural Workbench (Contextual Stage Tools) */}
-        <aside className="arch-workbench">
-          <div className="workbench-header">
-            <div className="workbench-title">
-              {activeStage === 'design' && <><Sparkles size={14} /> Design Brief &amp; Suites</>}
-              {activeStage === 'products' && <><ShoppingBag size={14} /> Kohler Catalog ({products.length})</>}
-              {activeStage === 'copilot' && <><MessageSquare size={14} /> AI Multimodal Copilot</>}
-              {activeStage === 'spatial' && <><ShieldCheck size={14} /> Spatial &amp; NKBA Validation</>}
-              {activeStage === 'sustainability' && <><Leaf size={14} /> Sustainability &amp; What-If</>}
-              {activeStage === 'bom' && <><Receipt size={14} /> Specification &amp; BOM</>}
-            </div>
-            <span style={{ fontSize: '11px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
-              {selectedProducts.length} Items Placed
-            </span>
-          </div>
-
-          <div className="workbench-content">
-            
-            {/* STAGE 1: DESIGN BRIEF & SUITES */}
-            {activeStage === 'design' && (
-              <>
+        {/* STAGE 1: DESIGN BRIEF & ALTERNATIVES */}
+        {activeStage === 'design' && (
+          <>
+            {/* Left Planning Column: Room Requirements & Parameters */}
+            <div className="planning-card">
+              <div className="workbench-header">
+                <div className="workbench-title">
+                  <Sparkles size={14} /> Design Brief &amp; Suite Parameters
+                </div>
+                <span style={{ fontSize: '11px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+                  {selectedProducts.length} Placed
+                </span>
+              </div>
+              <div className="planning-card-content">
                 {/* Natural Language Prompt Box */}
-                <div style={{ background: 'var(--bg-subtle)', border: '1px solid var(--border-light)', borderRadius: '8px', padding: '12px' }}>
+                <div style={{ background: 'var(--bg-subtle)', border: '1px solid var(--border-light)', borderRadius: '8px', padding: '14px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
                     <label className="cad-label" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                       <Wand2 size={12} /> Natural Language Ingestion
@@ -691,33 +681,51 @@ export function App() {
                     })}
                   </div>
                 </div>
+              </div>
+            </div>
 
-                {/* Curated Alternatives List */}
-                <div style={{ marginTop: '10px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                    <label className="cad-label">Curated Design Suites</label>
-                    <button
-                      type="button"
-                      onClick={handleFetchAlternatives}
-                      style={{ fontSize: '11px', color: 'var(--text-muted)', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
-                    >
-                      <RotateCw size={11} /> Re-Optimize
-                    </button>
-                  </div>
-                  <DesignAlternativesView
-                    alternatives={alternatives}
-                    selectedDesignId={selectedDesignId}
-                    onSelectAlternative={handleSelectAlternative}
-                    onRefreshAlternatives={handleFetchAlternatives}
-                    loading={loadingAlternatives}
-                  />
+            {/* Right Planning Column: Curated Design Alternatives */}
+            <div className="planning-card">
+              <div className="workbench-header">
+                <div className="workbench-title">
+                  <Sparkles size={14} /> Curated Design Suites &amp; Multi-Objective Options
                 </div>
-              </>
-            )}
+                <button
+                  type="button"
+                  onClick={handleFetchAlternatives}
+                  style={{ fontSize: '11px', color: 'var(--text-muted)', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
+                >
+                  <RotateCw size={11} /> Re-Optimize Suites
+                </button>
+              </div>
+              <div className="planning-card-content" style={{ overflowY: 'auto' }}>
+                <DesignAlternativesView
+                  alternatives={alternatives}
+                  selectedDesignId={selectedDesignId}
+                  onSelectAlternative={handleSelectAlternative}
+                  onRefreshAlternatives={handleFetchAlternatives}
+                  loading={loadingAlternatives}
+                />
+              </div>
+            </div>
+          </>
+        )}
 
-            {/* STAGE 2: PRODUCT CATALOG */}
-            {activeStage === 'products' && (
-              <>
+        {/* STAGE 2: PRODUCTS CATALOG + 2D/3D VISUALIZATION */}
+        {activeStage === 'products' && (
+          <>
+            {/* Left Column: Product Catalog */}
+            <aside className="arch-workbench">
+              <div className="workbench-header">
+                <div className="workbench-title">
+                  <ShoppingBag size={14} /> Kohler Catalog ({products.length})
+                </div>
+                <span style={{ fontSize: '11px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+                  {selectedProducts.length} Placed
+                </span>
+              </div>
+
+              <div className="workbench-content">
                 <SemanticSearchBar
                   onAddProduct={(productId: string) => toggleProductInBundle(productId)}
                   selectedProductIds={selectedProductIds}
@@ -765,7 +773,7 @@ export function App() {
                 </label>
 
                 {/* Catalog Product Grid */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxHeight: '420px', overflowY: 'auto' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1, overflowY: 'auto' }}>
                   {filteredProducts.map((p) => {
                     const isSelected = selectedProductIds.includes(p.id);
                     return (
@@ -806,29 +814,116 @@ export function App() {
                     );
                   })}
                 </div>
-              </>
-            )}
+              </div>
+            </aside>
 
-            {/* STAGE 3: AI REFINEMENT & VISION */}
-            {activeStage === 'copilot' && (
-              <ConversationalPanel
-                currentRequirements={{
-                  dimensions: { length: roomLength, width: roomWidth, unit: 'ft' },
-                  budget_max: budgetMax,
-                  style_preferences: [selectedStyle],
-                  finish_preferences: [],
-                  required_categories: requiredCategories,
-                  excluded_categories: excludedCategories,
-                }}
-                selectedProductIds={selectedProductIds}
-                onApplyRedesign={handleApplyRedesign}
-                onApplyDetectedRoom={handleApplyDetectedRoom}
-              />
-            )}
+            {/* Right Column: 2D/3D Visualization Stage & Ribbon */}
+            <section className="arch-canvas-stage">
+              <div className="viewport-card">
+                {/* 3D WebGL Showroom Viewport */}
+                <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view3d' ? 'block' : 'none', minWidth: 0, overflow: 'hidden' }}>
+                  <BathroomView3D
+                    layout={spatialLayout}
+                    products={selectedProducts}
+                    selectedProductIds={selectedProductIds}
+                    roomLength={roomLength}
+                    roomWidth={roomWidth}
+                    themeStyle={selectedStyle}
+                    viewMode={viewportMode}
+                    onToggleViewMode={setViewportMode}
+                    onSelectFixture={(_productId: string) => {
+                      setActiveStage('products');
+                    }}
+                  />
+                </div>
 
-            {/* STAGE 4: SPATIAL VALIDATION & CODE */}
-            {activeStage === 'spatial' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {/* 2D Architectural Floor Plan Viewport */}
+                <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view2d' ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
+                  <FloorPlan2D
+                    layout={spatialLayout}
+                    products={selectedProducts}
+                    spatialValidation={spatialValidation}
+                    onGenerateLayout={handleGenerateLayout}
+                    loading={generatingLayout}
+                    viewMode={viewportMode}
+                    onToggleViewMode={setViewportMode}
+                  />
+                </div>
+              </div>
+
+              {/* Bottom Placed Fixture Ribbon */}
+              <div className="fixture-ribbon-card">
+                <span className="fixture-ribbon-label">Placed Fixtures ({selectedProducts.length})</span>
+                {selectedProducts.map((p) => (
+                  <div
+                    key={p.id}
+                    className="fixture-item-chip"
+                    onClick={() => {
+                      setActiveStage('products');
+                      setSearchQuery(p.id);
+                    }}
+                    title={`Click to inspect ${p.name}`}
+                  >
+                    <Droplets size={12} color="var(--text-muted)" />
+                    <div>
+                      <div style={{ fontWeight: 600, fontSize: '11.5px', maxWidth: '140px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {p.name}
+                      </div>
+                      <div style={{ fontSize: '10px', color: 'var(--text-dim)' }}>
+                        ₹{p.price_inr?.toLocaleString('en-IN')}
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleProductInBundle(p.id);
+                      }}
+                      style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-dim)', padding: '2px' }}
+                    >
+                      <X size={12} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
+
+        {/* STAGE 3: AI COPILOT REFINEMENT */}
+        {activeStage === 'copilot' && (
+          <div style={{ width: '100%', maxWidth: '1080px', margin: '0 auto' }}>
+            <ConversationalPanel
+              currentRequirements={{
+                dimensions: { length: roomLength, width: roomWidth, unit: 'ft' },
+                budget_max: budgetMax,
+                style_preferences: [selectedStyle],
+                finish_preferences: [],
+                required_categories: requiredCategories,
+                excluded_categories: excludedCategories,
+              }}
+              selectedProductIds={selectedProductIds}
+              onApplyRedesign={handleApplyRedesign}
+              onApplyDetectedRoom={handleApplyDetectedRoom}
+            />
+          </div>
+        )}
+
+        {/* STAGE 4: SPATIAL VALIDATION + 2D/3D VISUALIZATION + FEASIBILITY DRAWER */}
+        {activeStage === 'spatial' && (
+          <>
+            {/* Left Column: Spatial & NKBA Controls */}
+            <aside className="arch-workbench">
+              <div className="workbench-header">
+                <div className="workbench-title">
+                  <ShieldCheck size={14} /> Spatial &amp; NKBA Validation
+                </div>
+                <span style={{ fontSize: '11px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+                  {selectedProducts.length} Items
+                </span>
+              </div>
+
+              <div className="workbench-content">
                 <div style={{
                   padding: '12px',
                   borderRadius: '8px',
@@ -865,199 +960,195 @@ export function App() {
                   </div>
                 )}
 
-                <div className="cad-input-group">
+                <div className="cad-input-group" style={{ marginTop: 'auto' }}>
                   <div className="cad-label">Spatial Layout Generation</div>
                   <button
                     type="button"
                     onClick={handleGenerateLayout}
                     disabled={generatingLayout}
                     className="btn-cad btn-cad-primary"
+                    style={{ width: '100%' }}
                   >
                     <RotateCw size={13} />
                     {generatingLayout ? 'Recomputing Vector Placements...' : 'Regenerate Spatial CAD Layout'}
                   </button>
                 </div>
               </div>
-            )}
+            </aside>
 
-            {/* STAGE 5: SUSTAINABILITY & WHAT-IF */}
-            {activeStage === 'sustainability' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                <SustainabilityCard
-                  report={sustainabilityReport}
-                  loading={loadingSustainability}
-                />
-                <WhatIfMatrixView
-                  alternatives={alternatives}
-                  currentProductIds={selectedProductIds}
-                  roomLength={roomLength}
-                  roomWidth={roomWidth}
-                  budgetMax={budgetMax}
-                  onApplySubstitutions={handleApplySubstitutions}
-                />
+            {/* Center Column: 2D/3D Visualization Stage & Ribbon */}
+            <section className="arch-canvas-stage">
+              <div className="viewport-card">
+                {/* 3D WebGL Showroom Viewport */}
+                <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view3d' ? 'block' : 'none', minWidth: 0, overflow: 'hidden' }}>
+                  <BathroomView3D
+                    layout={spatialLayout}
+                    products={selectedProducts}
+                    selectedProductIds={selectedProductIds}
+                    roomLength={roomLength}
+                    roomWidth={roomWidth}
+                    themeStyle={selectedStyle}
+                    viewMode={viewportMode}
+                    onToggleViewMode={setViewportMode}
+                    onSelectFixture={(_productId: string) => {
+                      setActiveStage('products');
+                    }}
+                  />
+                </div>
+
+                {/* 2D Architectural Floor Plan Viewport */}
+                <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view2d' ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
+                  <FloorPlan2D
+                    layout={spatialLayout}
+                    products={selectedProducts}
+                    spatialValidation={spatialValidation}
+                    onGenerateLayout={handleGenerateLayout}
+                    loading={generatingLayout}
+                    viewMode={viewportMode}
+                    onToggleViewMode={setViewportMode}
+                  />
+                </div>
               </div>
-            )}
 
-            {/* STAGE 6: BOM SPECIFICATION */}
-            {activeStage === 'bom' && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'center', padding: '24px 12px' }}>
-                <Receipt size={32} style={{ margin: '0 auto', color: 'var(--accent-black)' }} />
-                <h3 style={{ fontSize: '16px', fontWeight: 700 }}>Kohler Specification &amp; Bill of Materials</h3>
-                <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-                  Complete architectural schedule ready for procurement, rough-in plumbing specifications, and contractor export.
-                </p>
+              {/* Bottom Placed Fixture Ribbon */}
+              <div className="fixture-ribbon-card">
+                <span className="fixture-ribbon-label">Placed Fixtures ({selectedProducts.length})</span>
+                {selectedProducts.map((p) => (
+                  <div
+                    key={p.id}
+                    className="fixture-item-chip"
+                    onClick={() => {
+                      setActiveStage('products');
+                      setSearchQuery(p.id);
+                    }}
+                    title={`Click to inspect ${p.name}`}
+                  >
+                    <Droplets size={12} color="var(--text-muted)" />
+                    <div>
+                      <div style={{ fontWeight: 600, fontSize: '11.5px', maxWidth: '140px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {p.name}
+                      </div>
+                      <div style={{ fontSize: '10px', color: 'var(--text-dim)' }}>
+                        ₹{p.price_inr?.toLocaleString('en-IN')}
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleProductInBundle(p.id);
+                      }}
+                      style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-dim)', padding: '2px' }}
+                    >
+                      <X size={12} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Right Column: Project Spatial Feasibility Drawer (ONLY ON SPATIAL TAB) */}
+            <aside className="arch-summary-drawer">
+              <div>
+                <div className="summary-section-title">Project Spatial Feasibility</div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                  <div style={{ background: 'var(--bg-subtle)', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
+                    <span style={{ fontSize: '10px', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Space Fit</span>
+                    <span style={{ fontSize: '14px', fontWeight: 800, color: 'var(--accent-black)' }}>
+                      {spatialValidation?.is_feasible ? '100% Valid' : 'Check Code'}
+                    </span>
+                  </div>
+                  <div style={{ background: 'var(--bg-subtle)', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
+                    <span style={{ fontSize: '10px', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Budget Delta</span>
+                    <span style={{ fontSize: '14px', fontWeight: 800, color: budgetHeadroom >= 0 ? 'var(--eco-green)' : 'var(--warn-red)' }}>
+                      {budgetHeadroom >= 0 ? `+₹${budgetHeadroom.toLocaleString('en-IN')}` : `-₹${Math.abs(budgetHeadroom).toLocaleString('en-IN')}`}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="summary-section-title">Specification Summary</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '12px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+                    <span>Total Fixtures</span>
+                    <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{selectedProducts.length}</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+                    <span>Room Dimensions</span>
+                    <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{roomLength} × {roomWidth} ft</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
+                    <span>Annual Water Saved</span>
+                    <span style={{ fontWeight: 700, color: 'var(--eco-green)' }}>{annualSavedGallons.toLocaleString()} Gal</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)', borderTop: '1px solid var(--border-light)', paddingTop: '6px' }}>
+                    <span style={{ fontWeight: 700 }}>Total Project Cost</span>
+                    <span style={{ fontWeight: 800, color: 'var(--accent-black)', fontSize: '14px' }}>
+                      ₹{currentTotalCost.toLocaleString('en-IN')}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: 'auto' }}>
                 <button
                   type="button"
                   onClick={() => setIsBOMModalOpen(true)}
                   className="btn-cad btn-cad-primary"
-                  style={{ marginTop: '8px' }}
+                  style={{ width: '100%' }}
                 >
-                  <FileSpreadsheet size={14} /> Open Full Specification Schedule
+                  <Receipt size={13} />
+                  <span>Full Specification Schedule</span>
                 </button>
-              </div>
-            )}
-
-          </div>
-        </aside>
-
-        {/* Center Canvas Stage (Interactive 3D WebGL & 2D Floor Plan) */}
-        <section className="arch-canvas-stage">
-          
-          <div className="viewport-card">
-            {/* 3D WebGL Showroom Viewport */}
-            <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view3d' ? 'block' : 'none', minWidth: 0, overflow: 'hidden' }}>
-              <BathroomView3D
-                layout={spatialLayout}
-                products={selectedProducts}
-                selectedProductIds={selectedProductIds}
-                roomLength={roomLength}
-                roomWidth={roomWidth}
-                themeStyle={selectedStyle}
-                viewMode={viewportMode}
-                onToggleViewMode={setViewportMode}
-                onSelectFixture={(_productId: string) => {
-                  setActiveStage('products');
-                }}
-              />
-            </div>
-
-            {/* 2D Architectural Floor Plan Viewport */}
-            <div style={{ width: '100%', minHeight: '540px', display: viewportMode === 'view2d' ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
-              <FloorPlan2D
-                layout={spatialLayout}
-                products={selectedProducts}
-                spatialValidation={spatialValidation}
-                onGenerateLayout={handleGenerateLayout}
-                loading={generatingLayout}
-                viewMode={viewportMode}
-                onToggleViewMode={setViewportMode}
-              />
-            </div>
-          </div>
-
-          {/* Bottom Placed Fixture Ribbon */}
-          <div className="fixture-ribbon-card">
-            <span className="fixture-ribbon-label">Placed Fixtures ({selectedProducts.length})</span>
-            {selectedProducts.map((p) => (
-              <div
-                key={p.id}
-                className="fixture-item-chip"
-                onClick={() => {
-                  setActiveStage('products');
-                  setSearchQuery(p.id);
-                }}
-                title={`Click to inspect ${p.name}`}
-              >
-                <Droplets size={12} color="var(--text-muted)" />
-                <div>
-                  <div style={{ fontWeight: 600, fontSize: '11.5px', maxWidth: '140px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    {p.name}
-                  </div>
-                  <div style={{ fontSize: '10px', color: 'var(--text-dim)' }}>
-                    ₹{p.price_inr?.toLocaleString('en-IN')}
-                  </div>
-                </div>
                 <button
                   type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleProductInBundle(p.id);
-                  }}
-                  style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-dim)', padding: '2px' }}
+                  onClick={handleClearBundle}
+                  className="btn-cad btn-cad-secondary"
+                  style={{ width: '100%' }}
                 >
-                  <X size={12} />
+                  <Trash2 size={13} />
+                  <span>Clear Current Bundle</span>
                 </button>
               </div>
-            ))}
-          </div>
+            </aside>
+          </>
+        )}
 
-        </section>
-
-        {/* Right Architectural Summary & Feasibility Drawer */}
-        <aside className="arch-summary-drawer">
-          <div>
-            <div className="summary-section-title">Project Spatial Feasibility</div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-              <div style={{ background: 'var(--bg-subtle)', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '10px', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Space Fit</span>
-                <span style={{ fontSize: '14px', fontWeight: 800, color: 'var(--accent-black)' }}>
-                  {spatialValidation?.is_feasible ? '100% Valid' : 'Check Code'}
-                </span>
-              </div>
-              <div style={{ background: 'var(--bg-subtle)', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '10px', color: 'var(--text-dim)', textTransform: 'uppercase', display: 'block' }}>Budget Delta</span>
-                <span style={{ fontSize: '14px', fontWeight: 800, color: budgetHeadroom >= 0 ? 'var(--eco-green)' : 'var(--warn-red)' }}>
-                  {budgetHeadroom >= 0 ? `+₹${budgetHeadroom.toLocaleString('en-IN')}` : `-₹${Math.abs(budgetHeadroom).toLocaleString('en-IN')}`}
-                </span>
-              </div>
+        {/* STAGE 5: SUSTAINABILITY METRICS & WHAT-IF ANALYSIS */}
+        {activeStage === 'sustainability' && (
+          <>
+            <div style={{ minWidth: 0 }}>
+              <SustainabilityCard
+                report={sustainabilityReport}
+                loading={loadingSustainability}
+              />
             </div>
-          </div>
-
-          <div>
-            <div className="summary-section-title">Specification Summary</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '12px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
-                <span>Total Fixtures</span>
-                <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{selectedProducts.length}</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
-                <span>Room Dimensions</span>
-                <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{roomLength} × {roomWidth} ft</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
-                <span>Annual Water Saved</span>
-                <span style={{ fontWeight: 700, color: 'var(--eco-green)' }}>{annualSavedGallons.toLocaleString()} Gal</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)', borderTop: '1px solid var(--border-light)', paddingTop: '6px' }}>
-                <span style={{ fontWeight: 700 }}>Total Project Cost</span>
-                <span style={{ fontWeight: 800, color: 'var(--accent-black)', fontSize: '14px' }}>
-                  ₹{currentTotalCost.toLocaleString('en-IN')}
-                </span>
-              </div>
+            <div style={{ minWidth: 0 }}>
+              <WhatIfMatrixView
+                alternatives={alternatives}
+                currentProductIds={selectedProductIds}
+                roomLength={roomLength}
+                roomWidth={roomWidth}
+                budgetMax={budgetMax}
+                onApplySubstitutions={handleApplySubstitutions}
+              />
             </div>
-          </div>
+          </>
+        )}
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: 'auto' }}>
-            <button
-              type="button"
-              onClick={() => setIsBOMModalOpen(true)}
-              className="btn-cad btn-cad-primary"
-              style={{ width: '100%' }}
-            >
-              <Receipt size={13} />
-              <span>Full Specification Schedule</span>
-            </button>
-            <button
-              type="button"
-              onClick={handleClearBundle}
-              className="btn-cad btn-cad-secondary"
-              style={{ width: '100%' }}
-            >
-              <Trash2 size={13} />
-              <span>Clear Current Bundle</span>
-            </button>
+        {/* STAGE 6: FULL INLINE BILL OF MATERIALS & SPECIFICATION SCHEDULE */}
+        {activeStage === 'bom' && (
+          <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
+            <BOMSpecView
+              productIds={selectedProductIds}
+              projectTitle="Kohler Master Bathroom Design"
+              roomDimensions={`${roomLength} × ${roomWidth} ft`}
+              themeStyle={selectedStyle}
+              onNavigateToProducts={() => setActiveStage('products')}
+            />
           </div>
-        </aside>
+        )}
 
       </main>
 
